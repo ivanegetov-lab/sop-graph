@@ -1,0 +1,45 @@
+{
+  "doc": {"id": "QP-309", "title": "Packaging Material Specifications and Approved Suppliers", "type": "Quality Procedure", "rev": "G", "effective": "2025-01-13", "owner": "Quality", "file": "QP-309 Packaging Material Specifications and Approved Suppliers.pdf", "pages": 2,
+          "purpose": "Hold in one place the specification and the approved supplier for each packaging material."},
+  "roles": [
+    {"name": "Quality Manager", "does": "Owns this document and approves suppliers.", "where": "Roles"},
+    {"name": "Purchasing", "does": "Buys only from the suppliers listed here.", "where": "Roles"},
+    {"name": "QA Technician", "does": "Inspects against these specifications.", "where": "Roles"}
+  ],
+  "materials": [
+    {"name": "Bottles", "where": "Materials"},
+    {"name": "Caps (28 mm)", "where": "Materials"},
+    {"name": "Caps (38 mm)", "where": "Materials"},
+    {"name": "Labels", "where": "Materials"},
+    {"name": "Shipper cases", "where": "Materials"}
+  ],
+  "forms": [
+    {"id": "FRM-QA-09", "name": "Supplier Approval Record", "where": "step 2"}
+  ],
+  "references": [
+    {"id": "QP-308", "as_written": "QP-308 Incoming Inspection of Packaging Materials", "rev": null, "where": "step 3 and Related documents"}  ],
+  "suppliers": [
+    {"material": "Bottles", "supplier": "Clearform Bottles", "where": "Specifications table"},
+    {"material": "Caps (28 mm)", "supplier": "Capitol Closures", "where": "Specifications table"},
+    {"material": "Caps (38 mm)", "supplier": "Capitol Closures", "where": "Specifications table"},
+    {"material": "Labels", "supplier": "Northside Labels", "where": "Specifications table"},
+    {"material": "Shipper cases", "supplier": "Ridge Corrugated", "where": "Specifications table"}
+  ],
+  "parameters": [
+    {"what": "label liner caliper", "applies_to": "labels", "value": "0.075", "unit": "mm", "tolerance": "plus or minus 0.005", "where": "Specifications table", "quote": "Liner caliper 0.075 mm plus or minus 0.005; barcode grade C or better"},
+    {"what": "minimum barcode grade", "applies_to": "labels", "value": "C or better", "where": "Specifications table", "quote": "barcode grade C or better"},
+    {"what": "label roll core diameter", "applies_to": "labels", "value": "76", "unit": "mm", "where": "Specifications table", "quote": "Roll width, core 76 mm"},
+    {"what": "shipper case board grade", "applies_to": "shipper cases", "value": "32", "unit": "ECT", "where": "Specifications table", "quote": "Inside dimensions, board grade 32 ECT"},
+    {"what": "supplier line trial length", "applies_to": "new or second supplier", "value": "at least one full shift", "where": "step 2", "quote": "A new or second supplier needs a line trial of at least one full shift"}
+  ],
+  "rules": [
+    {"topic": "who approves suppliers", "statement": "The Quality Manager owns the document and approves suppliers; a new or second supplier needs a line trial and a signed FRM-QA-09 before first production order.", "where": "Roles / step 2", "quote": "A new or second supplier needs a line trial of at least one full shift and a signed FRM-QA-09 Supplier Approval Record"},
+    {"topic": "which suppliers' packaging may be used", "statement": "Purchasing buys only from the approved supplier in the table.", "where": "step 1", "quote": "Buy packaging materials only from the approved supplier in the table below."},
+    {"topic": "inspection of critical characteristics", "statement": "Characteristics marked critical must be measured on every lot by the QA Technician; label liner caliper is critical.", "where": "step 4", "quote": "Characteristics marked critical below must be measured on every lot."},
+    {"topic": "documents to update after supplier approval", "statement": "After approval the Quality Manager updates QP-309, QP-308 and the label and cap setup instructions before the material is used.", "where": "step 3", "quote": "After approval, update this document, QP-308 and the label and cap setup instructions before the material is used."}
+  ],
+  "unsure": [
+    {"what": "'the label and cap setup instructions' not named by number", "why": "Assumed to be WI-212 (labeler) and WI-211 (capper); the document does not give numbers", "where": "step 3"},
+    {"what": "'Caps, 28 mm and 38 mm' share one row; Labels row says 'pressure-sensitive'", "why": "Table cells wrap; supplier column alignment read from the image", "where": "Specifications table"}
+  ]
+}

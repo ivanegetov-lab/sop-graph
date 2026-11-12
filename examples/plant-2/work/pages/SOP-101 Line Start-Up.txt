@@ -1,0 +1,128 @@
+     P L A N T 2 · S TA N D A R D O P E R AT I N G P R O C E D U R E
+                                                                                                         SOP-101
+     Line Start-Up                                                                                             Rev E
+
+
+  Effective                        Owner                           Prepared by                  Approved by
+  2025-06-16                       Production                      M. Alvarez                   D. Whitfield
+
+
+PURPOSE
+
+Start a packaging line safely and reach approved production in the shortest time.
+
+SCOPE
+
+Lines 1, 2 and 3. Applies at the start of every shift and after any stop longer than 60 minutes.
+
+ROLES
+
+ ROLE                                              RESPONSIBILITY
+
+
+ Line Lead                                         Owns the start-up and signs the checklist.
+
+ Operator                                          Carries out the machine checks.
+
+ QA Technician                                     Gives first-off approval.
+
+ Maintenance Technician                            Removes locks after maintenance work.
+
+
+PPE
+
+     Safety glasses
+     Safety shoes
+     Hearing protection in the filling hall
+
+TOOLS
+
+None.
+
+M AT E R I A L S
+     Bottles
+     Caps
+     Labels
+     Shipper cases
+     Hot-melt glue
+
+PROCEDURE
+
+  Before start
+
+ STEP          WHO                            ACTION
+
+ 1             Line Lead                      Read the previous shift's entry in FRM-PR-02 Shift Handover Log. Note
+                                              any open problems.
+ 2          Line Lead                Confirm with the Maintenance Technician that all locks and tags are
+                                     removed as described in SP-402.
+
+ 3          Operator                 Walk the line from filler to palletizer. Remove tools, rags and loose parts.
+                                     All guards closed.
+
+ 4          Operator                 Check compressed air at the line regulator: 6.2 bar minimum.
+
+ 5          Operator                 Confirm the correct bottles, caps, labels and cases are staged for the
+                                     scheduled product.
+
+
+ Machine checks
+
+ STEP       WHO                      ACTION
+
+ 6          Operator                 Filler (FIL-1, FIL-2, FIL-3): set up as described in WI-210.
+
+ 7          Operator                 Capper (CAP-1, CAP-2, CAP-3): set up as described in WI-211.
+
+ 8          Operator                 Labeler (LAB-1, LAB-2, LAB-3): set up as described in WI-212.
+
+ 9          Operator                 Case packer (CPK-1, CPK-2, CPK-3): set up as described in WI-213.
+                                     Glue tank at temperature before starting.
+
+ 10         Operator                 Palletizer (PAL-1, PAL-2, PAL-3): light curtain test, correct pallet pattern
+                                     selected.
+
+
+ Start and first-off
+
+ STEP       WHO                      ACTION
+
+ 11         Operator                 Start conveyors (CNV-1, CNV-2, CNV-3), then the filler at 50% speed.
+
+ 12         Operator                 Run 20 bottles and stop. Take the first-off samples to the QA Technician.
+
+ 13         QA Technician            Approve or reject the first-off as described in QP-306.
+
+ 14         Operator                 After approval, ramp to the scheduled rate over 5 minutes.
+
+ 15         Operator                 Take the first fill weight check within 15 minutes of start, then every 30
+                                     minutes for the rest of the shift, as described in QP-303.
+
+ 16         Line Lead                Sign FRM-PR-01 Start-Up Checklist and file it at the line.
+
+
+R E L AT E D D O C U M E N T S
+
+     SP-402 Lockout/Tagout
+     WI-210 Filler Setup and Nozzle Check
+     WI-211 Capper Setup and Torque Check
+     WI-212 Labeler Setup and Label Roll Change
+     WI-213 Case Packer Setup and Glue Check
+     QP-303 Fill Weight Checks
+     QP-306 First-Off Approval
+
+RECORDS
+     FRM-PR-01 Start-Up Checklist
+     FRM-PR-02 Shift Handover Log
+
+R E V I S I O N H I S T O RY
+
+ REV            D AT E                       CHANGE
+
+ E              2025-06-16                   Added air pressure check and 50% speed start.
+
+ D              2023-02-06                   New template.
+
+
+SOP-101 Line Start-Up Rev E. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

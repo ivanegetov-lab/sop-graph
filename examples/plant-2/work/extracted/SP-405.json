@@ -1,0 +1,45 @@
+{
+  "doc": {"id": "SP-405", "title": "Forklift and Pedestrian Safety", "type": "Safety Procedure", "rev": "C", "effective": "2024-08-05", "owner": "Safety", "file": "SP-405 Forklift and Pedestrian Safety.pdf", "pages": 2,
+          "purpose": "Keep forklifts and people apart in the warehouse and at the dock doors."},
+  "roles": [
+    {"name": "Forklift Driver", "does": "Holds a current licence and does the daily check.", "where": "Roles"},
+    {"name": "Warehouse Supervisor", "does": "Keeps walkways and sightlines clear.", "where": "Roles"},
+    {"name": "Safety Manager", "does": "Reviews near-miss reports every week.", "where": "Roles"},
+    {"name": "Anyone", "does": "Walks only in marked walkways and reports every near miss.", "where": "steps 5 and 8"}
+  ],
+  "equipment": [
+    {"id": "FL-01", "name": "Forklift 1", "where": "Scope"},
+    {"id": "FL-02", "name": "Forklift 2", "where": "Scope"},
+    {"id": "FL-03", "name": "Forklift 3", "where": "Scope"},
+    {"id": "FL-04", "name": "Forklift 4", "where": "Scope"},
+    {"id": "DOCK-1", "name": "Dock leveler 1", "where": "step 7"},
+    {"id": "DOCK-2", "name": "Dock leveler 2", "where": "step 7"},
+    {"id": "DOCK-3", "name": "Dock leveler 3", "where": "step 7"},
+    {"id": "DOCK-4", "name": "Dock leveler 4", "where": "step 7"}
+  ],
+  "materials": [],
+  "tools": [],
+  "ppe": [
+    {"name": "High-visibility vest", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-SF-05", "name": "Forklift Daily Check", "where": "step 1"},
+    {"id": "FRM-SF-06", "name": "Near-Miss Card", "where": "step 8"}
+  ],
+  "references": [
+    {"id": "TR-701", "as_written": "TR-701 Training and Qualification", "rev": null, "where": "Related documents"},
+    {"id": "WH-601", "as_written": "WH-601 Receiving and Put-Away", "rev": null, "where": "Related documents"}
+  ],
+  "parameters": [
+    {"what": "maximum forklift speed", "applies_to": "forklifts inside the building", "value": "5", "unit": "mph", "where": "step 2", "quote": "Maximum speed is 5 mph everywhere inside the building."},
+    {"what": "forklift stop distance from pedestrian", "applies_to": "forklifts", "value": "3", "unit": "metres", "where": "step 3", "quote": "Stop if a pedestrian is within 3 metres."},
+    {"what": "no-stacking distance from corner or dock door", "applies_to": "warehouse", "value": "2", "unit": "metres", "where": "step 6", "quote": "Nothing is stacked within 2 metres of a corner or a dock door where it could block a driver's view."},
+    {"what": "near-miss report review interval", "applies_to": "Safety Manager", "value": "1", "unit": "week", "where": "Roles", "quote": "Reviews near-miss reports every week."}
+  ],
+  "rules": [
+    {"topic": "maximum forklift speed", "statement": "Forklifts may not exceed 5 mph anywhere inside the building.", "where": "step 2", "quote": "Maximum speed is 5 mph everywhere inside the building."},
+    {"topic": "who checks the dock before entering a trailer", "statement": "The Forklift Driver confirms wheels are chocked and the dock leveler is locked before entering a trailer.", "where": "step 7", "quote": "Before entering a trailer: wheels chocked, dock leveler (DOCK-1 to DOCK-4) locked in place."}
+  ],
+  "unsure": []
+}

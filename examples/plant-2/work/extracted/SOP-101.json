@@ -1,0 +1,73 @@
+{
+  "doc": {"id": "SOP-101", "title": "Line Start-Up", "type": "Standard Operating Procedure", "rev": "E", "effective": "2025-06-16", "owner": "Production", "file": "SOP-101 Line Start-Up.pdf", "pages": 3,
+          "purpose": "Start a packaging line safely and reach approved production in the shortest time."},
+  "roles": [
+    {"name": "Line Lead", "does": "Owns the start-up and signs the checklist.", "where": "Roles"},
+    {"name": "Operator", "does": "Carries out the machine checks.", "where": "Roles"},
+    {"name": "QA Technician", "does": "Gives first-off approval.", "where": "Roles"},
+    {"name": "Maintenance Technician", "does": "Removes locks after maintenance work.", "where": "Roles"}
+  ],
+  "equipment": [
+    {"id": "FIL-1", "name": "Filler 1", "where": "step 6"},
+    {"id": "FIL-2", "name": "Filler 2", "where": "step 6"},
+    {"id": "FIL-3", "name": "Filler 3", "where": "step 6"},
+    {"id": "CAP-1", "name": "Capper 1", "where": "step 7"},
+    {"id": "CAP-2", "name": "Capper 2", "where": "step 7"},
+    {"id": "CAP-3", "name": "Capper 3", "where": "step 7"},
+    {"id": "LAB-1", "name": "Labeler 1", "where": "step 8"},
+    {"id": "LAB-2", "name": "Labeler 2", "where": "step 8"},
+    {"id": "LAB-3", "name": "Labeler 3", "where": "step 8"},
+    {"id": "CPK-1", "name": "Case packer 1", "where": "step 9"},
+    {"id": "CPK-2", "name": "Case packer 2", "where": "step 9"},
+    {"id": "CPK-3", "name": "Case packer 3", "where": "step 9"},
+    {"id": "PAL-1", "name": "Palletizer 1", "where": "step 10"},
+    {"id": "PAL-2", "name": "Palletizer 2", "where": "step 10"},
+    {"id": "PAL-3", "name": "Palletizer 3", "where": "step 10"},
+    {"id": "CNV-1", "name": "Conveyor 1", "where": "step 11"},
+    {"id": "CNV-2", "name": "Conveyor 2", "where": "step 11"},
+    {"id": "CNV-3", "name": "Conveyor 3", "where": "step 11"}
+  ],
+  "materials": [
+    {"name": "Bottles", "where": "Materials"},
+    {"name": "Caps", "where": "Materials"},
+    {"name": "Labels", "where": "Materials"},
+    {"name": "Shipper cases", "where": "Materials"},
+    {"name": "Hot-melt glue", "where": "Materials"}
+  ],
+  "tools": [],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"},
+    {"name": "Hearing protection", "where": "PPE (in the filling hall)"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-01", "name": "Start-Up Checklist", "where": "step 16"},
+    {"id": "FRM-PR-02", "name": "Shift Handover Log", "where": "step 1"}
+  ],
+  "references": [
+    {"id": "SP-402", "as_written": "SP-402 Lockout/Tagout", "rev": null, "where": "step 2"},
+    {"id": "WI-210", "as_written": "WI-210 Filler Setup and Nozzle Check", "rev": null, "where": "step 6"},
+    {"id": "WI-211", "as_written": "WI-211 Capper Setup and Torque Check", "rev": null, "where": "step 7"},
+    {"id": "WI-212", "as_written": "WI-212 Labeler Setup and Label Roll Change", "rev": null, "where": "step 8"},
+    {"id": "WI-213", "as_written": "WI-213 Case Packer Setup and Glue Check", "rev": null, "where": "step 9"},
+    {"id": "QP-306", "as_written": "QP-306 First-Off Approval", "rev": null, "where": "step 13"},
+    {"id": "QP-303", "as_written": "QP-303 Fill Weight Checks", "rev": null, "where": "step 15"}
+  ],
+  "parameters": [
+    {"what": "stop length that requires a full start-up", "applies_to": "Lines 1, 2 and 3", "value": "60", "unit": "minutes", "where": "Scope", "quote": "Applies at the start of every shift and after any stop longer than 60 minutes."},
+    {"what": "minimum compressed air pressure", "applies_to": "line regulator", "value": "6.2", "unit": "bar", "where": "step 4", "quote": "Check compressed air at the line regulator: 6.2 bar minimum."},
+    {"what": "maximum line speed before first-off approval", "applies_to": "Lines 1, 2 and 3", "value": "50", "unit": "%", "where": "step 11", "quote": "Start conveyors (CNV-1, CNV-2, CNV-3), then the filler at 50% speed."},
+    {"what": "bottles run before first-off samples", "applies_to": "start-up", "value": "20", "unit": "bottles", "where": "step 12", "quote": "Run 20 bottles and stop. Take the first-off samples to the QA Technician."},
+    {"what": "ramp time to scheduled rate", "applies_to": "start-up after first-off approval", "value": "5", "unit": "minutes", "where": "step 14", "quote": "After approval, ramp to the scheduled rate over 5 minutes."},
+    {"what": "first fill weight check after start", "applies_to": "start-up", "value": "15", "unit": "minutes", "where": "step 15", "quote": "Take the first fill weight check within 15 minutes of start"},
+    {"what": "fill weight check interval", "applies_to": "Lines 1, 2 and 3", "value": "30", "unit": "minutes", "where": "step 15", "quote": "then every 30 minutes for the rest of the shift, as described in QP-303."}
+  ],
+  "rules": [
+    {"topic": "who removes lockout locks", "statement": "The Maintenance Technician removes locks after maintenance work, and the Line Lead confirms all locks and tags are removed.", "where": "Roles / step 2", "quote": "Removes locks after maintenance work."},
+    {"topic": "who gives first-off approval", "statement": "The QA Technician approves or rejects the first-off as described in QP-306.", "where": "step 13", "quote": "Approve or reject the first-off as described in QP-306."},
+    {"topic": "who releases the line", "statement": "The Line Lead owns the start-up and signs the checklist.", "where": "Roles", "quote": "Owns the start-up and signs the checklist."}
+  ],
+  "unsure": [
+    {"what": "Step 12 has the Operator run 20 bottles before first-off samples; QP-306 asks for the first 5 good bottles and one packed case", "why": "Not clear whether the 20 bottles include the 5; the case sample is not mentioned in SOP-101", "where": "step 12"}
+  ]
+}

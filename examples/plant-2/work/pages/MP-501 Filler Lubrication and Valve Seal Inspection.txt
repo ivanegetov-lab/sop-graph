@@ -1,0 +1,63 @@
+        PLANT 2                        Filler Lubrication and Valve Seal Inspection
+   Maintenance Procedure
+                              Document No.: MP-501                 Revision: B        Effective: 2020-02-17
+
+ Department: Maintenance      Prepared by: K. Petrov               Approved by: J. Brandt
+
+
+1.0 PURPOSE
+Keep the rotary fillers filling accurately by lubricating the carousel and catching worn valve seals.
+
+2.0 SCOPE
+FIL-1, FIL-2 and FIL-3. Covers the 14-day lubrication task and the 90-day valve seal inspection in the
+maintenance system.
+
+3.0 RESPONSIBILITIES
+
+ Role                                         Responsibility
+
+ Maintenance Technician                       Carries out the work.
+
+ Maintenance Planner                          Schedules the work with production.
+
+ Shift Lead                                   Releases the line.
+
+
+4.0 SAFETY AND MATERIALS
+Personal protective equipment: Safety glasses; Nitrile gloves; Safety shoes
+Materials: Food-grade grease (H1); Fill valve seal kit
+Tools: Grease gun; Nozzle wrench; Seal pick; Inspection light
+
+5.0 RELATED DOCUMENTS AND RECORDS
+Documents: SP-402 Lockout/Tagout; WI-210 Filler Setup and Nozzle Check
+Records: Maintenance work order
+
+6.0 EVERY 14 DAYS: LUBRICATION AND NOZZLE INSPECTION
+ 1. Maintenance Technician: Lock out the filler as described in SP-402.
+ 2. Maintenance Technician: Grease the carousel bearing and the lift cams: 3 strokes at each point. Use
+    only food-grade H1 grease.
+ 3. Maintenance Technician: Inspect every nozzle tip for nicks and build-up. Clean or replace.
+ 4. Maintenance Technician: Remove locks. Run the filler empty for 2 minutes and listen for noise.
+
+7.0 EVERY 90 DAYS: VALVE SEAL INSPECTION
+ 1. Maintenance Technician: Lock out. Remove two valves, chosen from different sides of the carousel.
+ 2. Maintenance Technician: Inspect the seals for flat spots, cuts and swelling. If either valve shows
+    wear, inspect all valves.
+ 3. Maintenance Technician: Replace worn seals. If more than a third are worn, replace the full set.
+ 4. Maintenance Technician: After any seal change, the operator repeats the nozzle check in WI-210
+    before the line is released.
+ 5. Maintenance Technician: Write what was found, valve by valve, on the work order. Do not close it
+    with 'OK' alone.
+
+8.0 REVISION HISTORY
+
+ Rev             Date                            Change
+
+ B               2020-02-17                      Seal inspection sample set at two valves.
+
+ A               2019-05-20                      First issue.
+
+
+MP-501 Filler Lubrication and Valve Seal Inspection Rev B. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open
+dataset.
+

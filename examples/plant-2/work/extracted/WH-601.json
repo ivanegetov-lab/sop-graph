@@ -1,0 +1,53 @@
+{
+  "doc": {"id": "WH-601", "title": "Receiving and Put-Away", "type": "Warehouse Procedure", "rev": "C", "effective": "2023-06-19", "owner": "Warehouse", "file": "WH-601 Receiving and Put-Away.pdf", "pages": 2,
+          "purpose": "Receive materials safely, check them against the order, and keep them in quarantine until Quality releases them."},
+  "roles": [
+    {"name": "Receiving Clerk", "does": "Checks the delivery against the purchase order.", "where": "Roles"},
+    {"name": "Forklift Driver", "does": "Unloads and puts away.", "where": "Roles"},
+    {"name": "Warehouse Supervisor", "does": "Assigns dock doors and resolves shortages.", "where": "Roles"},
+    {"name": "QA Technician", "does": "Releases packaging materials.", "where": "Roles"},
+    {"name": "Purchasing", "does": "Is told of any delivery more than 2 hours late, or short.", "where": "step 8"},
+    {"name": "Production Planner", "does": "Is told of any delivery more than 2 hours late, or short.", "where": "step 8"}
+  ],
+  "equipment": [
+    {"name": "Dock door 1", "where": "Scope"},
+    {"name": "Dock door 2", "where": "Scope"},
+    {"name": "Dock door 3", "where": "Scope and step 1"},
+    {"name": "Dock door 4", "where": "Scope and step 1"}
+  ],
+  "materials": [
+    {"name": "Bottles", "where": "Materials"},
+    {"name": "Caps", "where": "Materials"},
+    {"name": "Labels", "where": "Materials"},
+    {"name": "Shipper cases", "where": "Materials"},
+    {"name": "Raw chemicals", "where": "Materials"}
+  ],
+  "tools": [
+    {"name": "Pallet jack", "where": "Tools"},
+    {"name": "Wheel chocks", "where": "Tools"},
+    {"name": "Barcode scanner", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "High-visibility vest", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"},
+    {"name": "Cut-resistant gloves", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-WH-01", "name": "Receiving Log", "where": "step 5"}
+  ],
+  "references": [
+    {"id": "QP-308", "as_written": "QP-308 Incoming Inspection of Packaging Materials", "rev": null, "where": "step 6 and Related documents"},
+    {"id": "SP-405", "as_written": "SP-405 Forklift and Pedestrian Safety", "rev": null, "where": "Related documents"}
+  ],
+  "parameters": [
+    {"what": "maximum forklift speed", "applies_to": "forklifts on the dock and in the receiving lanes", "value": "3", "unit": "mph", "where": "step 3", "quote": "Drive at walking pace on the dock and in the receiving lanes: no faster than 3 mph."},
+    {"what": "late delivery reporting threshold", "applies_to": "inbound deliveries", "value": "2", "unit": "hours late", "where": "step 8", "quote": "A delivery more than 2 hours late, or short, is reported to Purchasing and to the Production Planner the same shift."}
+  ],
+  "rules": [
+    {"topic": "maximum forklift speed", "statement": "On the dock and in the receiving lanes forklifts drive no faster than 3 mph.", "where": "step 3", "quote": "no faster than 3 mph"},
+    {"topic": "who releases packaging materials", "statement": "Packaging materials stay in the quarantine lane until the QA Technician releases them.", "where": "step 6", "quote": "until the QA Technician releases them (see QP-308)."},
+    {"topic": "who checks the dock before entering a trailer", "statement": "The Forklift Driver chocks the trailer wheels and locks the dock leveler before entering.", "where": "step 2", "quote": "Chock the trailer wheels and lock the dock leveler before entering."}
+  ],
+  "unsure": [
+    {"what": "Dock doors 1 to 4 have no equipment tag in this document", "why": "SP-405 calls the dock levelers DOCK-1 to DOCK-4, but WH-601 does not give tags, so no tag assumed", "where": "Scope"}  ]
+}

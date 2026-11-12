@@ -1,0 +1,57 @@
+        PLANT 2                               Customer Complaints and Lot Trace
+     Quality Procedure
+                              Document No.: QP-316               Revision: B        Effective: 2020-11-02
+
+ Department: Quality          Prepared by: H. Costa              Approved by: J. Brandt
+
+
+1.0 PURPOSE
+Answer every customer complaint and find all product from the same lot.
+
+2.0 SCOPE
+All complaints about product made at Plant 2.
+
+3.0 RESPONSIBILITIES
+
+ Role                       Responsibility
+
+ Quality Manager            Owns each complaint until it is closed.
+
+ QA Technician              Carries out the lot trace.
+
+ Shift Lead                 Supplies the production and downtime records for the shift.
+
+
+4.0 SAFETY AND MATERIALS
+Personal protective equipment: None
+Materials: None
+Tools: None
+
+5.0 RELATED DOCUMENTS AND RECORDS
+Documents: QP-315 Nonconforming Product and Hold
+Records: FRM-QA-20 Complaint Record
+
+6.0 LOT CODES
+ 1. QA Technician: Every bottle carries a lot code in the form P2-L3-261104-A: plant, line, date as year-
+    month-day, shift.
+ 2. QA Technician: The lot code identifies the line and shift. Use it to pull the production report, the fill
+    weight chart, the label roll log and the downtime log for that shift.
+
+7.0 HANDLING A COMPLAINT
+ 1. Quality Manager: Open FRM-QA-20 Complaint Record within one working day.
+ 2. QA Technician: Trace the lot. List the materials used: bottle, cap and label lots.
+ 3. QA Technician: Place any remaining stock from the same lot on hold as described in QP-315.
+ 4. Shift Lead: Give the QA Technician the shift's records and any notes within one working day.
+ 5. Quality Manager: Reply to the customer within 5 working days with the cause and the action taken.
+
+8.0 REVISION HISTORY
+
+ Rev               Date                               Change
+
+ B                 2020-11-02                         Reply time set at 5 working days.
+
+ A                 2019-05-20                         First issue.
+
+
+QP-316 Customer Complaints and Lot Trace Rev B. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

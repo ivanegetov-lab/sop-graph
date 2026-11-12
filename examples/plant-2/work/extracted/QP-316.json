@@ -1,0 +1,29 @@
+{
+  "doc": {"id": "QP-316", "title": "Customer Complaints and Lot Trace", "type": "Quality Procedure", "rev": "B", "effective": "2020-11-02", "owner": "Quality", "file": "QP-316 Customer Complaints and Lot Trace.pdf", "pages": 2,
+          "purpose": "Answer every customer complaint and find all product from the same lot."},
+  "roles": [
+    {"name": "Quality Manager", "does": "Owns each complaint until it is closed.", "where": "3.0 Responsibilities"},
+    {"name": "QA Technician", "does": "Carries out the lot trace.", "where": "3.0 Responsibilities"},
+    {"name": "Shift Lead", "does": "Supplies the production and downtime records for the shift.", "where": "3.0 Responsibilities"}
+  ],
+  "materials": [],
+  "forms": [
+    {"id": "FRM-QA-20", "name": "Complaint Record", "where": "5.0 and 7.0 step 1"}
+  ],
+  "references": [
+    {"id": "QP-315", "as_written": "QP-315 Nonconforming Product and Hold", "rev": null, "where": "5.0 and 7.0 step 3"}
+  ],
+  "parameters": [
+    {"what": "time to open the complaint record", "applies_to": "customer complaint", "value": "1", "unit": "working day", "where": "7.0 step 1", "quote": "Open FRM-QA-20 Complaint Record within one working day."},
+    {"what": "customer reply time", "applies_to": "customer complaint", "value": "5", "unit": "working days", "where": "7.0 step 5", "quote": "Reply to the customer within 5 working days with the cause and the action taken."},
+    {"what": "time to hand shift records to QA Technician", "applies_to": "lot trace", "value": "1", "unit": "working day", "where": "7.0 step 4", "quote": "Give the QA Technician the shift's records and any notes within one working day."}
+  ],
+  "rules": [
+    {"topic": "who places product on hold", "statement": "The QA Technician places any remaining stock from the same lot on hold.", "where": "7.0 step 3", "quote": "Place any remaining stock from the same lot on hold as described in QP-315."},
+    {"topic": "who supplies shift records for a lot trace", "statement": "The Shift Lead gives the QA Technician the shift's records.", "where": "7.0 step 4", "quote": "Shift Lead: Give the QA Technician the shift's records and any notes within one working day."}
+  ],
+  "unsure": [
+    {"what": "Lot code form P2-L3-261104-A: plant, line, year-month-day, shift", "why": "The date '261104' reads as 2026-11-04 but the document is dated 2020; it is only an example", "where": "6.0 step 1"},
+    {"what": "'Shift Lead' role", "why": "Other documents use Line Lead; not stated whether these are the same", "where": "3.0 Responsibilities"}
+  ]
+}

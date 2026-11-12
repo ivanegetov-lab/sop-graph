@@ -1,0 +1,90 @@
+      QUALITY                Incoming Inspection of Packaging                                           QP-308
+     PROCEDURE               Materials                                                                  Rev D
+
+
+                                                                                                        By: P.
+ PLANT 2                     Dept: Quality                  Effective: 2023-10-09                       Nakamura
+                                                                                                        Appr: H. Costa
+
+
+ Purpose
+
+Stop bad bottles, caps, labels and cases at the dock, before they reach a line.
+
+ Scope
+
+Every delivery of bottles, caps, labels and shipper cases.
+
+ Roles
+
+ Role                              Responsibility
+
+ QA Technician                     Inspects and releases or rejects each lot.
+
+ Receiving Clerk                   Holds the delivery in quarantine until release.
+
+ Purchasing                        Is told of every rejection.
+
+
+ PPE                                         Tools                                   Materials
+
+     Safety shoes                             Calipers                                Bottles
+     Cut-resistant gloves                     Check scale (0.1 g)                     Caps
+                                              Go/no-go neck gauge                     Labels
+                                              Barcode verifier                        Shipper cases
+
+ Procedure
+
+For every lot
+ Step      Who                        Action
+
+ 1         Receiving Clerk            Place the delivery in the quarantine lane with a yellow QUARANTINE tag. See
+                                      WH-601.
+
+ 2         QA Technician              Check the supplier is on the approved list in QP-309. If not, reject.
+
+ 3         QA Technician              Check the certificate of conformance is with the delivery and matches the lot
+                                      number.
+
+Checks by material
+ Step      Who                        Action
+
+ 4         QA Technician              Bottles (sample of 13): weight, height, neck finish with the go/no-go gauge, no
+                                      flash or contamination.
+ 5          QA Technician                    Caps (sample of 13): size, colour, liner present, fit on a sample bottle.
+
+ 6          QA Technician                    Labels (3 rolls per lot): artwork and revision against the binder, print quality,
+                                             barcode grade C or better, roll width, core diameter 76 mm, labels wound
+                                             outward.
+
+ 7          QA Technician                    Shipper cases (sample of 5): dimensions, board grade stamp, print.
+
+Decision
+ Step       Who                              Action
+
+ 8          QA Technician                    Pass: green RELEASED sticker on every pallet or roll. Record on FRM-QA-08
+                                             Incoming Inspection Record.
+
+ 9          QA Technician                    Fail: red REJECTED tag, hold as described in QP-315, and email Purchasing
+                                             the same day.
+
+
+ Related documents                                                         Records
+
+     QP-309 Packaging Material Specifications and                             FRM-QA-08 Incoming Inspection Record
+     Approved Suppliers
+     WH-601 Receiving and Put-Away
+     QP-315 Nonconforming Product and Hold
+
+ Revision history
+
+ Rev               Date                                Change
+
+ D                 2023-10-09                          Barcode verifier added for labels.
+
+ C                 2022-06-13                          Work-instruction template.
+
+
+QP-308 Incoming Inspection of Packaging Materials Rev D. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open
+dataset.
+

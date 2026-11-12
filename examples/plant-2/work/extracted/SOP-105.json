@@ -1,0 +1,48 @@
+{
+  "doc": {"id": "SOP-105", "title": "Product Changeover and Line Clearance, Lines 1 and 3", "type": "Standard Operating Procedure", "rev": "B", "effective": "2021-02-08", "owner": "Production", "file": "SOP-105 Product Changeover and Line Clearance Lines 1 and 3.pdf", "pages": 2,
+          "purpose": "Change between products of the same bottle size without mixing product, labels or caps."},
+  "roles": [
+    {"name": "Shift Lead", "does": "Verifies the line clearance.", "where": "3.0 Responsibilities"},
+    {"name": "Operator", "does": "Clears the line and loads the new materials.", "where": "3.0 Responsibilities"},
+    {"name": "QA Technician", "does": "Gives first-off approval.", "where": "3.0 Responsibilities"},
+    {"name": "Batching Operator", "does": "Flushes the supply line from the mixing tank.", "where": "3.0 Responsibilities"}
+  ],
+  "equipment": [
+    {"id": "MIX-1", "name": "Mixing tank 1", "where": "6.0 step 4"},
+    {"id": "MIX-2", "name": "Mixing tank 2", "where": "6.0 step 4"}
+  ],
+  "materials": [
+    {"name": "Labels", "where": "4.0 Safety and materials"},
+    {"name": "Caps (28 mm)", "where": "4.0 Safety and materials"},
+    {"name": "Flush water", "where": "4.0 Safety and materials"}
+  ],
+  "tools": [
+    {"name": "Lint-free wipes", "where": "4.0 Safety and materials"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "4.0 Safety and materials"},
+    {"name": "Safety shoes", "where": "4.0 Safety and materials"},
+    {"name": "Chemical-resistant gloves", "where": "4.0 Safety and materials"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-05", "name": "Line Clearance Checklist", "where": "6.0 step 5"}
+  ],
+  "references": [
+    {"id": "QP-306", "as_written": "QP-306 First-Off Approval", "rev": null, "where": "5.0 and 7.0 step 3"},
+    {"id": "WI-210", "as_written": "WI-210 Filler Setup and Nozzle Check", "rev": null, "where": "5.0 and 7.0 step 2"},
+    {"id": "WI-212", "as_written": "WI-212 Labeler Setup and Label Roll Change", "rev": null, "where": "5.0 and 7.0 step 1"}
+  ],
+  "parameters": [
+    {"what": "supply line flush time", "applies_to": "MIX-1 or MIX-2 to the filler", "value": "10", "unit": "minutes", "where": "6.0 step 4", "quote": "Flush the supply line from MIX-1 or MIX-2 to the filler with water for 10 minutes."},
+    {"what": "target changeover time", "applies_to": "Lines 1 and 3 product changeover", "value": "30", "unit": "minutes", "where": "7.0 note", "quote": "Target changeover time: 30 minutes."}
+  ],
+  "rules": [
+    {"topic": "who verifies line clearance", "statement": "The Shift Lead walks the line with FRM-PR-05 and signs only when nothing from the old product remains.", "where": "6.0 step 5", "quote": "Sign only when nothing from the old product remains."},
+    {"topic": "who flushes the supply line", "statement": "The Batching Operator flushes the supply line from MIX-1 or MIX-2.", "where": "6.0 step 4", "quote": "Batching Operator: Flush the supply line from MIX-1 or MIX-2 to the filler"},
+    {"topic": "who gives first-off approval", "statement": "The QA Technician gives first-off approval, including a label and lot code check.", "where": "7.0 step 3", "quote": "First-off approval as described in QP-306, including a label and lot code check."}
+  ],
+  "unsure": [
+    {"what": "Scope says the clearance steps also apply to Line 2 size changeovers", "why": "Not stated whether the Batching Operator flush applies to a Line 2 size change (SOP-104 does not mention it)", "where": "2.0 Scope"},
+    {"what": "Products AC-1000, AC-1000-LEM, DS-0750, DS-0750-ECO named in scope", "why": "No field for products in the schema", "where": "2.0 Scope"}
+  ]
+}

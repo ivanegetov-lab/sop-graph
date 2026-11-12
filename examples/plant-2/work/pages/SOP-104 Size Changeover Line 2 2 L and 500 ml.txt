@@ -1,0 +1,74 @@
+        PLANT 2                          Size Changeover, Line 2 (2 L and 500 ml)
+     Standard Operating
+         Procedure            Document No.: SOP-104                  Revision: B       Effective: 2021-03-15
+
+ Department: Production       Prepared by: R. Okafor                 Approved by: J. Brandt
+
+
+1.0 PURPOSE
+Change Line 2 between the 2 L and the 500 ml fabric softener bottle.
+
+2.0 SCOPE
+Line 2 only. Products FS-2000 and FS-0500.
+
+3.0 RESPONSIBILITIES
+
+ Role                                Responsibility
+
+ Shift Lead                          Releases the line for changeover and signs the record.
+
+ Operator                            Carries out the changeover.
+
+ Maintenance Technician              Fits the filler change parts.
+
+ QA Technician                       Gives first-off approval.
+
+
+4.0 SAFETY AND MATERIALS
+Personal protective equipment: Safety glasses; Safety shoes; Cut-resistant gloves
+Materials: Bottles; Caps (38 mm); Labels; Shipper cases
+Tools: Change parts kit (stored in the maintenance crib); Torque tester; Hex key set; Feeler gauge
+
+5.0 RELATED DOCUMENTS AND RECORDS
+Documents: SP-402 Lockout/Tagout; WI-210 Filler Setup and Nozzle Check; WI-212 Labeler Setup and
+Label Roll Change; QP-306 First-Off Approval; SOP-105 Product Changeover and Line Clearance
+Records: FRM-PR-04 Changeover Record
+
+6.0 PREPARATION
+ 1. Shift Lead: Confirm the last pallet of the old size is complete and labelled.
+ 2. Operator: Collect the change parts kit for the new size from the maintenance crib. Check every part
+    against the list in the lid.
+ 3. Operator: Clear the line of all bottles, caps, labels and cases of the old size, as described in SOP-105.
+ 4. Maintenance Technician: Lock out FIL-2 and CAP-2 as described in SP-402.
+
+7.0 CHANGE PARTS
+  1. Maintenance Technician: FIL-2: change the infeed screw, star wheels and centering bells. Set the
+     nozzle height for the new bottle.
+  2. Maintenance Technician: CAP-2: change the bottle guides and adjust the head height.
+  3. Operator: CAP-2: both bottle sizes use the same 38 mm cap. Set the application torque to 15 in-lb,
+     plus or minus 2. Check three bottles with the torque tester.
+  4. Operator: LAB-2: load the labels for the new size and set up as described in WI-212.
+  5. Operator: CPK-2: change the case magazine guides and select the pack pattern (6 per case for 2 L,
+      12 per case for 500 ml).
+  6. Operator: CNV-2: adjust the guide rails to the bottle width plus 3 mm on each side.
+  7. Maintenance Technician: Remove locks and tags as described in SP-402.
+
+8.0 RESTART
+  1. Operator: Set up the filler for the new product as described in WI-210.
+  2. QA Technician: First-off approval as described in QP-306.
+  3. Shift Lead: Record start and end times and any missing parts on FRM-PR-04 Changeover Record.
+  4. Operator: Return the old change parts to the maintenance crib, clean and complete.
+Note: Target changeover time: 45 minutes in either direction.
+
+9.0 REVISION HISTORY
+
+  Rev                   Date                                           Change
+
+  B                     2021-03-15                                     Added target time.
+
+  A                     2019-05-20                                     First issue.
+
+
+SOP-104 Size Changeover, Line 2 (2 L and 500 ml) Rev B. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open
+dataset.
+

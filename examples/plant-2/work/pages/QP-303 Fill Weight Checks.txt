@@ -1,0 +1,98 @@
+     PLANT 2 · QUALITY PROCEDURE
+                                                                                                           QP-303
+     Fill Weight Checks                                                                                          Rev F
+
+
+  Effective                    Owner                           Prepared by                   Approved by
+  2024-01-15                   Quality                         P. Nakamura                   H. Costa
+
+
+PURPOSE
+
+Keep every bottle at or above the label claim without giving product away.
+
+SCOPE
+
+All filled product on Lines 1, 2 and 3.
+
+ROLES
+
+ ROLE                                  RESPONSIBILITY
+
+
+ Operator                              Takes and weighs the samples.
+
+ Line Lead                             Reacts to results outside the action limits.
+
+ QA Technician                         Reviews the charts each shift and places product on hold.
+
+ Maintenance Technician                Adjusts the filler.
+
+
+PPE
+
+     Safety glasses
+     Safety shoes
+
+TOOLS
+
+     Check scale (0.1 g)
+     Tare bottles
+
+M AT E R I A L S
+None.
+
+PROCEDURE
+
+  Sampling
+
+ STEP         WHO                         ACTION
+
+
+ 1            Operator                    Once every hour, take 5 bottles in a row from the filler discharge.
+
+ 2            Operator                    Weigh each bottle on the check scale. Subtract the tare. Write the five
+                                          weights and their average on FRM-QA-03 Fill Weight Chart.
+
+ 3            Operator                    Verify the check scale with the 1 kg test weight at the start of every shift.
+  Reacting
+
+ STEP         WHO                                 ACTION
+
+ 4            Operator                            Any single bottle below the lower limit: stop the line and tell the Line
+                                                  Lead.
+
+ 5            Line Lead                           Place all product since the last good check on hold as described in QP-
+                                                  315. Call the QA Technician.
+
+ 6            Operator                            Average above target by more than 4 g for two checks in a row: tell the
+                                                  Line Lead. Operators must not change the fill setpoint.
+
+ 7            Line Lead                           Call the Maintenance Technician to adjust the filler. Only the Maintenance
+                                                  Technician changes the setpoint, and the change is written on the chart.
+
+ 8            QA Technician                       Review every chart before the end of the shift and initial it.
+
+Note: Limits and targets for each product are in WI-210.
+
+R E L AT E D D O C U M E N T S
+
+     WI-210 Filler Setup and Nozzle Check
+     QP-315 Nonconforming Product and Hold
+
+RECORDS
+
+     FRM-QA-03 Fill Weight Chart
+
+R E V I S I O N H I S T O RY
+
+ REV         D AT E                  CHANGE
+
+
+ F           2024-01-15              Setpoint changes restricted to maintenance after overfill findings.
+
+ E           2022-03-07              Sample size raised from 3 to 5.
+
+
+QP-303 Fill Weight Checks Rev F. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

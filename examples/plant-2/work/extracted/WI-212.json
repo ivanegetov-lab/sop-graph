@@ -1,0 +1,50 @@
+{
+  "doc": {"id": "WI-212", "title": "Labeler Setup and Label Roll Change", "type": "Work Instruction", "rev": "D", "effective": "2025-09-08", "owner": "Production", "file": "WI-212 Labeler Setup and Label Roll Change.pdf", "pages": 2,
+          "purpose": "Apply labels straight, wrinkle-free and in the right place, and change rolls without a line stop."},
+  "roles": [
+    {"name": "Operator", "does": "Sets up the labeler and changes rolls.", "where": "Roles"},
+    {"name": "Line Lead", "does": "Decides whether to stop the line for repeated jams.", "where": "Roles"},
+    {"name": "Maintenance Technician", "does": "Adjusts sensors and replaces rollers.", "where": "Roles"},
+    {"name": "QA Technician", "does": "Is called if jams continue on a second lot.", "where": "step 11"}
+  ],
+  "equipment": [
+    {"id": "LAB-1", "name": "Labeler 1", "where": "Scope"},
+    {"id": "LAB-2", "name": "Labeler 2", "where": "Scope"},
+    {"id": "LAB-3", "name": "Labeler 3", "where": "Scope"}
+  ],
+  "materials": [
+    {"name": "Labels", "where": "Materials"}
+  ],
+  "tools": [
+    {"name": "Splice tape", "where": "Tools"},
+    {"name": "Scissors", "where": "Tools"},
+    {"name": "Lint-free wipes", "where": "Tools"},
+    {"name": "Isopropyl alcohol", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-12", "name": "Label Roll Log", "where": "step 8"}
+  ],
+  "references": [
+    {"id": "QP-308", "as_written": "QP-308 Incoming Inspection of Packaging Materials", "rev": null, "where": "step 1 and Related documents"},
+    {"id": "QP-309", "as_written": "QP-309 Packaging Material Specifications and Approved Suppliers", "rev": null, "where": "step 1 and Related documents"},
+    {"id": "WI-215", "as_written": "WI-215 Label Splicing", "rev": null, "where": "step 7"},
+    {"id": "QP-315", "as_written": "QP-315 Nonconforming Product and Hold", "rev": null, "where": "step 10"}
+  ],
+  "parameters": [
+    {"what": "web tension setting", "applies_to": "dancer arm", "value": "mark 4", "where": "step 4", "quote": "Set web tension to mark 4 on the dancer arm."},
+    {"what": "jams or web breaks per hour that trigger a roll hold", "applies_to": "labeler", "value": "3", "unit": "per hour", "where": "step 10", "quote": "Three jams or web breaks in one hour: tell the Line Lead."}
+  ],
+  "rules": [
+    {"topic": "which suppliers' packaging may be used", "statement": "Rolls from a supplier not listed in QP-309 are not to be loaded.", "where": "step 1", "quote": "Rolls from a supplier not listed in QP-309 are not to be loaded."},
+    {"topic": "who releases packaging materials", "statement": "Operators load only label rolls with a green QA release sticker.", "where": "step 1", "quote": "Use only label rolls with a green QA release sticker (see QP-308)."},
+    {"topic": "who places product on hold", "statement": "The Operator puts a roll aside with a hold tag after three jams in an hour.", "where": "step 10", "quote": "Put the roll aside with a hold tag as described in QP-315 and load a roll from a different lot."}
+  ],
+  "unsure": [
+    {"what": "WI-215 Label Splicing is referenced but not in the document set", "why": "Not provided", "where": "step 7"},
+    {"what": "Rev D says 'Updated for the new Line 3 labeler' but no step mentions the liner caliper that QP-309 Rev G made critical", "why": "Only a gap if QP-309 step 3 expects the setup instruction to change; not stated", "where": "Revision history"}
+  ]
+}

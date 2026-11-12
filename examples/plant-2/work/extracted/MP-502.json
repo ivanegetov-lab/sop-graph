@@ -1,0 +1,46 @@
+{
+  "doc": {"id": "MP-502", "title": "Case Packer Vacuum Pump Inspection", "type": "Maintenance Procedure", "rev": "A", "effective": "2019-08-12", "owner": "Maintenance", "file": "MP-502 Case Packer Vacuum Pump Inspection.pdf", "pages": 2,
+          "purpose": "Find a failing vacuum pump before it stops the case packer."},
+  "roles": [
+    {"name": "Maintenance Technician", "does": "Carries out the inspection.", "where": "3.0 Responsibilities"},
+    {"name": "Maintenance Planner", "does": "Orders spare parts and schedules repairs.", "where": "3.0 Responsibilities"}
+  ],
+  "equipment": [
+    {"id": "CPK-1", "name": "Case packer 1", "where": "2.0 Scope"},
+    {"id": "CPK-2", "name": "Case packer 2", "where": "2.0 Scope"},
+    {"id": "CPK-3", "name": "Case packer 3", "where": "2.0 Scope"}
+  ],
+  "materials": [
+    {"name": "Vacuum pump inlet filter", "where": "4.0 Safety and materials"},
+    {"name": "Bearing VP-BRG-6205", "where": "4.0 Safety and materials"}
+  ],
+  "tools": [
+    {"name": "Infrared thermometer", "where": "4.0 Safety and materials"},
+    {"name": "Vacuum gauge", "where": "4.0 Safety and materials"},
+    {"name": "Stethoscope", "where": "4.0 Safety and materials"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "4.0 Safety and materials"},
+    {"name": "Hearing protection", "where": "4.0 Safety and materials"},
+    {"name": "Safety shoes", "where": "4.0 Safety and materials"}
+  ],
+  "forms": [
+    {"id": "Maintenance work order", "name": "Maintenance work order", "where": "5.0 Related documents and records"}
+  ],
+  "references": [
+    {"id": "SP-402", "as_written": "SP-402 Lockout/Tagout, Rev B", "rev": "B", "where": "5.0 and 7.0 step 1"},
+    {"id": "WI-213", "as_written": "WI-213 Case Packer Setup and Glue Check", "rev": null, "where": "5.0"}
+  ],
+  "parameters": [
+    {"what": "maximum bearing housing temperature", "applies_to": "vacuum pump", "value": "70", "unit": "degrees C", "where": "6.0 step 2", "quote": "More than 70 degrees C, or more than 15 degrees above last month, is a fail."},
+    {"what": "maximum bearing temperature rise since last month", "applies_to": "vacuum pump", "value": "15", "unit": "degrees C", "where": "6.0 step 2", "quote": "More than 70 degrees C, or more than 15 degrees above last month, is a fail."},
+    {"what": "minimum vacuum", "applies_to": "case packer", "value": "0.7", "unit": "bar", "where": "6.0 step 3", "quote": "Read the vacuum at the pump inlet with the erector idle: at least 0.7 bar of vacuum."},
+    {"what": "vacuum pump inspection interval", "applies_to": "case packer", "value": "monthly", "where": "2.0 Scope", "quote": "Monthly task in the maintenance system."},
+    {"what": "minimum bearing VP-BRG-6205 in stores", "applies_to": "vacuum pump", "value": "1", "unit": "bearing", "where": "7.0 step 4", "quote": "Keep at least one bearing VP-BRG-6205 in stores."}
+  ],
+  "rules": [
+    {"topic": "lockout method for case packers", "statement": "Case packers are locked out using the group lock box.", "where": "7.0 step 1", "quote": "Lock out the case packer using the group lock box, as described in SP-402, Rev B."}  ],
+  "unsure": [
+    {"what": "Vacuum reading is taken at the pump inlet with the erector idle (0.7 bar), WI-213 reads at the erector cups (0.6 bar)", "why": "Different measuring points; document does not say how they relate", "where": "6.0 step 3"}
+  ]
+}

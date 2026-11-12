@@ -1,0 +1,75 @@
+      QUALITY                                                                                   QP-315
+     PROCEDURE             Nonconforming Product and Hold                                       Rev C
+
+                                                                                                By: P. Nakamura
+ PLANT 2                   Dept: Quality               Effective: 2022-04-18
+                                                                                                Appr: H. Costa
+
+
+ Purpose
+
+Keep product or material that might be wrong from being shipped or used.
+
+ Scope
+
+Finished product, product in process and packaging materials.
+
+ Roles
+
+ Role                            Responsibility
+
+ Anyone                          May place product on hold.
+
+ QA Technician                   Decides what happens to held product.
+
+ Team Leader                     Makes sure held product is tagged and moved.
+
+ Quality Manager                 Approves scrap above 500 dollars.
+
+
+ PPE                                       Tools                                 Materials
+
+     Safety shoes                           Red HOLD tags                      None.
+
+ Procedure
+
+Placing a hold
+ Step      Who                      Action
+
+ 1         Anyone                   Attach FRM-QA-15 Hold Tag to every pallet, roll or tote in question. Write the
+                                    reason, the lot code and your name.
+
+ 2         Team Leader              Move held product to the hold cage the same shift. Nothing on hold stays at
+                                    the line.
+
+ 3         Team Leader              Tell the QA Technician.
+
+Disposition
+ Step      Who                      Action
+
+ 4         QA Technician            Inspect within one working day. Decide: release, rework, return to supplier or
+                                    scrap.
+
+ 5         QA Technician            Rework follows QP-318.
+
+ 6         QA Technician            Record the decision on FRM-QA-16 Disposition Record. Scrap above 500
+                                    dollars needs the Quality Manager's signature.
+ 7          QA Technician                   If held product has already shipped, start a lot trace as described in QP-316.
+
+
+ Related documents                                                        Records
+
+     QP-318 Rework                                                           FRM-QA-15 Hold Tag
+     QP-316 Customer Complaints and Lot Trace                                FRM-QA-16 Disposition Record
+
+ Revision history
+
+ Rev                 Date                                   Change
+
+ C                   2022-04-18                             Work-instruction template.
+
+ B                   2020-09-14                             Scrap approval limit added.
+
+
+QP-315 Nonconforming Product and Hold Rev C. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

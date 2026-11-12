@@ -1,0 +1,39 @@
+{
+  "doc": {"id": "QP-315", "title": "Nonconforming Product and Hold", "type": "Quality Procedure", "rev": "C", "effective": "2022-04-18", "owner": "Quality", "file": "QP-315 Nonconforming Product and Hold.pdf", "pages": 2,
+          "purpose": "Keep product or material that might be wrong from being shipped or used."},
+  "roles": [
+    {"name": "Anyone", "does": "May place product on hold.", "where": "Roles"},
+    {"name": "QA Technician", "does": "Decides what happens to held product.", "where": "Roles"},
+    {"name": "Team Leader", "does": "Makes sure held product is tagged and moved.", "where": "Roles"},
+    {"name": "Quality Manager", "does": "Approves scrap above 500 dollars.", "where": "Roles"}
+  ],
+  "materials": [],
+  "tools": [
+    {"name": "Red HOLD tags", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-QA-15", "name": "Hold Tag", "where": "step 1"},
+    {"id": "FRM-QA-16", "name": "Disposition Record", "where": "step 6"}
+  ],
+  "references": [
+    {"id": "QP-318", "as_written": "QP-318 Rework", "rev": null, "where": "step 5"},
+    {"id": "QP-316", "as_written": "QP-316 Customer Complaints and Lot Trace", "rev": null, "where": "step 7"}
+  ],
+  "parameters": [
+    {"what": "scrap value needing Quality Manager signature", "applies_to": "held product disposition", "value": "500", "unit": "dollars", "where": "step 6", "quote": "Scrap above 500 dollars needs the Quality Manager's signature."},
+    {"what": "time to inspect held product", "applies_to": "held product", "value": "1", "unit": "working day", "where": "step 4", "quote": "Inspect within one working day."},
+    {"what": "time to move held product to the hold cage", "applies_to": "held product", "value": "same shift", "where": "step 2", "quote": "Move held product to the hold cage the same shift."}
+  ],
+  "rules": [
+    {"topic": "who places product on hold", "statement": "Anyone may place product on hold.", "where": "Roles", "quote": "Anyone May place product on hold."},
+    {"topic": "who moves held product to the hold cage", "statement": "The Team Leader moves held product to the hold cage the same shift.", "where": "step 2", "quote": "Move held product to the hold cage the same shift. Nothing on hold stays at the line."},
+    {"topic": "who approves scrap above 500 dollars", "statement": "Scrap above 500 dollars needs the Quality Manager's signature.", "where": "step 6", "quote": "Scrap above 500 dollars needs the Quality Manager's signature."}
+  ],
+  "unsure": [
+    {"what": "Team Leader is not a role in any other document", "why": "May be the Line Lead or Shift Lead; not stated", "where": "Roles / steps 2 and 3"},
+    {"what": "QP-318 Rework is referenced but its content is not in the document set", "why": "Not provided", "where": "step 5"}
+  ]
+}

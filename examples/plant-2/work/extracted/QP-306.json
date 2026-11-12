@@ -1,0 +1,41 @@
+{
+  "doc": {"id": "QP-306", "title": "First-Off Approval", "type": "Quality Procedure", "rev": "C", "effective": "2024-05-20", "owner": "Quality", "file": "QP-306 First-Off Approval.pdf", "pages": 2,
+          "purpose": "Confirm the first product after a start-up or changeover is right before the line runs at rate."},
+  "roles": [
+    {"name": "QA Technician", "does": "Carries out the checks and signs.", "where": "Roles"},
+    {"name": "Operator", "does": "Supplies the samples.", "where": "Roles"},
+    {"name": "Line Lead", "does": "Holds the line until approval.", "where": "Roles"}
+  ],
+  "materials": [],
+  "tools": [
+    {"name": "Check scale (0.1 g)", "where": "Tools"},
+    {"name": "Torque tester", "where": "Tools"},
+    {"name": "Approved label artwork binder", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-QA-06", "name": "First-Off Record", "where": "step 7"}
+  ],
+  "references": [
+    {"id": "WI-210", "as_written": "limits in WI-210", "rev": null, "where": "step 2"},
+    {"id": "WI-211", "as_written": "WI-211 Capper Setup and Torque Check", "rev": null, "where": "step 3"},
+    {"id": "QP-316", "as_written": "QP-316 Customer Complaints and Lot Trace", "rev": null, "where": "step 5"},
+    {"id": "QP-303", "as_written": "QP-303 Fill Weight Checks", "rev": null, "where": "Related documents"}
+  ],
+  "parameters": [
+    {"what": "first-off bottles to QA bench", "applies_to": "start-up or changeover", "value": "5", "unit": "good bottles", "where": "step 1", "quote": "Bring the first 5 good bottles and one packed case to the QA bench."},
+    {"what": "label straightness tolerance", "applies_to": "first-off label check", "value": "2", "unit": "mm", "where": "step 4", "quote": "straight within 2 mm, no wrinkles or bubbles"},
+    {"what": "maximum line speed before first-off approval", "applies_to": "Lines 1, 2 and 3", "value": "50", "unit": "%", "where": "step 9", "quote": "Do not run above 50% speed before approval."}
+  ],
+  "rules": [
+    {"topic": "who gives first-off approval", "statement": "The QA Technician checks and signs first-off approval.", "where": "step 7", "quote": "All checks pass: sign FRM-QA-06 First-Off Record and tell the Line Lead."},
+    {"topic": "who holds the line until first-off approval", "statement": "The Line Lead holds the line until approval and corrects any fault.", "where": "step 8", "quote": "Any check fails: the line stays stopped. The Line Lead corrects the fault and a new first-off is taken."}
+  ],
+  "unsure": [
+    {"what": "Step 3 checks removal torque against 'the range in WI-211'", "why": "WI-211's table gives application torque with a tolerance, not a removal torque range", "where": "step 3"},
+    {"what": "Fill weight check says 'limits in WI-210'", "why": "WI-210 limits are per product; which product's limits apply is by context only", "where": "step 2"}
+  ]
+}

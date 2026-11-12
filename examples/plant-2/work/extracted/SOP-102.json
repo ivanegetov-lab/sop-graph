@@ -1,0 +1,37 @@
+{
+  "doc": {"id": "SOP-102", "title": "Line Shutdown and Shift Handover", "type": "Standard Operating Procedure", "rev": "C", "effective": "2024-09-02", "owner": "Production", "file": "SOP-102 Line Shutdown and Shift Handover.pdf", "pages": 2,
+          "purpose": "Leave the line clean, safe and documented for the next shift."},
+  "roles": [
+    {"name": "Line Lead", "does": "Writes the handover and meets the incoming Line Lead.", "where": "Roles"},
+    {"name": "Operator", "does": "Cleans and secures the machine.", "where": "Roles"}
+  ],
+  "materials": [
+    {"name": "Sanitizer", "where": "Materials"}
+  ],
+  "tools": [
+    {"name": "Scraper", "where": "Tools"},
+    {"name": "Lint-free wipes", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"},
+    {"name": "Chemical-resistant gloves", "where": "PPE (when cleaning the filler)"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-02", "name": "Shift Handover Log", "where": "step 6"},
+    {"id": "FRM-PR-09", "name": "Downtime Log Sheet", "where": "step 5"}
+  ],
+  "references": [
+    {"id": "QP-315", "as_written": "QP-315 Nonconforming Product and Hold", "rev": null, "where": "step 4"},
+    {"id": "SOP-101", "as_written": "SOP-101 Line Start-Up", "rev": null, "where": "step 8"}
+  ],
+  "parameters": [
+    {"what": "minimum stop length to log", "applies_to": "Lines 1, 2 and 3", "value": "3", "unit": "minutes", "where": "step 5", "quote": "Enter every stop of 3 minutes or longer in FRM-PR-09 Downtime Log Sheet with the cause and a short comment."},
+    {"what": "stop length that requires a full start-up", "applies_to": "Lines 1, 2 and 3", "value": "60", "unit": "minutes", "where": "step 8", "quote": "If the line will be down for more than 60 minutes, the next start follows SOP-101 in full."}
+  ],
+  "rules": [
+    {"topic": "who moves held product to the hold cage", "statement": "The Operator moves any product on hold to the hold cage at shutdown.", "where": "step 4", "quote": "Move any product on hold to the hold cage as described in QP-315."}  ],
+  "unsure": [
+    {"what": "Cleaning filler nozzles, the drip tray and the case packer reject bin (step 2) does not mention lockout", "why": "SP-402 scope covers cleaning that puts any part of the body inside a guard; SOP-102 does not reference SP-402", "where": "step 2"}
+  ]
+}

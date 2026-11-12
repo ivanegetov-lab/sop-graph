@@ -1,0 +1,94 @@
+     PLANT 2 · SAFETY PROCEDURE
+                                                                                                         SP-405
+     Forklift and Pedestrian Safety                                                                         Rev C
+
+
+  Effective                     Owner                         Prepared by                 Approved by
+  2024-08-05                    Safety                        T. Greene                   D. Whitfield
+
+
+PURPOSE
+
+Keep forklifts and people apart in the warehouse and at the dock doors.
+
+SCOPE
+
+Forklifts FL-01 to FL-04, the warehouse, and dock doors 1 to 4.
+
+ROLES
+
+ ROLE                                    RESPONSIBILITY
+
+
+ Forklift Driver                         Holds a current licence and does the daily check.
+
+ Warehouse Supervisor                    Keeps walkways and sightlines clear.
+
+ Safety Manager                          Reviews near-miss reports every week.
+
+
+PPE
+     High-visibility vest
+     Safety shoes
+
+TOOLS
+
+None.
+
+M AT E R I A L S
+
+None.
+
+PROCEDURE
+
+  Driving
+
+ STEP         WHO                        ACTION
+
+ 1            Forklift Driver            Complete FRM-SF-05 Forklift Daily Check before first use each shift. A
+                                         truck with a fault is tagged out.
+
+ 2            Forklift Driver            Maximum speed is 5 mph everywhere inside the building.
+
+ 3            Forklift Driver            Sound the horn at every corner, doorway and dock door. Stop if a
+                                         pedestrian is within 3 metres.
+
+ 4            Forklift Driver            Travel with forks lowered. Reverse if the load blocks the view.
+  Pedestrians and docks
+
+ STEP         WHO                                 ACTION
+
+ 5            Anyone                              Walk only in the marked green walkways. Make eye contact with the
+                                                  driver before crossing.
+
+ 6            Warehouse Supervisor                Nothing is stacked within 2 metres of a corner or a dock door where it
+                                                  could block a driver's view.
+
+ 7            Forklift Driver                     Before entering a trailer: wheels chocked, dock leveler (DOCK-1 to
+                                                  DOCK-4) locked in place.
+
+ 8            Anyone                              Report every near miss on FRM-SF-06 Near-Miss Card, the same shift.
+
+
+R E L AT E D D O C U M E N T S
+
+     TR-701 Training and Qualification
+     WH-601 Receiving and Put-Away
+
+RECORDS
+
+     FRM-SF-05 Forklift Daily Check
+     FRM-SF-06 Near-Miss Card
+
+R E V I S I O N H I S T O RY
+
+ REV                  D AT E                                    CHANGE
+
+
+ C                    2024-08-05                                Near-miss card added.
+
+ B                    2022-01-10                                Speed limit stated in mph.
+
+
+SP-405 Forklift and Pedestrian Safety Rev C. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

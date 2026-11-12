@@ -1,0 +1,84 @@
+     WAREHOUSE                                                                                  WH-601
+     PROCEDURE                Receiving and Put-Away                                            Rev C
+
+                                                                                                By: L. Mbeki
+  PLANT 2                     Dept: Warehouse               Effective: 2023-06-19
+                                                                                                Appr: D. Whitfield
+
+
+ Purpose
+
+Receive materials safely, check them against the order, and keep them in quarantine until Quality releases
+them.
+
+ Scope
+
+All deliveries at dock doors 1 to 4.
+
+ Roles
+
+ Role                                      Responsibility
+
+ Receiving Clerk                           Checks the delivery against the purchase order.
+
+ Forklift Driver                           Unloads and puts away.
+
+ Warehouse Supervisor                      Assigns dock doors and resolves shortages.
+
+ QA Technician                             Releases packaging materials.
+
+
+ PPE                                       Tools                                    Materials
+
+     High-visibility vest                    Pallet jack                              Bottles
+     Safety shoes                            Wheel chocks                             Caps
+     Cut-resistant gloves                    Barcode scanner                          Labels
+                                                                                      Shipper cases
+                                                                                      Raw chemicals
+
+ Procedure
+
+Unloading
+ Step       Who                        Action
+
+ 1          Warehouse Supervisor       Assign a dock door. Inbound packaging normally uses doors 3 and 4.
+
+ 2          Forklift Driver            Chock the trailer wheels and lock the dock leveler before entering.
+
+ 3          Forklift Driver            Drive at walking pace on the dock and in the receiving lanes: no faster than 3
+                                       mph.
+
+ 4          Receiving Clerk            Check the delivery against the purchase order: item, quantity, lot numbers,
+                                       damage. Note the time of arrival against the promised time.
+
+Quarantine and put-away
+ Step       Who                             Action
+
+ 5          Receiving Clerk                 Enter the delivery on FRM-WH-01 Receiving Log and in the inventory system.
+
+ 6          Receiving Clerk                 Packaging materials go to the quarantine lane with a yellow QUARANTINE
+                                            tag until the QA Technician releases them (see QP-308).
+
+ 7          Forklift Driver                 After release, put away to the location on the tag. Oldest lot in front.
+
+ 8          Warehouse Supervisor            A delivery more than 2 hours late, or short, is reported to Purchasing and to
+                                            the Production Planner the same shift.
+
+
+ Related documents                                                         Records
+
+     QP-308 Incoming Inspection of Packaging                                 FRM-WH-01 Receiving Log
+     Materials
+     SP-405 Forklift and Pedestrian Safety
+
+ Revision history
+
+ Rev                Date                                  Change
+
+ C                  2023-06-19                            Late delivery reporting added.
+
+ B                  2022-06-13                            Work-instruction template.
+
+
+WH-601 Receiving and Put-Away Rev C. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

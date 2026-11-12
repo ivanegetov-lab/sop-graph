@@ -1,0 +1,54 @@
+{
+  "doc": {"id": "MP-501", "title": "Filler Lubrication and Valve Seal Inspection", "type": "Maintenance Procedure", "rev": "B", "effective": "2020-02-17", "owner": "Maintenance", "file": "MP-501 Filler Lubrication and Valve Seal Inspection.pdf", "pages": 2,
+          "purpose": "Keep the rotary fillers filling accurately by lubricating the carousel and catching worn valve seals."},
+  "roles": [
+    {"name": "Maintenance Technician", "does": "Carries out the work.", "where": "3.0 Responsibilities"},
+    {"name": "Maintenance Planner", "does": "Schedules the work with production.", "where": "3.0 Responsibilities"},
+    {"name": "Shift Lead", "does": "Releases the line.", "where": "3.0 Responsibilities"},
+    {"name": "Operator", "does": "Repeats the nozzle check in WI-210 after any seal change.", "where": "7.0 step 4"}
+  ],
+  "equipment": [
+    {"id": "FIL-1", "name": "Filler 1", "where": "2.0 Scope"},
+    {"id": "FIL-2", "name": "Filler 2", "where": "2.0 Scope"},
+    {"id": "FIL-3", "name": "Filler 3", "where": "2.0 Scope"}
+  ],
+  "materials": [
+    {"name": "Food-grade grease (H1)", "where": "4.0 Safety and materials"},
+    {"name": "Fill valve seal kit", "where": "4.0 Safety and materials"}
+  ],
+  "tools": [
+    {"name": "Grease gun", "where": "4.0 Safety and materials"},
+    {"name": "Nozzle wrench", "where": "4.0 Safety and materials"},
+    {"name": "Seal pick", "where": "4.0 Safety and materials"},
+    {"name": "Inspection light", "where": "4.0 Safety and materials"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "4.0 Safety and materials"},
+    {"name": "Nitrile gloves", "where": "4.0 Safety and materials"},
+    {"name": "Safety shoes", "where": "4.0 Safety and materials"}
+  ],
+  "forms": [
+    {"id": "Maintenance work order", "name": "Maintenance work order", "where": "5.0 Related documents and records"}
+  ],
+  "references": [
+    {"id": "SP-402", "as_written": "SP-402 Lockout/Tagout", "rev": null, "where": "5.0 and 6.0 step 1"},
+    {"id": "WI-210", "as_written": "WI-210 Filler Setup and Nozzle Check", "rev": null, "where": "5.0 and 7.0 step 4"}
+  ],
+  "parameters": [
+    {"what": "lubrication interval", "applies_to": "filler", "value": "14", "unit": "days", "where": "6.0 heading", "quote": "EVERY 14 DAYS: LUBRICATION AND NOZZLE INSPECTION"},
+    {"what": "valve seal inspection interval", "applies_to": "filler", "value": "90", "unit": "days", "where": "7.0 heading", "quote": "EVERY 90 DAYS: VALVE SEAL INSPECTION"},
+    {"what": "grease strokes per point", "applies_to": "carousel bearing and lift cams", "value": "3", "unit": "strokes", "where": "6.0 step 2", "quote": "3 strokes at each point"},
+    {"what": "empty run time after lubrication", "applies_to": "filler", "value": "2", "unit": "minutes", "where": "6.0 step 4", "quote": "Run the filler empty for 2 minutes and listen for noise."},
+    {"what": "valve seal inspection sample", "applies_to": "filler valves", "value": "2", "unit": "valves", "where": "7.0 step 1", "quote": "Remove two valves, chosen from different sides of the carousel."},
+    {"what": "worn seal share that triggers full set replacement", "applies_to": "filler valve seals", "value": "more than one third", "where": "7.0 step 3", "quote": "If more than a third are worn, replace the full set."}
+  ],
+  "rules": [
+    {"topic": "who removes lockout locks", "statement": "The Maintenance Technician removes the locks after the lubrication work.", "where": "6.0 step 4", "quote": "Maintenance Technician: Remove locks. Run the filler empty for 2 minutes"},
+    {"topic": "who repeats the nozzle check after a seal change", "statement": "After any seal change the operator, not the Maintenance Technician, repeats the WI-210 nozzle check before the line is released.", "where": "7.0 step 4", "quote": "After any seal change, the operator repeats the nozzle check in WI-210 before the line is released."},
+    {"topic": "who releases the line", "statement": "The Shift Lead releases the line.", "where": "3.0 Responsibilities", "quote": "Shift Lead Releases the line."}
+  ],
+  "unsure": [
+    {"what": "Step 4 of section 7.0 is written as a Maintenance Technician step but assigns the action to 'the operator'", "why": "Unclear who actually repeats the nozzle check; WI-210 has no 'repeat after seal change' step", "where": "7.0 step 4"},
+    {"what": "Shift Lead, a role not used in the Line Lead procedures", "why": "May be the same person as the Line Lead; not stated", "where": "3.0 Responsibilities"}
+  ]
+}

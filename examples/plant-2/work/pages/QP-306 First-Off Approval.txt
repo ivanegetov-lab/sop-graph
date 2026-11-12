@@ -1,0 +1,95 @@
+     PLANT 2 · QUALITY PROCEDURE
+                                                                                                             QP-306
+     First-Off Approval                                                                                         Rev C
+
+
+  Effective                    Owner                           Prepared by                     Approved by
+  2024-05-20                   Quality                         P. Nakamura                     H. Costa
+
+
+PURPOSE
+
+Confirm the first product after a start-up or changeover is right before the line runs at rate.
+
+SCOPE
+
+Every start-up, product changeover and size changeover on Lines 1, 2 and 3.
+
+ROLES
+
+ ROLE                                    RESPONSIBILITY
+
+
+ QA Technician                           Carries out the checks and signs.
+
+ Operator                                Supplies the samples.
+
+ Line Lead                               Holds the line until approval.
+
+
+PPE
+     Safety glasses
+     Safety shoes
+
+TOOLS
+
+     Check scale (0.1 g)
+     Torque tester
+     Approved label artwork binder
+
+M AT E R I A L S
+
+None.
+
+PROCEDURE
+
+  Checks
+
+ STEP         WHO                         ACTION
+
+ 1            Operator                    Bring the first 5 good bottles and one packed case to the QA bench.
+
+ 2            QA Technician               Fill weight: all 5 bottles inside the limits in WI-210.
+
+ 3            QA Technician               Cap: correct cap, removal torque inside the range in WI-211.
+
+ 4            QA Technician               Label: correct artwork against the binder, straight within 2 mm, no
+                                          wrinkles or bubbles.
+ 5            QA Technician                       Lot code: readable, correct format (see QP-316), correct date and shift.
+
+ 6            QA Technician                       Case: correct count, case label matches the product, glue seal good.
+
+
+  Decision
+
+ STEP         WHO                                 ACTION
+
+
+ 7            QA Technician                       All checks pass: sign FRM-QA-06 First-Off Record and tell the Line Lead.
+
+ 8            QA Technician                       Any check fails: the line stays stopped. The Line Lead corrects the fault
+                                                  and a new first-off is taken.
+
+ 9            Line Lead                           Do not run above 50% speed before approval.
+
+
+R E L AT E D D O C U M E N T S
+
+     QP-303 Fill Weight Checks
+     WI-211 Capper Setup and Torque Check
+     QP-316 Customer Complaints and Lot Trace
+
+RECORDS
+     FRM-QA-06 First-Off Record
+
+R E V I S I O N H I S T O RY
+
+ REV                    D AT E                                      CHANGE
+
+ C                      2024-05-20                                  Lot code check added.
+
+ B                      2022-01-10                                  Case check added.
+
+
+QP-306 First-Off Approval Rev C. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

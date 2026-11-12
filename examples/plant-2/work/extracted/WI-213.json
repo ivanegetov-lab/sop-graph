@@ -1,0 +1,45 @@
+{
+  "doc": {"id": "WI-213", "title": "Case Packer Setup and Glue Check", "type": "Work Instruction", "rev": "B", "effective": "2022-08-22", "owner": "Production", "file": "WI-213 Case Packer Setup and Glue Check.pdf", "pages": 2,
+          "purpose": "Erect, pack and seal shipper cases that survive the pallet."},
+  "roles": [
+    {"name": "Operator", "does": "Sets up the case packer.", "where": "Roles"},
+    {"name": "Maintenance Technician", "does": "Services the glue system and the vacuum pump.", "where": "Roles"}
+  ],
+  "equipment": [
+    {"id": "CPK-1", "name": "Case packer 1", "where": "Scope"},
+    {"id": "CPK-2", "name": "Case packer 2", "where": "Scope"},
+    {"id": "CPK-3", "name": "Case packer 3", "where": "Scope"}
+  ],
+  "materials": [
+    {"name": "Shipper cases", "where": "Materials"},
+    {"name": "Hot-melt glue", "where": "Materials"}
+  ],
+  "tools": [
+    {"name": "Infrared thermometer", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Heat-resistant gloves", "where": "PPE (at the glue tank)"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-13", "name": "Case Seal Check", "where": "step 5"}
+  ],
+  "references": [
+    {"id": "MP-502", "as_written": "MP-502 Case Packer Vacuum Pump Inspection", "rev": null, "where": "step 6 and Related documents"},
+    {"id": "SP-402", "as_written": "SP-402 Lockout/Tagout", "rev": null, "where": "step 7 and Related documents"}
+  ],
+  "parameters": [
+    {"what": "glue tank temperature", "applies_to": "case packer", "value": "175", "unit": "degrees C", "where": "step 2", "quote": "Glue tank set to 175 degrees C."},
+    {"what": "minimum vacuum", "applies_to": "case packer", "value": "0.6", "unit": "bar", "where": "step 3", "quote": "Check the vacuum gauge on the case erector reads at least 0.6 bar of vacuum with a case on the cups."},
+    {"what": "setup test cases", "applies_to": "case packer", "value": "3", "unit": "cases", "where": "step 4", "quote": "Run three cases. Check they are square and that all four flaps are glued."},
+    {"what": "case seal check interval", "applies_to": "case packer", "value": "1", "unit": "hour", "where": "step 5", "quote": "Every hour: tear open one sealed case."}
+  ],
+  "rules": [
+    {"topic": "lockout method for case packers", "statement": "For any work inside the guards the Operator locks out as described in SP-402 (no revision given).", "where": "step 7", "quote": "For any work inside the guards, lock out as described in SP-402."},
+    {"topic": "who services the vacuum pump", "statement": "Operators check the cups, then call the Maintenance Technician for low vacuum.", "where": "step 6", "quote": "Low vacuum or cases not erecting: check the cups for wear, then call the Maintenance Technician (see MP-502)."}
+  ],
+  "unsure": [
+    {"what": "Rev B (2022) says nothing about the glue tank cool-down or tagged lid that SP-402 Rev D (2025) added for case packers", "why": "WI-213 just points to SP-402 and does not say who locks out beyond 'the Operator'", "where": "step 7"}
+  ]
+}

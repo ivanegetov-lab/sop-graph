@@ -1,0 +1,86 @@
+        WORK                                                                                   WI-211
+     INSTRUCTION           Capper Setup and Torque Check                                       Rev C
+
+                                                                                               By: S. Lindqvist
+ PLANT 2                   Dept: Production                Effective: 2022-11-07
+                                                                                               Appr: D. Whitfield
+
+
+ Purpose
+
+Apply caps at the right torque so bottles neither leak nor are too hard to open.
+
+ Scope
+
+CAP-1, CAP-2 and CAP-3.
+
+ Roles
+
+ Role                                           Responsibility
+
+ Operator                                       Sets up the capper and checks torque.
+
+ Maintenance Technician                         Replaces chucks and adjusts clutches.
+
+
+ PPE                                    Tools                                      Materials
+
+     Safety glasses                       Torque tester                             Caps (28 mm)
+     Safety shoes                         Chuck wrench                              Caps (38 mm)
+
+
+  CAUTION: Cross-threaded caps mean the head height is wrong. Do not raise the torque to
+  compensate.
+
+
+ Procedure
+
+Setup
+ Step      Who                      Action
+
+ 1         Operator                 Fill the cap hopper. Check the cap chute is free and the caps are the right size
+                                    and colour for the product.
+
+ 2         Operator                 Set the head height so the chuck sits square on the cap with the bottle on the
+                                    plate.
+
+ 3         Operator                 Set the application torque from the table below.
+
+Torque check
+
+ Step      Who                      Action
+
+ 4         Operator                 At start-up and every 2 hours: take one bottle from each capping head.
+                                    Measure removal torque with the torque tester.
+
+ 5         Operator                 Write the values on FRM-PR-11 Torque Check Sheet.
+ 6          Operator                        One head out of range: adjust that head and re-check. Two or more heads out
+                                            of range: stop the line and call the Maintenance Technician.
+
+ 7          Operator                        Product capped since the last good check goes on hold as described in QP-
+                                            315.
+
+Application torque
+
+ Cap               Used on                                                       Torque (in-lb)                Tolerance
+
+ 28 mm             Lines 1 and 3 (CAP-1, CAP-3)                                  12                            plus or minus 2
+
+ 38 mm             Line 2 (CAP-2), both bottle sizes                             17                            plus or minus 2
+
+
+ Related documents                                                         Records
+
+     QP-315 Nonconforming Product and Hold                                   FRM-PR-11 Torque Check Sheet
+
+ Revision history
+
+ Rev         Date                    Change
+
+ C           2022-11-07              38 mm torque raised from 15 to 17 in-lb after leak complaints.
+
+ B           2022-06-13              Work-instruction template.
+
+
+WI-211 Capper Setup and Torque Check Rev C. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

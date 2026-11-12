@@ -1,0 +1,103 @@
+     PLANT 2 · SAFETY PROCEDURE
+                                                                                                       SP-402
+     Lockout/Tagout                                                                                       Rev D
+
+
+  Effective                    Owner                         Prepared by                Approved by
+  2025-03-03                   Safety                        T. Greene                  D. Whitfield
+
+
+PURPOSE
+
+Make sure no machine can start or release stored energy while someone is working inside it.
+
+SCOPE
+
+All servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at
+Plant 2.
+
+ROLES
+
+ ROLE                    RESPONSIBILITY
+
+
+ Authorized              Applies their own lock and tag. Operators and Maintenance Technicians who are trained
+ Employee                and listed.
+
+ Line Lead               Makes sure everyone affected knows the machine is locked out.
+
+ Safety Manager          Audits this procedure every year.
+
+
+PPE
+
+     Safety glasses
+     Safety shoes
+
+TOOLS
+     Personal padlock (one key)
+     Lockout hasp
+     Danger tag
+     Valve lockout device
+     Voltage tester
+
+M AT E R I A L S
+None.
+
+PROCEDURE
+
+  Applying
+
+ STEP         WHO                       ACTION
+
+
+ 1            Authorized Employee       Tell the Line Lead and the operators which machine is being locked out.
+
+ 2            Authorized Employee       Stop the machine with its normal stop button.
+ 3            Authorized Employee                Switch off and lock the electrical disconnect. Close and lock the
+                                                 compressed air isolation valve. Bleed the air.
+
+ 4            Authorized Employee                Case packers: also wait for the glue tank to cool below 60 degrees C or
+                                                 keep the tank lid closed and tagged.
+
+ 5            Authorized Employee                One person, one lock, one key. Each person working on the machine
+                                                 applies their own lock to the hasp.
+
+ 6            Authorized Employee                Try to start the machine. Confirm nothing moves. Test for voltage where
+                                                 electrical work is planned.
+
+
+  Removing
+
+ STEP         WHO                                ACTION
+
+
+ 7            Authorized Employee                Tools out, guards back, everyone clear.
+
+ 8            Authorized Employee                Each person removes only their own lock. A lock left on at shift change
+                                                 stays until its owner removes it or the Safety Manager authorises
+                                                 removal.
+
+ 9            Authorized Employee                Tell the Line Lead the machine is ready to start.
+
+
+R E L AT E D D O C U M E N T S
+     TR-701 Training and Qualification
+
+RECORDS
+
+     FRM-SF-02 Lockout Audit Form
+
+R E V I S I O N H I S T O RY
+
+ REV         D AT E                CHANGE
+
+ D           2025-03-03            Glue tank added as a stored energy source. Group lock box removed.
+
+ C           2023-02-06            New template.
+
+ B           2020-06-01            Group lock box introduced.
+
+
+SP-402 Lockout/Tagout Rev D. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

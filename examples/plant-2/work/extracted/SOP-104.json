@@ -1,0 +1,61 @@
+{
+  "doc": {"id": "SOP-104", "title": "Size Changeover, Line 2 (2 L and 500 ml)", "type": "Standard Operating Procedure", "rev": "B", "effective": "2021-03-15", "owner": "Production", "file": "SOP-104 Size Changeover Line 2 2 L and 500 ml.pdf", "pages": 2,
+          "purpose": "Change Line 2 between the 2 L and the 500 ml fabric softener bottle."},
+  "roles": [
+    {"name": "Shift Lead", "does": "Releases the line for changeover and signs the record.", "where": "3.0 Responsibilities"},
+    {"name": "Operator", "does": "Carries out the changeover.", "where": "3.0 Responsibilities"},
+    {"name": "Maintenance Technician", "does": "Fits the filler change parts.", "where": "3.0 Responsibilities"},
+    {"name": "QA Technician", "does": "Gives first-off approval.", "where": "3.0 Responsibilities"}
+  ],
+  "equipment": [
+    {"id": "FIL-2", "name": "Filler 2", "where": "6.0 step 4"},
+    {"id": "CAP-2", "name": "Capper 2", "where": "6.0 step 4"},
+    {"id": "LAB-2", "name": "Labeler 2", "where": "7.0 step 4"},
+    {"id": "CPK-2", "name": "Case packer 2", "where": "7.0 step 5"},
+    {"id": "CNV-2", "name": "Conveyor 2", "where": "7.0 step 6"}
+  ],
+  "materials": [
+    {"name": "Bottles", "where": "4.0 Safety and materials"},
+    {"name": "Caps (38 mm)", "where": "4.0 Safety and materials"},
+    {"name": "Labels", "where": "4.0 Safety and materials"},
+    {"name": "Shipper cases", "where": "4.0 Safety and materials"}
+  ],
+  "tools": [
+    {"name": "Change parts kit", "where": "4.0 Safety and materials (stored in the maintenance crib)"},
+    {"name": "Torque tester", "where": "4.0 Safety and materials"},
+    {"name": "Hex key set", "where": "4.0 Safety and materials"},
+    {"name": "Feeler gauge", "where": "4.0 Safety and materials"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "4.0 Safety and materials"},
+    {"name": "Safety shoes", "where": "4.0 Safety and materials"},
+    {"name": "Cut-resistant gloves", "where": "4.0 Safety and materials"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-04", "name": "Changeover Record", "where": "8.0 step 3"}
+  ],
+  "references": [
+    {"id": "SP-402", "as_written": "SP-402 Lockout/Tagout", "rev": null, "where": "5.0, 6.0 step 4, 7.0 step 7"},
+    {"id": "WI-210", "as_written": "WI-210 Filler Setup and Nozzle Check", "rev": null, "where": "5.0 and 8.0 step 1"},
+    {"id": "WI-212", "as_written": "WI-212 Labeler Setup and Label Roll Change", "rev": null, "where": "5.0 and 7.0 step 4"},
+    {"id": "QP-306", "as_written": "QP-306 First-Off Approval", "rev": null, "where": "5.0 and 8.0 step 2"},
+    {"id": "SOP-105", "as_written": "SOP-105 Product Changeover and Line Clearance", "rev": null, "where": "5.0 and 6.0 step 3"}
+  ],
+  "parameters": [
+    {"what": "application torque", "applies_to": "38 mm cap", "value": "15", "unit": "in-lb", "tolerance": "plus or minus 2", "where": "7.0 step 3", "quote": "Set the application torque to 15 in-lb, plus or minus 2."},
+    {"what": "torque check sample at changeover", "applies_to": "CAP-2", "value": "3", "unit": "bottles", "where": "7.0 step 3", "quote": "Check three bottles with the torque tester."},
+    {"what": "pack pattern", "applies_to": "2 L", "value": "6", "unit": "per case", "where": "7.0 step 5", "quote": "6 per case for 2 L, 12 per case for 500 ml"},
+    {"what": "pack pattern", "applies_to": "500 ml", "value": "12", "unit": "per case", "where": "7.0 step 5", "quote": "6 per case for 2 L, 12 per case for 500 ml"},
+    {"what": "conveyor guide rail clearance", "applies_to": "CNV-2", "value": "3", "unit": "mm each side", "where": "7.0 step 6", "quote": "adjust the guide rails to the bottle width plus 3 mm on each side."},
+    {"what": "target changeover time", "applies_to": "Line 2 size changeover", "value": "45", "unit": "minutes", "where": "8.0 note", "quote": "Target changeover time: 45 minutes in either direction."}
+  ],
+  "rules": [
+    {"topic": "who removes lockout locks", "statement": "The Maintenance Technician removes locks and tags after the changeover.", "where": "7.0 step 7", "quote": "Maintenance Technician: Remove locks and tags as described in SP-402."},
+    {"topic": "who releases the line", "statement": "The Shift Lead releases the line for changeover and signs the record.", "where": "3.0 Responsibilities", "quote": "Releases the line for changeover and signs the record."},
+    {"topic": "lockout scope for Line 2 size changeover", "statement": "Only FIL-2 and CAP-2 are locked out, though changes are also made on LAB-2, CPK-2 and CNV-2.", "where": "6.0 step 4", "quote": "Maintenance Technician: Lock out FIL-2 and CAP-2 as described in SP-402."}
+  ],
+  "unsure": [
+    {"what": "Products FS-2000 and FS-0500 are named in scope but the schema has no field for products", "why": "Not extracted as a node", "where": "2.0 Scope"},
+    {"what": "Steps 7.0.4 to 7.0.6 (labeler, case packer, conveyor changes) are done by the Operator with no lockout stated", "why": "Only FIL-2 and CAP-2 are locked out in 6.0 step 4; unclear whether the other machines are inside guards", "where": "6.0 step 4 / 7.0 steps 4-6"}
+  ]
+}

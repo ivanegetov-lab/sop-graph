@@ -1,0 +1,56 @@
+{
+  "doc": {"id": "TR-701", "title": "Training and Qualification", "type": "Training Procedure", "rev": "D", "effective": "2024-02-12", "owner": "Human Resources", "file": "TR-701 Training and Qualification.pdf", "pages": 3,
+          "purpose": "Make sure nobody carries out a procedure they have not been trained and signed off on."},
+  "roles": [
+    {"name": "Training Coordinator", "does": "Keeps the training matrix.", "where": "Roles"},
+    {"name": "Line Lead", "does": "Signs off operators on the line.", "where": "Roles"},
+    {"name": "Department Manager", "does": "Approves the list of required procedures for each role.", "where": "Roles"}
+  ],
+  "materials": [],
+  "tools": [],
+  "ppe": [],
+  "forms": [
+    {"id": "FRM-TR-01", "name": "Training Matrix", "where": "step 1"},
+    {"id": "FRM-TR-02", "name": "Sign-Off Sheet", "where": "step 2"}
+  ],
+  "references": [
+    {"id": "SOP-101", "as_written": "SOP-101 Line Start-Up", "rev": null, "where": "Related documents"},
+    {"id": "SOP-102", "as_written": "SOP-102 Line Shutdown and Shift Handover", "rev": null, "where": "Related documents"},
+    {"id": "SOP-104", "as_written": "SOP-104 Size Changeover, Line 2", "rev": null, "where": "Related documents"},
+    {"id": "SOP-105", "as_written": "SOP-105 Product Changeover and Line Clearance", "rev": null, "where": "Related documents"},
+    {"id": "WI-210", "as_written": "WI-210 Filler Setup and Nozzle Check", "rev": null, "where": "Related documents"},
+    {"id": "WI-211", "as_written": "WI-211 Capper Setup and Torque Check, Rev A", "rev": "A", "where": "Required procedures by role; Related documents"},
+    {"id": "WI-212", "as_written": "WI-212 Labeler Setup and Label Roll Change", "rev": null, "where": "Related documents"},
+    {"id": "WI-213", "as_written": "WI-213 Case Packer Setup and Glue Check", "rev": null, "where": "Related documents"},
+    {"id": "QP-303", "as_written": "QP-303 Fill Weight Checks", "rev": null, "where": "Related documents"},
+    {"id": "QP-306", "as_written": "QP-306 First-Off Approval", "rev": null, "where": "Related documents"},
+    {"id": "QP-308", "as_written": "QP-308 Incoming Inspection of Packaging Materials", "rev": null, "where": "Related documents"},
+    {"id": "QP-315", "as_written": "QP-315 Nonconforming Product and Hold", "rev": null, "where": "Related documents"},
+    {"id": "SP-402", "as_written": "SP-402 Lockout/Tagout", "rev": null, "where": "Related documents"},
+    {"id": "SP-405", "as_written": "SP-405 Forklift and Pedestrian Safety", "rev": null, "where": "Related documents"},
+    {"id": "MP-501", "as_written": "MP-501 Filler Lubrication and Valve Seal Inspection", "rev": null, "where": "Related documents"},
+    {"id": "MP-502", "as_written": "MP-502 Case Packer Vacuum Pump Inspection", "rev": null, "where": "Related documents"},
+    {"id": "WH-601", "as_written": "WH-601 Receiving and Put-Away", "rev": null, "where": "Related documents"}
+  ],
+  "parameters": [
+    {"what": "retraining window after a procedure is revised", "applies_to": "everyone trained on the procedure", "value": "30", "unit": "days", "where": "step 3", "quote": "When a procedure is revised, everyone trained on it is retrained within 30 days."},
+    {"what": "required procedures review interval", "applies_to": "each role", "value": "1", "unit": "year", "where": "step 4", "quote": "Review the required procedures for each role every year."}
+  ],
+  "rules": [
+    {"topic": "who signs off new operators", "statement": "The Line Lead signs off a new operator on FRM-TR-02 for each required procedure.", "where": "step 2", "quote": "A new operator works with a qualified operator until signed off on FRM-TR-02 Sign-Off Sheet"},
+    {"topic": "who tells the Training Coordinator of a revision", "statement": "The document owner tells the Training Coordinator on the day of issue.", "where": "step 3", "quote": "The document owner tells the Training Coordinator on the day of issue."}
+  ],
+  "training": [
+    {"role": "Operator", "docs": [{"id": "SOP-101", "rev": null}, {"id": "SOP-102", "rev": null}, {"id": "SOP-104", "rev": null}, {"id": "SOP-105", "rev": null}, {"id": "WI-210", "rev": null}, {"id": "WI-211", "rev": "A"}, {"id": "WI-212", "rev": null}, {"id": "WI-213", "rev": null}, {"id": "QP-303", "rev": null}, {"id": "QP-315", "rev": null}, {"id": "SP-402", "rev": null}], "where": "Required procedures by role (SOP-104 Line 2 only)"},
+    {"role": "Line Lead", "docs": [{"id": "SOP-101", "rev": null}, {"id": "SOP-102", "rev": null}, {"id": "SOP-104", "rev": null}, {"id": "SOP-105", "rev": null}, {"id": "WI-210", "rev": null}, {"id": "WI-211", "rev": "A"}, {"id": "WI-212", "rev": null}, {"id": "WI-213", "rev": null}, {"id": "QP-303", "rev": null}, {"id": "QP-315", "rev": null}, {"id": "SP-402", "rev": null}, {"id": "QP-306", "rev": null}], "where": "Required procedures by role ('Everything for Operator, plus QP-306')"},
+    {"role": "QA Technician", "docs": [{"id": "QP-303", "rev": null}, {"id": "QP-306", "rev": null}, {"id": "QP-308", "rev": null}, {"id": "QP-315", "rev": null}, {"id": "SP-405", "rev": null}], "where": "Required procedures by role"},
+    {"role": "Maintenance Technician", "docs": [{"id": "SP-402", "rev": null}, {"id": "MP-501", "rev": null}, {"id": "MP-502", "rev": null}, {"id": "WI-210", "rev": null}, {"id": "WI-213", "rev": null}], "where": "Required procedures by role"},
+    {"role": "Forklift Driver", "docs": [{"id": "SP-405", "rev": null}, {"id": "WH-601", "rev": null}], "where": "Required procedures by role"},
+    {"role": "Receiving Clerk", "docs": [{"id": "WH-601", "rev": null}, {"id": "QP-308", "rev": null}, {"id": "SP-405", "rev": null}], "where": "Required procedures by role"}
+  ],
+  "unsure": [
+    {"what": "Line Lead row says 'Everything for Operator, plus QP-306'; expanded here to the Operator list plus QP-306", "why": "Expansion is mine, not printed", "where": "Required procedures by role"},
+    {"what": "Operator row names WI-211 'Rev A', while the current WI-211 is Rev C", "why": "May be intentional pinning or a stale revision; not explained", "where": "Required procedures by role"},
+    {"what": "No row for Shift Lead, Team Leader, Batching Operator, Quality Manager, Warehouse Supervisor, Purchasing, Authorized Employee", "why": "Roles used in other procedures but absent from the training table", "where": "Required procedures by role"}
+  ]
+}

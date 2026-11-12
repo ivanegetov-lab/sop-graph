@@ -1,0 +1,96 @@
+        WORK                                                                                       WI-210
+     INSTRUCTION            Filler Setup and Nozzle Check                                          Rev D
+
+                                                                                                   By: S. Lindqvist
+  PLANT 2                   Dept: Production                  Effective: 2023-04-03
+                                                                                                   Appr: D. Whitfield
+
+
+ Purpose
+
+Set up a rotary filler so that every nozzle fills inside the weight limits.
+
+ Scope
+
+FIL-1, FIL-2 and FIL-3.
+
+ Roles
+
+ Role                                          Responsibility
+
+ Operator                                      Sets up and adjusts the filler.
+
+ Line Lead                                     Is told about any nozzle taken out of service.
+
+ Maintenance Technician                        Repairs nozzles and valves.
+
+
+ PPE                                       Tools                                      Materials
+
+     Safety glasses                          Check scale (0.1 g)                       Sanitizer
+     Chemical-resistant gloves               Nozzle wrench
+     Safety shoes                            Sample tray
+
+
+  CAUTION: Never reach into the filler carousel while it is turning. Use the jog button with the guard
+  closed.
+
+
+ Procedure
+
+Setup
+
+ Step       Who                       Action
+
+ 1          Operator                  Select the product recipe on the filler panel. Confirm the target weight on
+                                      screen matches the table below.
+
+ 2          Operator                  Prime the bowl. Run two full rotations into the sample tray and discard.
+
+ 3          Operator                  Weigh one bottle from every nozzle (12 nozzles on FIL-1; all nozzles on FIL-2
+                                      and FIL-3). Write each weight on FRM-PR-10 Filler Setup Sheet.
+
+ 4          Operator                  Any nozzle more than 3 g from the others: stop, tell the Line Lead, and call the
+                                      Maintenance Technician.
+
+Adjustment during the run
+ Step       Who                       Action
+ 5          Operator                         If the hourly average drifts from target, you may adjust the fill setpoint by up to
+                                             2 g up or down. Write the change and the time on FRM-PR-10.
+
+ 6          Operator                         If more than 2 g of adjustment is needed in one shift, stop adjusting and call
+                                             the Maintenance Technician. Worn valve seals are the usual cause (see MP-
+                                             501).
+
+ 7          Operator                         Dripping or stringing nozzle: wipe, run 10 bottles, check again. If it continues,
+                                             take the nozzle out of service and tell the Line Lead.
+
+Fill targets
+ Product                                              Target (g)              Lower limit (g)                   Upper limit (g)
+
+ AC-1000 / AC-1000-LEM                                1005                    1000                              1015
+
+ FS-2000                                              2010                    2000                              2030
+
+ FS-0500                                              504                     500                               512
+
+ DS-0750 / DS-0750-ECO                                756                     750                               765
+
+
+ Related documents                                                          Records
+
+     QP-303 Fill Weight Checks                                                FRM-PR-10 Filler Setup Sheet
+     MP-501 Filler Lubrication and Valve Seal
+     Inspection
+
+ Revision history
+
+ Rev            Date                         Change
+
+ D              2023-04-03                   Operators may adjust the setpoint by up to 2 g.
+
+ C              2022-06-13                   Work-instruction template.
+
+
+WI-210 Filler Setup and Nozzle Check Rev D. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

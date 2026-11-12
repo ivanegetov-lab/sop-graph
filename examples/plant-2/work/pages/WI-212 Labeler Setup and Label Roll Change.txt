@@ -1,0 +1,111 @@
+     PLANT 2 · WORK INSTRUCTION
+                                                                                                        WI-212
+     Labeler Setup and Label Roll Change                                                                   Rev D
+
+
+  Effective                    Owner                        Prepared by                  Approved by
+  2025-09-08                   Production                   M. Alvarez                   D. Whitfield
+
+
+PURPOSE
+
+Apply labels straight, wrinkle-free and in the right place, and change rolls without a line stop.
+
+SCOPE
+
+LAB-1, LAB-2 and LAB-3 pressure-sensitive labelers.
+
+ROLES
+
+ ROLE                                   RESPONSIBILITY
+
+
+ Operator                               Sets up the labeler and changes rolls.
+
+ Line Lead                              Decides whether to stop the line for repeated jams.
+
+ Maintenance Technician                 Adjusts sensors and replaces rollers.
+
+
+PPE
+     Safety glasses
+     Safety shoes
+
+TOOLS
+
+     Splice tape
+     Scissors
+     Lint-free wipes
+     Isopropyl alcohol
+
+M AT E R I A L S
+
+     Labels
+
+PROCEDURE
+
+  Setup
+
+ STEP         WHO                       ACTION
+
+ 1            Operator                  Use only label rolls with a green QA release sticker (see QP-308). Rolls
+                                        from a supplier not listed in QP-309 are not to be loaded.
+
+ 2            Operator                  Check the label matches the product and the artwork revision on the
+                                        schedule.
+
+ 3            Operator                  Thread the web as shown on the diagram inside the labeler door.
+ 4            Operator                           Set web tension to mark 4 on the dancer arm. Set the gap sensor so it
+                                                 reads the gap between labels, not the label edge.
+
+ 5            Operator                           Clean the peel plate and the drive roller with isopropyl alcohol at every
+                                                 roll change.
+
+
+  Roll change
+
+ STEP         WHO                                ACTION
+
+
+ 6            Operator                           Prepare the new roll on the spare spindle before the old roll runs out.
+
+ 7            Operator                           Splice the new roll to the old one as described in WI-215.
+
+ 8            Operator                           Write the roll number, supplier and lot on FRM-PR-12 Label Roll Log.
+
+
+  Jams and web breaks
+
+ STEP         WHO                                ACTION
+
+ 9            Operator                           First jam: clear, re-thread, restart.
+
+ 10           Operator                           Three jams or web breaks in one hour: tell the Line Lead. Put the roll
+                                                 aside with a hold tag as described in QP-315 and load a roll from a
+                                                 different lot.
+
+ 11           Line Lead                          If jams continue on a second lot, call the Maintenance Technician and the
+                                                 QA Technician.
+
+
+R E L AT E D D O C U M E N T S
+
+     QP-308 Incoming Inspection of Packaging Materials
+     QP-309 Packaging Material Specifications and Approved Suppliers
+     WI-215 Label Splicing
+     QP-315 Nonconforming Product and Hold
+
+RECORDS
+     FRM-PR-12 Label Roll Log
+
+R E V I S I O N H I S T O RY
+
+ REV               D AT E                             CHANGE
+
+ D                 2025-09-08                         Updated for the new Line 3 labeler.
+
+ C                 2023-02-06                         New template.
+
+
+WI-212 Labeler Setup and Label Roll Change Rev D. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

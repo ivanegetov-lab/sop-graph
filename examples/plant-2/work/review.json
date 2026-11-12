@@ -1,0 +1,177 @@
+{
+ "decisions": [
+  {
+   "key": "rule:who may change the fill setpoint",
+   "verdict": "conflict",
+   "title": "Two answers to who may change the fill setpoint",
+   "why": "WI-210 Rev D (2023) lets operators adjust the setpoint by up to 2 g. QP-303 Rev F (2024) says operators must not change it and only the Maintenance Technician may. WI-210 was not revised after QP-303, and TR-701 trains operators on WI-210."
+  },
+  {
+   "key": "rule:lockout method for case packers",
+   "verdict": "conflict",
+   "title": "MP-502 still tells technicians to use the group lock box that SP-402 Rev D removed",
+   "why": "MP-502 step 7.1 locks out the case packer with the group lock box per SP-402 Rev B. SP-402 Rev D says 'Group lock box removed' and requires one person, one lock, one key. WI-213 points to SP-402 without a revision, so only MP-502 is out of date."
+  },
+  {
+   "key": "rule:who removes lockout locks",
+   "verdict": "conflict",
+   "title": "SOP-101, SOP-104 and MP-501 have the Maintenance Technician remove locks; SP-402 says each person removes only their own",
+   "why": "SP-402 step 8 lets each person remove only their own lock, and Operators can be Authorized Employees. SOP-101, SOP-104 and MP-501 assign lock removal to the Maintenance Technician alone, which cannot cover a lock an operator applied."
+  },
+  {
+   "key": "rule:who moves held product to the hold cage",
+   "verdict": "conflict",
+   "title": "Two different roles move held product to the hold cage",
+   "why": "QP-315 step 2 makes the Team Leader responsible for moving held product to the hold cage the same shift. SOP-102 step 4 has the Operator do it at shutdown. Team Leader is not defined anywhere else."
+  },
+  {
+   "key": "rule:maximum forklift speed",
+   "verdict": "conflict",
+   "title": "Forklift speed limit: 5 mph everywhere (SP-405) versus 3 mph on the dock (WH-601)",
+   "why": "SP-405 step 2 says the maximum is 5 mph everywhere inside the building, including dock doors. WH-601 step 3 says no faster than 3 mph on the dock and in the receiving lanes. A driver who reads only SP-405 would think 5 mph is allowed at the dock."
+  },
+  {
+   "key": "rule:who releases the line",
+   "verdict": "ok",
+   "why": "MP-501 (Shift Lead releases after maintenance), SOP-104 (Shift Lead releases for changeover) and SOP-101 (Line Lead owns the start-up) describe different events and do not contradict each other. The Shift Lead versus Line Lead naming is left for the plant to decide."
+  },
+  {
+   "key": "rule:who places product on hold",
+   "verdict": "ok",
+   "why": "QP-315 lets anyone place product on hold, so the QA Technician (QP-303, QP-316), Line Lead (QP-303), Operator (WI-211, WI-212) are all allowed. QP-303's own roles table and step 5 name different people, but neither forbids the other."
+  },
+  {
+   "key": "rule:who gives first off approval",
+   "verdict": "ok",
+   "why": "QP-306, SOP-101 and SOP-105 all give first-off approval to the QA Technician."
+  },
+  {
+   "key": "rule:who releases packaging materials",
+   "verdict": "ok",
+   "why": "QP-308 and WH-601 both give release to the QA Technician, and WI-212 only loads rolls that carry the QA release sticker."
+  },
+  {
+   "key": "rule:which suppliers packaging may be used",
+   "verdict": "ok",
+   "why": "QP-309 limits purchasing to the listed supplier, QP-308 rejects lots from unlisted suppliers and WI-212 refuses rolls from unlisted suppliers. The three documents agree."
+  },
+  {
+   "key": "rule:who checks the dock before entering a trailer",
+   "verdict": "ok",
+   "why": "SP-405 and WH-601 both require the Forklift Driver to chock the wheels and lock the dock leveler before entering a trailer."
+  },
+  {
+   "key": "value:minimum vacuum",
+   "verdict": "ok",
+   "why": "Measured at different points: MP-502 reads at least 0.7 bar at the pump inlet with the erector idle, WI-213 reads at least 0.6 bar at the erector cups with a case on them. The lower figure at the cups is expected, but neither document says how the two relate."
+  },
+  {
+   "key": "value:application torque 38 mm cap",
+   "verdict": "conflict",
+   "title": "Two torque values for the same 38 mm cap",
+   "why": "WI-211 Rev C raised the 38 mm cap torque from 15 to 17 in-lb after leak complaints. SOP-104 step 7.3 still tells the Operator to set 15 in-lb, and TR-701 requires operators to be trained on WI-211 Rev A, the version before the change. Line 2 operators following SOP-104 or trained to TR-701 would set the old torque."
+  }
+ ],
+ "findings": [
+  {
+   "type": "gap",
+   "severity": "high",
+   "title": "Label liner caliper is critical on every lot (QP-309 Rev G) but QP-308 does not check it",
+   "detail": "QP-309 Rev G made label liner caliper (0.075 mm plus or minus 0.005) a critical characteristic that must be measured on every lot. QP-308 Rev D (2023, older than QP-309 Rev G) lists the label checks at incoming inspection and liner caliper is not among them. QP-309 step 3 also requires QP-308 to be updated after a change.",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "step 4",
+     "quote": "Characteristics marked critical below must be measured on every lot."
+    },
+    {
+     "doc": "QP-309",
+     "where": "Revision history",
+     "quote": "Label liner caliper made a critical characteristic for the new Line 3 labeler."
+    },
+    {
+     "doc": "QP-308",
+     "where": "step 6",
+     "quote": "print quality, barcode grade C or better, roll width, core diameter 76 mm, labels wound outward."
+    }
+   ]
+  },
+  {
+   "type": "rule_conflict",
+   "severity": "medium",
+   "title": "SOP-104 locks out only FIL-2 and CAP-2 but the changeover also works on LAB-2, CPK-2 and CNV-2",
+   "detail": "SP-402 applies to all servicing, cleaning and jam clearing that puts any part of the body inside a guard on any equipment. SOP-104 locks out only FIL-2 and CAP-2 in preparation, then has operators change parts on the labeler, case packer and conveyor with no lockout stated. If those changes reach inside a guard, SP-402 requires a lock.",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "6.0 step 4",
+     "quote": "Lock out FIL-2 and CAP-2 as described in SP-402."
+    },
+    {
+     "doc": "SOP-104",
+     "where": "7.0 step 5",
+     "quote": "change the case magazine guides and select the pack pattern"
+    },
+    {
+     "doc": "SP-402",
+     "where": "Scope",
+     "quote": "All servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2."
+    }
+   ]
+  },
+  {
+   "type": "gap",
+   "severity": "low",
+   "title": "SOP-102 shutdown cleaning does not refer to lockout",
+   "detail": "SOP-102 has operators clean the filler nozzles and drip tray and empty the case packer reject bin, and does not mention SP-402. SP-402 covers cleaning that puts any part of the body inside a guard. Whether these tasks reach inside guards is not stated.",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "step 2",
+     "quote": "Clean filler nozzles and the drip tray. Wipe the labeler rollers. Empty the case packer reject bin."
+    },
+    {
+     "doc": "SP-402",
+     "where": "Scope",
+     "quote": "All servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2."
+    }
+   ]
+  },
+  {
+   "type": "gap",
+   "severity": "low",
+   "title": "QP-306 asks for a packed case at first-off but SOP-101 start-up does not produce one",
+   "detail": "QP-306 step 1 has the Operator bring the first 5 good bottles and one packed case to the QA bench, and QA checks the case in step 6. SOP-101 steps 11 and 12 run 20 bottles and take the first-off samples to the QA Technician, with no step for a packed case.",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 1",
+     "quote": "Bring the first 5 good bottles and one packed case to the QA bench."
+    },
+    {
+     "doc": "SOP-101",
+     "where": "step 12",
+     "quote": "Run 20 bottles and stop. Take the first-off samples to the QA Technician."
+    }
+   ]
+  },
+  {
+   "type": "gap",
+   "severity": "low",
+   "title": "QP-306 checks cap removal torque against a range that WI-211 does not give",
+   "detail": "QP-306 step 3 passes the first-off cap if removal torque is inside the range in WI-211. WI-211 only gives an application torque with a tolerance for each cap size, and has the operator measure removal torque without stating a removal range.",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 3",
+     "quote": "Cap: correct cap, removal torque inside the range in WI-211."
+    },
+    {
+     "doc": "WI-211",
+     "where": "step 3",
+     "quote": "Set the application torque from the table below."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "doc": {"id": "QP-303", "title": "Fill Weight Checks", "type": "Quality Procedure", "rev": "F", "effective": "2024-01-15", "owner": "Quality", "file": "QP-303 Fill Weight Checks.pdf", "pages": 2,
+          "purpose": "Keep every bottle at or above the label claim without giving product away."},
+  "roles": [
+    {"name": "Operator", "does": "Takes and weighs the samples.", "where": "Roles"},
+    {"name": "Line Lead", "does": "Reacts to results outside the action limits.", "where": "Roles"},
+    {"name": "QA Technician", "does": "Reviews the charts each shift and places product on hold.", "where": "Roles"},
+    {"name": "Maintenance Technician", "does": "Adjusts the filler.", "where": "Roles"}
+  ],
+  "equipment": [],
+  "materials": [],
+  "tools": [
+    {"name": "Check scale (0.1 g)", "where": "Tools"},
+    {"name": "Tare bottles", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-QA-03", "name": "Fill Weight Chart", "where": "step 2"}
+  ],
+  "references": [
+    {"id": "WI-210", "as_written": "WI-210 Filler Setup and Nozzle Check", "rev": null, "where": "Note and Related documents"},
+    {"id": "QP-315", "as_written": "QP-315 Nonconforming Product and Hold", "rev": null, "where": "step 5"}
+  ],
+  "parameters": [
+    {"what": "fill weight check interval", "applies_to": "Lines 1, 2 and 3", "value": "1", "unit": "hour", "where": "step 1", "quote": "Once every hour, take 5 bottles in a row from the filler discharge."},
+    {"what": "fill weight sample size", "applies_to": "each fill weight check", "value": "5", "unit": "bottles", "where": "step 1", "quote": "Once every hour, take 5 bottles in a row from the filler discharge."},
+    {"what": "check scale verification test weight", "applies_to": "check scale", "value": "1", "unit": "kg", "where": "step 3", "quote": "Verify the check scale with the 1 kg test weight at the start of every shift."},
+    {"what": "overfill trigger to tell the Line Lead", "applies_to": "average above target, two checks in a row", "value": "4", "unit": "g", "where": "step 6", "quote": "Average above target by more than 4 g for two checks in a row: tell the Line Lead."}
+  ],
+  "rules": [
+    {"topic": "who may change the fill setpoint", "statement": "Operators must not change the fill setpoint.", "where": "step 6", "quote": "Operators must not change the fill setpoint."},
+    {"topic": "who may change the fill setpoint", "statement": "Only the Maintenance Technician changes the setpoint and the change is written on the chart.", "where": "step 7", "quote": "Only the Maintenance Technician changes the setpoint, and the change is written on the chart."},
+    {"topic": "who places product on hold", "statement": "The QA Technician places product on hold.", "where": "Roles", "quote": "Reviews the charts each shift and places product on hold."},
+    {"topic": "who places product on hold", "statement": "The Line Lead places all product since the last good check on hold.", "where": "step 5", "quote": "Place all product since the last good check on hold as described in QP-315."}
+  ],
+  "unsure": [
+    {"what": "The 1 kg test weight is used in step 3 but is not listed under Tools", "why": "Tools list only the check scale and tare bottles", "where": "step 3 / Tools"},
+    {"what": "Roles table says the QA Technician places product on hold; step 5 has the Line Lead doing it", "why": "Internal inconsistency in who places the hold", "where": "Roles / step 5"}
+  ]
+}

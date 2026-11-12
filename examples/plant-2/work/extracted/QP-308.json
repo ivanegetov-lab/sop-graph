@@ -1,0 +1,49 @@
+{
+  "doc": {"id": "QP-308", "title": "Incoming Inspection of Packaging Materials", "type": "Quality Procedure", "rev": "D", "effective": "2023-10-09", "owner": "Quality", "file": "QP-308 Incoming Inspection of Packaging Materials.pdf", "pages": 2,
+          "purpose": "Stop bad bottles, caps, labels and cases at the dock, before they reach a line."},
+  "roles": [
+    {"name": "QA Technician", "does": "Inspects and releases or rejects each lot.", "where": "Roles"},
+    {"name": "Receiving Clerk", "does": "Holds the delivery in quarantine until release.", "where": "Roles"},
+    {"name": "Purchasing", "does": "Is told of every rejection.", "where": "Roles"}
+  ],
+  "materials": [
+    {"name": "Bottles", "where": "Materials"},
+    {"name": "Caps", "where": "Materials"},
+    {"name": "Labels", "where": "Materials"},
+    {"name": "Shipper cases", "where": "Materials"}
+  ],
+  "tools": [
+    {"name": "Calipers", "where": "Tools"},
+    {"name": "Check scale (0.1 g)", "where": "Tools"},
+    {"name": "Go/no-go neck gauge", "where": "Tools"},
+    {"name": "Barcode verifier", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety shoes", "where": "PPE"},
+    {"name": "Cut-resistant gloves", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-QA-08", "name": "Incoming Inspection Record", "where": "step 8"}
+  ],
+  "references": [
+    {"id": "WH-601", "as_written": "WH-601 Receiving and Put-Away", "rev": null, "where": "step 1"},
+    {"id": "QP-309", "as_written": "QP-309 Packaging Material Specifications and Approved Suppliers", "rev": null, "where": "step 2"},
+    {"id": "QP-315", "as_written": "QP-315 Nonconforming Product and Hold", "rev": null, "where": "step 9"}
+  ],
+  "parameters": [
+    {"what": "incoming inspection sample size", "applies_to": "bottles", "value": "13", "unit": "bottles", "where": "step 4", "quote": "Bottles (sample of 13): weight, height, neck finish with the go/no-go gauge, no flash or contamination."},
+    {"what": "incoming inspection sample size", "applies_to": "caps", "value": "13", "unit": "caps", "where": "step 5", "quote": "Caps (sample of 13): size, colour, liner present, fit on a sample bottle."},
+    {"what": "incoming inspection sample size", "applies_to": "labels", "value": "3", "unit": "rolls per lot", "where": "step 6", "quote": "Labels (3 rolls per lot): artwork and revision against the binder"},
+    {"what": "incoming inspection sample size", "applies_to": "shipper cases", "value": "5", "unit": "cases", "where": "step 7", "quote": "Shipper cases (sample of 5): dimensions, board grade stamp, print."},
+    {"what": "minimum barcode grade", "applies_to": "labels", "value": "C or better", "where": "step 6", "quote": "barcode grade C or better"},
+    {"what": "label roll core diameter", "applies_to": "labels", "value": "76", "unit": "mm", "where": "step 6", "quote": "core diameter 76 mm, labels wound outward"},
+    {"what": "time to email Purchasing after a failed lot", "applies_to": "rejected packaging lots", "value": "same day", "where": "step 9", "quote": "Fail: red REJECTED tag, hold as described in QP-315, and email Purchasing the same day."}
+  ],
+  "rules": [
+    {"topic": "who releases packaging materials", "statement": "The QA Technician releases or rejects each lot.", "where": "Roles / step 8", "quote": "Pass: green RELEASED sticker on every pallet or roll."},
+    {"topic": "which suppliers' packaging may be used", "statement": "The QA Technician rejects a lot whose supplier is not on the approved list in QP-309.", "where": "step 2", "quote": "Check the supplier is on the approved list in QP-309. If not, reject."}
+  ],
+  "unsure": [
+    {"what": "Label checks do not list liner caliper", "why": "QP-309 Rev G (later than this Rev D) makes label liner caliper a critical characteristic on every lot; this document is not updated for it", "where": "step 6"}
+  ]
+}

@@ -1,0 +1,103 @@
+     PLANT 2 · QUALITY PROCEDURE
+
+     Packaging Material Specifications and
+                                                                                                            QP-309
+     Approved Suppliers                                                                                         Rev G
+
+
+  Effective                      Owner                         Prepared by                    Approved by
+  2025-01-13                     Quality                       H. Costa                       D. Whitfield
+
+
+PURPOSE
+
+Hold in one place the specification and the approved supplier for each packaging material.
+
+SCOPE
+
+Bottles, caps, labels and shipper cases used at Plant 2.
+
+ROLES
+
+ ROLE                               RESPONSIBILITY
+
+
+ Quality Manager                    Owns this document and approves suppliers.
+
+ Purchasing                         Buys only from the suppliers listed here.
+
+ QA Technician                      Inspects against these specifications.
+
+
+PPE
+None.
+
+TOOLS
+
+None.
+
+M AT E R I A L S
+
+     Bottles
+     Caps (28 mm)
+     Caps (38 mm)
+     Labels
+     Shipper cases
+
+PROCEDURE
+
+  Rules
+
+ STEP          WHO                         ACTION
+
+ 1             Purchasing                  Buy packaging materials only from the approved supplier in the table
+                                           below.
+
+ 2             Quality Manager             A new or second supplier needs a line trial of at least one full shift and a
+                                           signed FRM-QA-09 Supplier Approval Record before the first production
+                                                 order.
+
+ 3            Quality Manager                    After approval, update this document, QP-308 and the label and cap
+                                                 setup instructions before the material is used.
+
+ 4            QA Technician                      Characteristics marked critical below must be measured on every lot.
+
+
+  Specifications
+
+ M AT E R I A L                APPROVED              CRITICAL CHARACTERISTICS                            OTHER
+                               SUPPLIER                                                                  CHARACTERISTICS
+
+
+ Bottles (1 L, 2 L,            Clearform             Neck finish (go/no-go), weight                      Height, colour
+ 500 ml, 750 ml)               Bottles
+
+ Caps, 28 mm and               Capitol               Liner present, thread fit                           Colour
+ 38 mm                         Closures
+
+ Labels, pressure-             Northside             Liner caliper 0.075 mm plus or minus                Roll width, core 76 mm,
+ sensitive                     Labels                0.005; barcode grade C or better                    wound outward
+
+ Shipper cases                 Ridge                 Inside dimensions, board grade 32                   Print
+                               Corrugated            ECT
+
+
+R E L AT E D D O C U M E N T S
+
+     QP-308 Incoming Inspection of Packaging Materials
+
+RECORDS
+     FRM-QA-09 Supplier Approval Record
+
+R E V I S I O N H I S T O RY
+
+ REV        D AT E                CHANGE
+
+ G          2025-01-13            Label liner caliper made a critical characteristic for the new Line 3 labeler.
+
+ F          2023-10-09            Barcode grade added.
+
+
+QP-309 Packaging Material Specifications and Approved Suppliers Rev G. Printed copies are uncontrolled. Fictional document, written for the
+Plant 2 open dataset.
+

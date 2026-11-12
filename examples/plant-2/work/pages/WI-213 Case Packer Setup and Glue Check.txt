@@ -1,0 +1,82 @@
+        WORK                                                                                   WI-213
+     INSTRUCTION            Case Packer Setup and Glue Check                                   Rev B
+
+                                                                                               By: S. Lindqvist
+ PLANT 2                    Dept: Production              Effective: 2022-08-22
+                                                                                               Appr: D. Whitfield
+
+
+ Purpose
+
+Erect, pack and seal shipper cases that survive the pallet.
+
+ Scope
+
+CPK-1, CPK-2 and CPK-3.
+
+ Roles
+
+ Role                                   Responsibility
+
+ Operator                               Sets up the case packer.
+
+ Maintenance Technician                 Services the glue system and the vacuum pump.
+
+
+ PPE                                    Tools                                     Materials
+
+     Safety glasses                       Infrared thermometer                     Shipper cases
+     Heat-resistant gloves at the                                                  Hot-melt glue
+     glue tank
+     Safety shoes
+
+
+  CAUTION: Hot-melt glue causes deep burns. Do not open the tank lid without heat-resistant
+  gloves.
+
+
+ Procedure
+
+Setup
+
+ Step      Who                      Action
+
+ 1         Operator                 Load the case magazine with the flaps facing the operator side. Do not mix
+                                    case sizes.
+
+ 2         Operator                 Glue tank set to 175 degrees C. Wait for the ready light. Check the hose
+                                    temperature with the infrared thermometer.
+
+ 3         Operator                 Check the vacuum gauge on the case erector reads at least 0.6 bar of
+                                    vacuum with a case on the cups.
+
+ 4         Operator                 Run three cases. Check they are square and that all four flaps are glued.
+
+During the run
+ Step      Who                      Action
+ 5          Operator                        Every hour: tear open one sealed case. Fibre tear on both glue lines is a pass.
+                                            Write it on FRM-PR-13 Case Seal Check.
+
+ 6          Operator                        Low vacuum or cases not erecting: check the cups for wear, then call the
+                                            Maintenance Technician (see MP-502).
+
+ 7          Operator                        Never clear a jam with the machine running. For any work inside the guards,
+                                            lock out as described in SP-402.
+
+
+ Related documents                                                        Records
+
+     MP-502 Case Packer Vacuum Pump Inspection                               FRM-PR-13 Case Seal Check
+     SP-402 Lockout/Tagout
+
+ Revision history
+
+ Rev                   Date                                        Change
+
+ B                     2022-08-22                                  Vacuum check added.
+
+ A                     2020-01-13                                  First issue.
+
+
+WI-213 Case Packer Setup and Glue Check Rev B. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

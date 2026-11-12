@@ -1,0 +1,40 @@
+{
+  "doc": {"id": "SP-402", "title": "Lockout/Tagout", "type": "Safety Procedure", "rev": "D", "effective": "2025-03-03", "owner": "Safety", "file": "SP-402 Lockout-Tagout.pdf", "pages": 2,
+          "purpose": "Make sure no machine can start or release stored energy while someone is working inside it."},
+  "roles": [
+    {"name": "Authorized Employee", "does": "Applies their own lock and tag. Operators and Maintenance Technicians who are trained and listed.", "where": "Roles"},
+    {"name": "Line Lead", "does": "Makes sure everyone affected knows the machine is locked out.", "where": "Roles"},
+    {"name": "Safety Manager", "does": "Audits this procedure every year.", "where": "Roles"}
+  ],
+  "materials": [],
+  "tools": [
+    {"name": "Personal padlock (one key)", "where": "Tools"},
+    {"name": "Lockout hasp", "where": "Tools"},
+    {"name": "Danger tag", "where": "Tools"},
+    {"name": "Valve lockout device", "where": "Tools"},
+    {"name": "Voltage tester", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-SF-02", "name": "Lockout Audit Form", "where": "Records"}
+  ],
+  "references": [
+    {"id": "TR-701", "as_written": "TR-701 Training and Qualification", "rev": null, "where": "Related documents"}
+  ],
+  "parameters": [
+    {"what": "glue tank cool-down temperature before lockout work", "applies_to": "case packers", "value": "60", "unit": "degrees C", "where": "step 4", "quote": "Case packers: also wait for the glue tank to cool below 60 degrees C or keep the tank lid closed and tagged."},
+    {"what": "lockout procedure audit interval", "applies_to": "SP-402", "value": "1", "unit": "year", "where": "Roles", "quote": "Audits this procedure every year."}
+  ],
+  "rules": [
+    {"topic": "lockout method for case packers", "statement": "One person, one lock, one key: each person applies their own lock to the hasp. The group lock box was removed in Rev D.", "where": "step 5 / Revision history", "quote": "One person, one lock, one key. Each person working on the machine applies their own lock to the hasp."},
+    {"topic": "who removes lockout locks", "statement": "Each person removes only their own lock; a lock left at shift change stays until its owner removes it or the Safety Manager authorises removal.", "where": "step 8", "quote": "Each person removes only their own lock."},
+    {"topic": "who applies lockout locks", "statement": "Authorized Employees (trained and listed Operators and Maintenance Technicians) apply their own lock and tag.", "where": "Roles", "quote": "Operators and Maintenance Technicians who are trained and listed."},
+    {"topic": "lockout scope", "statement": "Lockout applies to all servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2.", "where": "Scope", "quote": "All servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2."}
+  ],
+  "unsure": [
+    {"what": "'Trained and listed' Authorized Employees", "why": "The list is not part of this document and TR-701 has no row for the Authorized Employee role", "where": "Roles"}
+  ]
+}

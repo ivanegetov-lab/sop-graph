@@ -1,0 +1,7766 @@
+{
+ "meta": {
+  "title": "How Plant 2 is run",
+  "sample": true,
+  "documents": 20,
+  "built": "2026-11-11",
+  "labels": {
+   "value_conflict": "Two documents, two numbers",
+   "rule_conflict": "Two documents, two rules",
+   "gap": "Gap between documents",
+   "old_revision": "Cites an old revision",
+   "missing_document": "Points to a document that isn't there",
+   "not_trained": "Job without required training",
+   "role_not_in_matrix": "Role missing from the training list",
+   "overdue_review": "Not revised for years",
+   "similar_names": "Names that may be the same thing"
+  },
+  "quotes": {
+   "checked": 136,
+   "not_found": 0,
+   "examples": []
+  },
+  "story": {
+   "title": "How Plant 2 is run",
+   "example": {
+    "question": "We're switching label supplier. What needs updating?",
+    "node": "Labels"
+   }
+  }
+ },
+ "nodes": [
+  {
+   "id": "MP-501",
+   "type": "procedure",
+   "name": "Filler Lubrication and Valve Seal Inspection",
+   "rev": "B",
+   "effective": "2020-02-17",
+   "owner": "Maintenance",
+   "doc_type": "Maintenance Procedure",
+   "file": "MP-501 Filler Lubrication and Valve Seal Inspection.pdf",
+   "pages": 2,
+   "purpose": "Keep the rotary fillers filling accurately by lubricating the carousel and catching worn valve seals.",
+   "degree": 22,
+   "issues": 2
+  },
+  {
+   "id": "MP-502",
+   "type": "procedure",
+   "name": "Case Packer Vacuum Pump Inspection",
+   "rev": "A",
+   "effective": "2019-08-12",
+   "owner": "Maintenance",
+   "doc_type": "Maintenance Procedure",
+   "file": "MP-502 Case Packer Vacuum Pump Inspection.pdf",
+   "pages": 2,
+   "purpose": "Find a failing vacuum pump before it stops the case packer.",
+   "degree": 19,
+   "issues": 2
+  },
+  {
+   "id": "QP-303",
+   "type": "procedure",
+   "name": "Fill Weight Checks",
+   "rev": "F",
+   "effective": "2024-01-15",
+   "owner": "Quality",
+   "doc_type": "Quality Procedure",
+   "file": "QP-303 Fill Weight Checks.pdf",
+   "pages": 2,
+   "purpose": "Keep every bottle at or above the label claim without giving product away.",
+   "degree": 18,
+   "issues": 3
+  },
+  {
+   "id": "QP-306",
+   "type": "procedure",
+   "name": "First-Off Approval",
+   "rev": "C",
+   "effective": "2024-05-20",
+   "owner": "Quality",
+   "doc_type": "Quality Procedure",
+   "file": "QP-306 First-Off Approval.pdf",
+   "pages": 2,
+   "purpose": "Confirm the first product after a start-up or changeover is right before the line runs at rate.",
+   "degree": 19,
+   "issues": 1
+  },
+  {
+   "id": "QP-308",
+   "type": "procedure",
+   "name": "Incoming Inspection of Packaging Materials",
+   "rev": "D",
+   "effective": "2023-10-09",
+   "owner": "Quality",
+   "doc_type": "Quality Procedure",
+   "file": "QP-308 Incoming Inspection of Packaging Materials.pdf",
+   "pages": 2,
+   "purpose": "Stop bad bottles, caps, labels and cases at the dock, before they reach a line.",
+   "degree": 23,
+   "issues": 1
+  },
+  {
+   "id": "QP-309",
+   "type": "procedure",
+   "name": "Packaging Material Specifications and Approved Suppliers",
+   "rev": "G",
+   "effective": "2025-01-13",
+   "owner": "Quality",
+   "doc_type": "Quality Procedure",
+   "file": "QP-309 Packaging Material Specifications and Approved Suppliers.pdf",
+   "pages": 2,
+   "purpose": "Hold in one place the specification and the approved supplier for each packaging material.",
+   "degree": 16,
+   "issues": 2
+  },
+  {
+   "id": "QP-315",
+   "type": "procedure",
+   "name": "Nonconforming Product and Hold",
+   "rev": "C",
+   "effective": "2022-04-18",
+   "owner": "Quality",
+   "doc_type": "Quality Procedure",
+   "file": "QP-315 Nonconforming Product and Hold.pdf",
+   "pages": 2,
+   "purpose": "Keep product or material that might be wrong from being shipped or used.",
+   "degree": 20,
+   "issues": 2
+  },
+  {
+   "id": "QP-316",
+   "type": "procedure",
+   "name": "Customer Complaints and Lot Trace",
+   "rev": "B",
+   "effective": "2020-11-02",
+   "owner": "Quality",
+   "doc_type": "Quality Procedure",
+   "file": "QP-316 Customer Complaints and Lot Trace.pdf",
+   "pages": 2,
+   "purpose": "Answer every customer complaint and find all product from the same lot.",
+   "degree": 7,
+   "issues": 1
+  },
+  {
+   "id": "SOP-101",
+   "type": "procedure",
+   "name": "Line Start-Up",
+   "rev": "E",
+   "effective": "2025-06-16",
+   "owner": "Production",
+   "doc_type": "Standard Operating Procedure",
+   "file": "SOP-101 Line Start-Up.pdf",
+   "pages": 3,
+   "purpose": "Start a packaging line safely and reach approved production in the shortest time.",
+   "degree": 43,
+   "issues": 4
+  },
+  {
+   "id": "SOP-102",
+   "type": "procedure",
+   "name": "Line Shutdown and Shift Handover",
+   "rev": "C",
+   "effective": "2024-09-02",
+   "owner": "Production",
+   "doc_type": "Standard Operating Procedure",
+   "file": "SOP-102 Line Shutdown and Shift Handover.pdf",
+   "pages": 2,
+   "purpose": "Leave the line clean, safe and documented for the next shift.",
+   "degree": 15,
+   "issues": 1
+  },
+  {
+   "id": "SOP-104",
+   "type": "procedure",
+   "name": "Size Changeover, Line 2 (2 L and 500 ml)",
+   "rev": "B",
+   "effective": "2021-03-15",
+   "owner": "Production",
+   "doc_type": "Standard Operating Procedure",
+   "file": "SOP-104 Size Changeover Line 2 2 L and 500 ml.pdf",
+   "pages": 2,
+   "purpose": "Change Line 2 between the 2 L and the 500 ml fabric softener bottle.",
+   "degree": 29,
+   "issues": 5
+  },
+  {
+   "id": "SOP-105",
+   "type": "procedure",
+   "name": "Product Changeover and Line Clearance, Lines 1 and 3",
+   "rev": "B",
+   "effective": "2021-02-08",
+   "owner": "Production",
+   "doc_type": "Standard Operating Procedure",
+   "file": "SOP-105 Product Changeover and Line Clearance Lines 1 and 3.pdf",
+   "pages": 2,
+   "purpose": "Change between products of the same bottle size without mixing product, labels or caps.",
+   "degree": 21,
+   "issues": 1
+  },
+  {
+   "id": "SP-402",
+   "type": "procedure",
+   "name": "Lockout/Tagout",
+   "rev": "D",
+   "effective": "2025-03-03",
+   "owner": "Safety",
+   "doc_type": "Safety Procedure",
+   "file": "SP-402 Lockout-Tagout.pdf",
+   "pages": 2,
+   "purpose": "Make sure no machine can start or release stored energy while someone is working inside it.",
+   "degree": 21,
+   "issues": 4
+  },
+  {
+   "id": "SP-405",
+   "type": "procedure",
+   "name": "Forklift and Pedestrian Safety",
+   "rev": "C",
+   "effective": "2024-08-05",
+   "owner": "Safety",
+   "doc_type": "Safety Procedure",
+   "file": "SP-405 Forklift and Pedestrian Safety.pdf",
+   "pages": 2,
+   "purpose": "Keep forklifts and people apart in the warehouse and at the dock doors.",
+   "degree": 23,
+   "issues": 1
+  },
+  {
+   "id": "TR-701",
+   "type": "procedure",
+   "name": "Training and Qualification",
+   "rev": "D",
+   "effective": "2024-02-12",
+   "owner": "Human Resources",
+   "doc_type": "Training Procedure",
+   "file": "TR-701 Training and Qualification.pdf",
+   "pages": 3,
+   "purpose": "Make sure nobody carries out a procedure they have not been trained and signed off on.",
+   "degree": 24,
+   "issues": 1
+  },
+  {
+   "id": "WH-601",
+   "type": "procedure",
+   "name": "Receiving and Put-Away",
+   "rev": "C",
+   "effective": "2023-06-19",
+   "owner": "Warehouse",
+   "doc_type": "Warehouse Procedure",
+   "file": "WH-601 Receiving and Put-Away.pdf",
+   "pages": 2,
+   "purpose": "Receive materials safely, check them against the order, and keep them in quarantine until Quality releases them.",
+   "degree": 29,
+   "issues": 2
+  },
+  {
+   "id": "WI-210",
+   "type": "procedure",
+   "name": "Filler Setup and Nozzle Check",
+   "rev": "D",
+   "effective": "2023-04-03",
+   "owner": "Production",
+   "doc_type": "Work Instruction",
+   "file": "WI-210 Filler Setup and Nozzle Check.pdf",
+   "pages": 2,
+   "purpose": "Set up a rotary filler so that every nozzle fills inside the weight limits.",
+   "degree": 26,
+   "issues": 1
+  },
+  {
+   "id": "WI-211",
+   "type": "procedure",
+   "name": "Capper Setup and Torque Check",
+   "rev": "C",
+   "effective": "2022-11-07",
+   "owner": "Production",
+   "doc_type": "Work Instruction",
+   "file": "WI-211 Capper Setup and Torque Check.pdf",
+   "pages": 2,
+   "purpose": "Apply caps at the right torque so bottles neither leak nor are too hard to open.",
+   "degree": 18,
+   "issues": 3
+  },
+  {
+   "id": "WI-212",
+   "type": "procedure",
+   "name": "Labeler Setup and Label Roll Change",
+   "rev": "D",
+   "effective": "2025-09-08",
+   "owner": "Production",
+   "doc_type": "Work Instruction",
+   "file": "WI-212 Labeler Setup and Label Roll Change.pdf",
+   "pages": 2,
+   "purpose": "Apply labels straight, wrinkle-free and in the right place, and change rolls without a line stop.",
+   "degree": 25,
+   "issues": 3
+  },
+  {
+   "id": "WI-213",
+   "type": "procedure",
+   "name": "Case Packer Setup and Glue Check",
+   "rev": "B",
+   "effective": "2022-08-22",
+   "owner": "Production",
+   "doc_type": "Work Instruction",
+   "file": "WI-213 Case Packer Setup and Glue Check.pdf",
+   "pages": 2,
+   "purpose": "Erect, pack and seal shipper cases that survive the pallet.",
+   "degree": 20,
+   "issues": 1
+  },
+  {
+   "id": "CAP-1",
+   "type": "equipment",
+   "name": "Capper 1",
+   "degree": 2
+  },
+  {
+   "id": "CAP-2",
+   "type": "equipment",
+   "name": "Capper 2",
+   "degree": 3
+  },
+  {
+   "id": "CAP-3",
+   "type": "equipment",
+   "name": "Capper 3",
+   "degree": 2
+  },
+  {
+   "id": "CNV-1",
+   "type": "equipment",
+   "name": "Conveyor 1",
+   "degree": 1
+  },
+  {
+   "id": "CNV-2",
+   "type": "equipment",
+   "name": "Conveyor 2",
+   "degree": 2
+  },
+  {
+   "id": "CNV-3",
+   "type": "equipment",
+   "name": "Conveyor 3",
+   "degree": 1
+  },
+  {
+   "id": "CPK-1",
+   "type": "equipment",
+   "name": "Case packer 1",
+   "degree": 3
+  },
+  {
+   "id": "CPK-2",
+   "type": "equipment",
+   "name": "Case packer 2",
+   "degree": 4
+  },
+  {
+   "id": "CPK-3",
+   "type": "equipment",
+   "name": "Case packer 3",
+   "degree": 3
+  },
+  {
+   "id": "DOCK-1",
+   "type": "equipment",
+   "name": "Dock leveler 1",
+   "degree": 1
+  },
+  {
+   "id": "DOCK-2",
+   "type": "equipment",
+   "name": "Dock leveler 2",
+   "degree": 1
+  },
+  {
+   "id": "DOCK-3",
+   "type": "equipment",
+   "name": "Dock leveler 3",
+   "degree": 1
+  },
+  {
+   "id": "DOCK-4",
+   "type": "equipment",
+   "name": "Dock leveler 4",
+   "degree": 1
+  },
+  {
+   "id": "FIL-1",
+   "type": "equipment",
+   "name": "Filler 1",
+   "degree": 3
+  },
+  {
+   "id": "FIL-2",
+   "type": "equipment",
+   "name": "Filler 2",
+   "degree": 4
+  },
+  {
+   "id": "FIL-3",
+   "type": "equipment",
+   "name": "Filler 3",
+   "degree": 3
+  },
+  {
+   "id": "FL-01",
+   "type": "equipment",
+   "name": "Forklift 1",
+   "degree": 1
+  },
+  {
+   "id": "FL-02",
+   "type": "equipment",
+   "name": "Forklift 2",
+   "degree": 1
+  },
+  {
+   "id": "FL-03",
+   "type": "equipment",
+   "name": "Forklift 3",
+   "degree": 1
+  },
+  {
+   "id": "FL-04",
+   "type": "equipment",
+   "name": "Forklift 4",
+   "degree": 1
+  },
+  {
+   "id": "LAB-1",
+   "type": "equipment",
+   "name": "Labeler 1",
+   "degree": 2
+  },
+  {
+   "id": "LAB-2",
+   "type": "equipment",
+   "name": "Labeler 2",
+   "degree": 3
+  },
+  {
+   "id": "LAB-3",
+   "type": "equipment",
+   "name": "Labeler 3",
+   "degree": 2
+  },
+  {
+   "id": "MIX-1",
+   "type": "equipment",
+   "name": "Mixing tank 1",
+   "degree": 1
+  },
+  {
+   "id": "MIX-2",
+   "type": "equipment",
+   "name": "Mixing tank 2",
+   "degree": 1
+  },
+  {
+   "id": "PAL-1",
+   "type": "equipment",
+   "name": "Palletizer 1",
+   "degree": 1
+  },
+  {
+   "id": "PAL-2",
+   "type": "equipment",
+   "name": "Palletizer 2",
+   "degree": 1
+  },
+  {
+   "id": "PAL-3",
+   "type": "equipment",
+   "name": "Palletizer 3",
+   "degree": 1
+  },
+  {
+   "id": "eq:dock-door-1",
+   "type": "equipment",
+   "name": "Dock door 1",
+   "degree": 1
+  },
+  {
+   "id": "eq:dock-door-2",
+   "type": "equipment",
+   "name": "Dock door 2",
+   "degree": 1
+  },
+  {
+   "id": "eq:dock-door-3",
+   "type": "equipment",
+   "name": "Dock door 3",
+   "degree": 1
+  },
+  {
+   "id": "eq:dock-door-4",
+   "type": "equipment",
+   "name": "Dock door 4",
+   "degree": 1
+  },
+  {
+   "id": "ma:bearing-vp-brg-6205",
+   "type": "material",
+   "name": "Bearing VP-BRG-6205",
+   "degree": 1
+  },
+  {
+   "id": "ma:bottles",
+   "type": "material",
+   "name": "Bottles",
+   "degree": 6
+  },
+  {
+   "id": "ma:caps",
+   "type": "material",
+   "name": "Caps",
+   "degree": 3
+  },
+  {
+   "id": "ma:caps-28-mm",
+   "type": "material",
+   "name": "Caps (28 mm)",
+   "degree": 4
+  },
+  {
+   "id": "ma:caps-38-mm",
+   "type": "material",
+   "name": "Caps (38 mm)",
+   "degree": 4
+  },
+  {
+   "id": "ma:fill-valve-seal-kit",
+   "type": "material",
+   "name": "Fill valve seal kit",
+   "degree": 1
+  },
+  {
+   "id": "ma:flush-water",
+   "type": "material",
+   "name": "Flush water",
+   "degree": 1
+  },
+  {
+   "id": "ma:food-grade-grease-h1",
+   "type": "material",
+   "name": "Food-grade grease (H1)",
+   "degree": 1
+  },
+  {
+   "id": "ma:hot-melt-glue",
+   "type": "material",
+   "name": "Hot-melt glue",
+   "degree": 2
+  },
+  {
+   "id": "ma:labels",
+   "type": "material",
+   "name": "Labels",
+   "degree": 8
+  },
+  {
+   "id": "ma:raw-chemicals",
+   "type": "material",
+   "name": "Raw chemicals",
+   "degree": 1
+  },
+  {
+   "id": "ma:sanitizer",
+   "type": "material",
+   "name": "Sanitizer",
+   "degree": 2
+  },
+  {
+   "id": "ma:shipper-cases",
+   "type": "material",
+   "name": "Shipper cases",
+   "degree": 7
+  },
+  {
+   "id": "ma:vacuum-pump-inlet-filter",
+   "type": "material",
+   "name": "Vacuum pump inlet filter",
+   "degree": 1
+  },
+  {
+   "id": "to:approved-label-artwork-binder",
+   "type": "tool",
+   "name": "Approved label artwork binder",
+   "degree": 1
+  },
+  {
+   "id": "to:barcode-scanner",
+   "type": "tool",
+   "name": "Barcode scanner",
+   "degree": 1
+  },
+  {
+   "id": "to:barcode-verifier",
+   "type": "tool",
+   "name": "Barcode verifier",
+   "degree": 1
+  },
+  {
+   "id": "to:calipers",
+   "type": "tool",
+   "name": "Calipers",
+   "degree": 1
+  },
+  {
+   "id": "to:change-parts-kit",
+   "type": "tool",
+   "name": "Change parts kit",
+   "degree": 1
+  },
+  {
+   "id": "to:check-scale-0-1-g",
+   "type": "tool",
+   "name": "Check scale (0.1 g)",
+   "degree": 4
+  },
+  {
+   "id": "to:chuck-wrench",
+   "type": "tool",
+   "name": "Chuck wrench",
+   "degree": 1
+  },
+  {
+   "id": "to:danger-tag",
+   "type": "tool",
+   "name": "Danger tag",
+   "degree": 1
+  },
+  {
+   "id": "to:feeler-gauge",
+   "type": "tool",
+   "name": "Feeler gauge",
+   "degree": 1
+  },
+  {
+   "id": "to:go-no-go-neck-gauge",
+   "type": "tool",
+   "name": "Go/no-go neck gauge",
+   "degree": 1
+  },
+  {
+   "id": "to:grease-gun",
+   "type": "tool",
+   "name": "Grease gun",
+   "degree": 1
+  },
+  {
+   "id": "to:hex-key-set",
+   "type": "tool",
+   "name": "Hex key set",
+   "degree": 1
+  },
+  {
+   "id": "to:infrared-thermometer",
+   "type": "tool",
+   "name": "Infrared thermometer",
+   "degree": 2
+  },
+  {
+   "id": "to:inspection-light",
+   "type": "tool",
+   "name": "Inspection light",
+   "degree": 1
+  },
+  {
+   "id": "to:isopropyl-alcohol",
+   "type": "tool",
+   "name": "Isopropyl alcohol",
+   "degree": 1
+  },
+  {
+   "id": "to:lint-free-wipes",
+   "type": "tool",
+   "name": "Lint-free wipes",
+   "degree": 3
+  },
+  {
+   "id": "to:lockout-hasp",
+   "type": "tool",
+   "name": "Lockout hasp",
+   "degree": 1
+  },
+  {
+   "id": "to:nozzle-wrench",
+   "type": "tool",
+   "name": "Nozzle wrench",
+   "degree": 2
+  },
+  {
+   "id": "to:pallet-jack",
+   "type": "tool",
+   "name": "Pallet jack",
+   "degree": 1
+  },
+  {
+   "id": "to:personal-padlock-one-key",
+   "type": "tool",
+   "name": "Personal padlock (one key)",
+   "degree": 1
+  },
+  {
+   "id": "to:red-hold-tags",
+   "type": "tool",
+   "name": "Red HOLD tags",
+   "degree": 1
+  },
+  {
+   "id": "to:sample-tray",
+   "type": "tool",
+   "name": "Sample tray",
+   "degree": 1
+  },
+  {
+   "id": "to:scissors",
+   "type": "tool",
+   "name": "Scissors",
+   "degree": 1
+  },
+  {
+   "id": "to:scraper",
+   "type": "tool",
+   "name": "Scraper",
+   "degree": 1
+  },
+  {
+   "id": "to:seal-pick",
+   "type": "tool",
+   "name": "Seal pick",
+   "degree": 1
+  },
+  {
+   "id": "to:splice-tape",
+   "type": "tool",
+   "name": "Splice tape",
+   "degree": 1
+  },
+  {
+   "id": "to:stethoscope",
+   "type": "tool",
+   "name": "Stethoscope",
+   "degree": 1
+  },
+  {
+   "id": "to:tare-bottles",
+   "type": "tool",
+   "name": "Tare bottles",
+   "degree": 1
+  },
+  {
+   "id": "to:torque-tester",
+   "type": "tool",
+   "name": "Torque tester",
+   "degree": 3
+  },
+  {
+   "id": "to:vacuum-gauge",
+   "type": "tool",
+   "name": "Vacuum gauge",
+   "degree": 1
+  },
+  {
+   "id": "to:valve-lockout-device",
+   "type": "tool",
+   "name": "Valve lockout device",
+   "degree": 1
+  },
+  {
+   "id": "to:voltage-tester",
+   "type": "tool",
+   "name": "Voltage tester",
+   "degree": 1
+  },
+  {
+   "id": "to:wheel-chocks",
+   "type": "tool",
+   "name": "Wheel chocks",
+   "degree": 1
+  },
+  {
+   "id": "pp:chemical-resistant-gloves",
+   "type": "ppe",
+   "name": "Chemical-resistant gloves",
+   "degree": 3
+  },
+  {
+   "id": "pp:cut-resistant-gloves",
+   "type": "ppe",
+   "name": "Cut-resistant gloves",
+   "degree": 3
+  },
+  {
+   "id": "pp:hearing-protection",
+   "type": "ppe",
+   "name": "Hearing protection",
+   "degree": 2
+  },
+  {
+   "id": "pp:heat-resistant-gloves",
+   "type": "ppe",
+   "name": "Heat-resistant gloves",
+   "degree": 1
+  },
+  {
+   "id": "pp:high-visibility-vest",
+   "type": "ppe",
+   "name": "High-visibility vest",
+   "degree": 2
+  },
+  {
+   "id": "pp:nitrile-gloves",
+   "type": "ppe",
+   "name": "Nitrile gloves",
+   "degree": 1
+  },
+  {
+   "id": "pp:safety-glasses",
+   "type": "ppe",
+   "name": "Safety glasses",
+   "degree": 13
+  },
+  {
+   "id": "pp:safety-shoes",
+   "type": "ppe",
+   "name": "Safety shoes",
+   "degree": 17
+  },
+  {
+   "id": "ro:anyone",
+   "type": "role",
+   "name": "Anyone",
+   "does": {
+    "QP-315": "May place product on hold.",
+    "SP-405": "Walks only in marked walkways and reports every near miss."
+   },
+   "degree": 2
+  },
+  {
+   "id": "ro:authorized-employee",
+   "type": "role",
+   "name": "Authorized Employee",
+   "does": {
+    "SP-402": "Applies their own lock and tag. Operators and Maintenance Technicians who are trained and listed."
+   },
+   "degree": 1
+  },
+  {
+   "id": "ro:batching-operator",
+   "type": "role",
+   "name": "Batching Operator",
+   "does": {
+    "SOP-105": "Flushes the supply line from the mixing tank."
+   },
+   "degree": 1
+  },
+  {
+   "id": "ro:department-manager",
+   "type": "role",
+   "name": "Department Manager",
+   "does": {
+    "TR-701": "Approves the list of required procedures for each role."
+   },
+   "degree": 1
+  },
+  {
+   "id": "ro:forklift-driver",
+   "type": "role",
+   "name": "Forklift Driver",
+   "does": {
+    "SP-405": "Holds a current licence and does the daily check.",
+    "WH-601": "Unloads and puts away."
+   },
+   "degree": 4
+  },
+  {
+   "id": "ro:line-lead",
+   "type": "role",
+   "name": "Line Lead",
+   "does": {
+    "QP-303": "Reacts to results outside the action limits.",
+    "QP-306": "Holds the line until approval.",
+    "SOP-101": "Owns the start-up and signs the checklist.",
+    "SOP-102": "Writes the handover and meets the incoming Line Lead.",
+    "SP-402": "Makes sure everyone affected knows the machine is locked out.",
+    "TR-701": "Signs off operators on the line.",
+    "WI-210": "Is told about any nozzle taken out of service.",
+    "WI-212": "Decides whether to stop the line for repeated jams."
+   },
+   "degree": 20
+  },
+  {
+   "id": "ro:maintenance-planner",
+   "type": "role",
+   "name": "Maintenance Planner",
+   "does": {
+    "MP-501": "Schedules the work with production.",
+    "MP-502": "Orders spare parts and schedules repairs."
+   },
+   "degree": 2
+  },
+  {
+   "id": "ro:maintenance-technician",
+   "type": "role",
+   "name": "Maintenance Technician",
+   "does": {
+    "MP-501": "Carries out the work.",
+    "MP-502": "Carries out the inspection.",
+    "QP-303": "Adjusts the filler.",
+    "SOP-101": "Removes locks after maintenance work.",
+    "SOP-104": "Fits the filler change parts.",
+    "WI-210": "Repairs nozzles and valves.",
+    "WI-211": "Replaces chucks and adjusts clutches.",
+    "WI-212": "Adjusts sensors and replaces rollers.",
+    "WI-213": "Services the glue system and the vacuum pump."
+   },
+   "degree": 14
+  },
+  {
+   "id": "ro:operator",
+   "type": "role",
+   "name": "Operator",
+   "does": {
+    "MP-501": "Repeats the nozzle check in WI-210 after any seal change.",
+    "QP-303": "Takes and weighs the samples.",
+    "QP-306": "Supplies the samples.",
+    "SOP-101": "Carries out the machine checks.",
+    "SOP-102": "Cleans and secures the machine.",
+    "SOP-104": "Carries out the changeover.",
+    "SOP-105": "Clears the line and loads the new materials.",
+    "WI-210": "Sets up and adjusts the filler.",
+    "WI-211": "Sets up the capper and checks torque.",
+    "WI-212": "Sets up the labeler and changes rolls.",
+    "WI-213": "Sets up the case packer."
+   },
+   "degree": 22
+  },
+  {
+   "id": "ro:production-planner",
+   "type": "role",
+   "name": "Production Planner",
+   "does": {
+    "WH-601": "Is told of any delivery more than 2 hours late, or short."
+   },
+   "degree": 1
+  },
+  {
+   "id": "ro:purchasing",
+   "type": "role",
+   "name": "Purchasing",
+   "does": {
+    "QP-308": "Is told of every rejection.",
+    "QP-309": "Buys only from the suppliers listed here.",
+    "WH-601": "Is told of any delivery more than 2 hours late, or short."
+   },
+   "degree": 3
+  },
+  {
+   "id": "ro:qa-technician",
+   "type": "role",
+   "name": "QA Technician",
+   "does": {
+    "QP-303": "Reviews the charts each shift and places product on hold.",
+    "QP-306": "Carries out the checks and signs.",
+    "QP-308": "Inspects and releases or rejects each lot.",
+    "QP-309": "Inspects against these specifications.",
+    "QP-315": "Decides what happens to held product.",
+    "QP-316": "Carries out the lot trace.",
+    "SOP-101": "Gives first-off approval.",
+    "SOP-104": "Gives first-off approval.",
+    "SOP-105": "Gives first-off approval.",
+    "WH-601": "Releases packaging materials.",
+    "WI-212": "Is called if jams continue on a second lot."
+   },
+   "degree": 16
+  },
+  {
+   "id": "ro:quality-manager",
+   "type": "role",
+   "name": "Quality Manager",
+   "does": {
+    "QP-309": "Owns this document and approves suppliers.",
+    "QP-315": "Approves scrap above 500 dollars.",
+    "QP-316": "Owns each complaint until it is closed."
+   },
+   "degree": 3
+  },
+  {
+   "id": "ro:receiving-clerk",
+   "type": "role",
+   "name": "Receiving Clerk",
+   "does": {
+    "QP-308": "Holds the delivery in quarantine until release.",
+    "WH-601": "Checks the delivery against the purchase order."
+   },
+   "degree": 5
+  },
+  {
+   "id": "ro:safety-manager",
+   "type": "role",
+   "name": "Safety Manager",
+   "does": {
+    "SP-402": "Audits this procedure every year.",
+    "SP-405": "Reviews near-miss reports every week."
+   },
+   "degree": 2
+  },
+  {
+   "id": "ro:shift-lead",
+   "type": "role",
+   "name": "Shift Lead",
+   "does": {
+    "MP-501": "Releases the line.",
+    "QP-316": "Supplies the production and downtime records for the shift.",
+    "SOP-104": "Releases the line for changeover and signs the record.",
+    "SOP-105": "Verifies the line clearance."
+   },
+   "degree": 4
+  },
+  {
+   "id": "ro:team-leader",
+   "type": "role",
+   "name": "Team Leader",
+   "does": {
+    "QP-315": "Makes sure held product is tagged and moved."
+   },
+   "degree": 1
+  },
+  {
+   "id": "ro:training-coordinator",
+   "type": "role",
+   "name": "Training Coordinator",
+   "does": {
+    "TR-701": "Keeps the training matrix."
+   },
+   "degree": 1
+  },
+  {
+   "id": "ro:warehouse-supervisor",
+   "type": "role",
+   "name": "Warehouse Supervisor",
+   "does": {
+    "SP-405": "Keeps walkways and sightlines clear.",
+    "WH-601": "Assigns dock doors and resolves shortages."
+   },
+   "degree": 2
+  },
+  {
+   "id": "FRM-PR-01",
+   "type": "form",
+   "name": "Start-Up Checklist",
+   "degree": 1
+  },
+  {
+   "id": "FRM-PR-02",
+   "type": "form",
+   "name": "Shift Handover Log",
+   "degree": 2
+  },
+  {
+   "id": "FRM-PR-04",
+   "type": "form",
+   "name": "Changeover Record",
+   "degree": 1
+  },
+  {
+   "id": "FRM-PR-05",
+   "type": "form",
+   "name": "Line Clearance Checklist",
+   "degree": 1
+  },
+  {
+   "id": "FRM-PR-09",
+   "type": "form",
+   "name": "Downtime Log Sheet",
+   "degree": 1
+  },
+  {
+   "id": "FRM-PR-10",
+   "type": "form",
+   "name": "Filler Setup Sheet",
+   "degree": 1
+  },
+  {
+   "id": "FRM-PR-11",
+   "type": "form",
+   "name": "Torque Check Sheet",
+   "degree": 1
+  },
+  {
+   "id": "FRM-PR-12",
+   "type": "form",
+   "name": "Label Roll Log",
+   "degree": 1
+  },
+  {
+   "id": "FRM-PR-13",
+   "type": "form",
+   "name": "Case Seal Check",
+   "degree": 1
+  },
+  {
+   "id": "FRM-QA-03",
+   "type": "form",
+   "name": "Fill Weight Chart",
+   "degree": 1
+  },
+  {
+   "id": "FRM-QA-06",
+   "type": "form",
+   "name": "First-Off Record",
+   "degree": 1
+  },
+  {
+   "id": "FRM-QA-08",
+   "type": "form",
+   "name": "Incoming Inspection Record",
+   "degree": 1
+  },
+  {
+   "id": "FRM-QA-09",
+   "type": "form",
+   "name": "Supplier Approval Record",
+   "degree": 1
+  },
+  {
+   "id": "FRM-QA-15",
+   "type": "form",
+   "name": "Hold Tag",
+   "degree": 1
+  },
+  {
+   "id": "FRM-QA-16",
+   "type": "form",
+   "name": "Disposition Record",
+   "degree": 1
+  },
+  {
+   "id": "FRM-QA-20",
+   "type": "form",
+   "name": "Complaint Record",
+   "degree": 1
+  },
+  {
+   "id": "FRM-SF-02",
+   "type": "form",
+   "name": "Lockout Audit Form",
+   "degree": 1
+  },
+  {
+   "id": "FRM-SF-05",
+   "type": "form",
+   "name": "Forklift Daily Check",
+   "degree": 1
+  },
+  {
+   "id": "FRM-SF-06",
+   "type": "form",
+   "name": "Near-Miss Card",
+   "degree": 1
+  },
+  {
+   "id": "FRM-TR-01",
+   "type": "form",
+   "name": "Training Matrix",
+   "degree": 1
+  },
+  {
+   "id": "FRM-TR-02",
+   "type": "form",
+   "name": "Sign-Off Sheet",
+   "degree": 1
+  },
+  {
+   "id": "FRM-WH-01",
+   "type": "form",
+   "name": "Receiving Log",
+   "degree": 1
+  },
+  {
+   "id": "Maintenance work order",
+   "type": "form",
+   "name": "Maintenance work order",
+   "degree": 2
+  },
+  {
+   "id": "su:capitol-closures",
+   "type": "supplier",
+   "name": "Capitol Closures",
+   "degree": 3
+  },
+  {
+   "id": "su:clearform-bottles",
+   "type": "supplier",
+   "name": "Clearform Bottles",
+   "degree": 2
+  },
+  {
+   "id": "su:northside-labels",
+   "type": "supplier",
+   "name": "Northside Labels",
+   "degree": 2
+  },
+  {
+   "id": "su:ridge-corrugated",
+   "type": "supplier",
+   "name": "Ridge Corrugated",
+   "degree": 2
+  },
+  {
+   "id": "QP-318",
+   "type": "missing",
+   "name": "QP-318 Rework",
+   "degree": 1
+  },
+  {
+   "id": "WI-215",
+   "type": "missing",
+   "name": "WI-215 Label Splicing",
+   "degree": 1
+  }
+ ],
+ "edges": [
+  {
+   "src": "MP-501",
+   "dst": "FIL-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "2.0 Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "FIL-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "2.0 Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "FIL-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "2.0 Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "ma:food-grade-grease-h1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "ma:fill-valve-seal-kit",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "to:grease-gun",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "to:nozzle-wrench",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "to:seal-pick",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "to:inspection-light",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "pp:nitrile-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "ro:maintenance-planner",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "ro:shift-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "7.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "Maintenance work order",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "5.0 Related documents and records",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "SP-402",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "5.0 and 6.0 step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-501",
+   "dst": "WI-210",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "5.0 and 7.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "CPK-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "2.0 Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "CPK-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "2.0 Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "CPK-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "2.0 Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "ma:vacuum-pump-inlet-filter",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "ma:bearing-vp-brg-6205",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "to:infrared-thermometer",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "to:vacuum-gauge",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "to:stethoscope",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "pp:hearing-protection",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "ro:maintenance-planner",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "Maintenance work order",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "5.0 Related documents and records",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "SP-402",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "5.0 and 7.0 step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "MP-502",
+   "dst": "WI-213",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "5.0",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "to:check-scale-0-1-g",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "to:tare-bottles",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "FRM-QA-03",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "WI-210",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Note and Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-303",
+   "dst": "QP-315",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "to:check-scale-0-1-g",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "to:torque-tester",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "to:approved-label-artwork-binder",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "FRM-QA-06",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "WI-210",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "WI-211",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 3",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "QP-316",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-306",
+   "dst": "QP-303",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "ma:bottles",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "ma:caps",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "ma:labels",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "ma:shipper-cases",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "to:calipers",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "to:check-scale-0-1-g",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "to:go-no-go-neck-gauge",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "to:barcode-verifier",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "pp:cut-resistant-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "ro:receiving-clerk",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "ro:purchasing",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "FRM-QA-08",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "WH-601",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "QP-309",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-308",
+   "dst": "QP-315",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-308",
+     "where": "step 9",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ma:bottles",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ma:caps-28-mm",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ma:caps-38-mm",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ma:labels",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ma:shipper-cases",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ro:quality-manager",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ro:purchasing",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "FRM-QA-09",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "su:clearform-bottles",
+   "dst": "ma:bottles",
+   "type": "supplies",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "su:clearform-bottles",
+   "type": "names_supplier",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "su:capitol-closures",
+   "dst": "ma:caps-28-mm",
+   "type": "supplies",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "su:capitol-closures",
+   "type": "names_supplier",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "su:capitol-closures",
+   "dst": "ma:caps-38-mm",
+   "type": "supplies",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "su:northside-labels",
+   "dst": "ma:labels",
+   "type": "supplies",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "su:northside-labels",
+   "type": "names_supplier",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "su:ridge-corrugated",
+   "dst": "ma:shipper-cases",
+   "type": "supplies",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "su:ridge-corrugated",
+   "type": "names_supplier",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Specifications table",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-309",
+   "dst": "QP-308",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "step 3 and Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "to:red-hold-tags",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "ro:anyone",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "ro:team-leader",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "ro:quality-manager",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "FRM-QA-15",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "FRM-QA-16",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "QP-318",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-315",
+   "dst": "QP-316",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-316",
+   "dst": "ro:quality-manager",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-316",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-316",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-316",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-316",
+   "dst": "ro:shift-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "QP-316",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-316",
+   "dst": "FRM-QA-20",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "QP-316",
+     "where": "5.0 and 7.0 step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "QP-316",
+   "dst": "QP-315",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "QP-316",
+     "where": "5.0 and 7.0 step 3",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "FIL-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "FIL-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "FIL-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CAP-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CAP-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CAP-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "LAB-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "LAB-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "LAB-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CPK-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 9",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CPK-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 9",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CPK-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 9",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "PAL-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 10",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "PAL-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 10",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "PAL-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 10",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CNV-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 11",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CNV-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 11",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "CNV-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 11",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ma:bottles",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ma:caps",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ma:labels",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ma:shipper-cases",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ma:hot-melt-glue",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "pp:hearing-protection",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "PPE (in the filling hall)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "FRM-PR-01",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 16",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "FRM-PR-02",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "SP-402",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "WI-210",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "WI-211",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "WI-212",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "WI-213",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 9",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "QP-306",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 13",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-101",
+   "dst": "QP-303",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-101",
+     "where": "step 15",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "ma:sanitizer",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "to:scraper",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "to:lint-free-wipes",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "pp:chemical-resistant-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "PPE (when cleaning the filler)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "FRM-PR-02",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "FRM-PR-09",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "QP-315",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-102",
+   "dst": "SOP-101",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "FIL-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "6.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "CAP-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "6.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "LAB-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "7.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "CPK-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "7.0 step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "CNV-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "7.0 step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ma:bottles",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ma:caps-38-mm",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ma:labels",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ma:shipper-cases",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "to:change-parts-kit",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials (stored in the maintenance crib)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "to:torque-tester",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "to:hex-key-set",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "to:feeler-gauge",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "pp:cut-resistant-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ro:shift-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "FRM-PR-04",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "8.0 step 3",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "SP-402",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "5.0, 6.0 step 4, 7.0 step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "WI-210",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "5.0 and 8.0 step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "WI-212",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "5.0 and 7.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "QP-306",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "5.0 and 8.0 step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-104",
+   "dst": "SOP-105",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "5.0 and 6.0 step 3",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "MIX-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "6.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "MIX-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "6.0 step 4",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "ma:labels",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "ma:caps-28-mm",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "ma:flush-water",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "to:lint-free-wipes",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "pp:chemical-resistant-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "4.0 Safety and materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "ro:shift-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "ro:batching-operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "FRM-PR-05",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "6.0 step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "QP-306",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "5.0 and 7.0 step 3",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "WI-210",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "5.0 and 7.0 step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SOP-105",
+   "dst": "WI-212",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SOP-105",
+     "where": "5.0 and 7.0 step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "to:personal-padlock-one-key",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "to:lockout-hasp",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "to:danger-tag",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "to:valve-lockout-device",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "to:voltage-tester",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "ro:authorized-employee",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "ro:safety-manager",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "FRM-SF-02",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Records",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-402",
+   "dst": "TR-701",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SP-402",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "FL-01",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "FL-02",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "FL-03",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "FL-04",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "DOCK-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "DOCK-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "DOCK-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "DOCK-4",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "pp:high-visibility-vest",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "ro:forklift-driver",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "ro:warehouse-supervisor",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "ro:safety-manager",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "ro:anyone",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "steps 5 and 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "FRM-SF-05",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "FRM-SF-06",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "TR-701",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "SP-405",
+   "dst": "WH-601",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "ro:training-coordinator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "ro:department-manager",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "FRM-TR-01",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "FRM-TR-02",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "step 2",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "SOP-101",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "SOP-102",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "SOP-104",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "SOP-105",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "WI-210",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "WI-211",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role; Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "WI-212",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "WI-213",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "QP-303",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "QP-306",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "QP-308",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "QP-315",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "SP-402",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "SP-405",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "MP-501",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "MP-502",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "TR-701",
+   "dst": "WH-601",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "SOP-101",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "SOP-102",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "SOP-104",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "SOP-105",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "WI-210",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "WI-211",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "WI-212",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "WI-213",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "QP-303",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "QP-315",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:operator",
+   "dst": "SP-402",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role (SOP-104 Line 2 only)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "SOP-101",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "SOP-102",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "SOP-104",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "SOP-105",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "WI-210",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "WI-211",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "WI-212",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "WI-213",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "QP-303",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "QP-315",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "SP-402",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:line-lead",
+   "dst": "QP-306",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role ('Everything for Operator, plus QP-306')",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:qa-technician",
+   "dst": "QP-303",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:qa-technician",
+   "dst": "QP-306",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:qa-technician",
+   "dst": "QP-308",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:qa-technician",
+   "dst": "QP-315",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:qa-technician",
+   "dst": "SP-405",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:maintenance-technician",
+   "dst": "SP-402",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:maintenance-technician",
+   "dst": "MP-501",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:maintenance-technician",
+   "dst": "MP-502",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:maintenance-technician",
+   "dst": "WI-210",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:maintenance-technician",
+   "dst": "WI-213",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:forklift-driver",
+   "dst": "SP-405",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:forklift-driver",
+   "dst": "WH-601",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:receiving-clerk",
+   "dst": "WH-601",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:receiving-clerk",
+   "dst": "QP-308",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "ro:receiving-clerk",
+   "dst": "SP-405",
+   "type": "trained_on",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "eq:dock-door-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "eq:dock-door-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "eq:dock-door-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Scope and step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "eq:dock-door-4",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Scope and step 1",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ma:bottles",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ma:caps",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ma:labels",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ma:shipper-cases",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ma:raw-chemicals",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "to:pallet-jack",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "to:wheel-chocks",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "to:barcode-scanner",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "pp:high-visibility-vest",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "pp:cut-resistant-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ro:receiving-clerk",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ro:forklift-driver",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ro:warehouse-supervisor",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ro:purchasing",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "ro:production-planner",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "FRM-WH-01",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "QP-308",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "step 6 and Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WH-601",
+   "dst": "SP-405",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WH-601",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "FIL-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Scope and step 3",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "FIL-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "FIL-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "ma:sanitizer",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "to:check-scale-0-1-g",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "to:nozzle-wrench",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "to:sample-tray",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "pp:chemical-resistant-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "FRM-PR-10",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "steps 3 and 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "QP-303",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-210",
+   "dst": "MP-501",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-210",
+     "where": "step 6",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "CAP-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "CAP-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "CAP-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "ma:caps-28-mm",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "ma:caps-38-mm",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "to:torque-tester",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "to:chuck-wrench",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "FRM-PR-11",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-211",
+   "dst": "QP-315",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-211",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "LAB-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "LAB-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "LAB-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "ma:labels",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "to:splice-tape",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "to:scissors",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "to:lint-free-wipes",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "to:isopropyl-alcohol",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "ro:line-lead",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "ro:qa-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "step 11",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "FRM-PR-12",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "step 8",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "QP-308",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "step 1 and Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "QP-309",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "step 1 and Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "WI-215",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "step 7",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-212",
+   "dst": "QP-315",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "step 10",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "CPK-1",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "CPK-2",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "CPK-3",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Scope",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "ma:shipper-cases",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "ma:hot-melt-glue",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Materials",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "to:infrared-thermometer",
+   "type": "uses",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Tools",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "pp:safety-glasses",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "pp:heat-resistant-gloves",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "PPE (at the glue tank)",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "pp:safety-shoes",
+   "type": "requires",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "PPE",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "ro:operator",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "ro:maintenance-technician",
+   "type": "done_by",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "Roles",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "FRM-PR-13",
+   "type": "records_on",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "step 5",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "MP-502",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "step 6 and Related documents",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "src": "WI-213",
+   "dst": "SP-402",
+   "type": "refers_to",
+   "evidence": [
+    {
+     "doc": "WI-213",
+     "where": "step 7 and Related documents",
+     "quote": ""
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "what": "lubrication interval",
+   "applies_to": "filler",
+   "value": "14",
+   "unit": "days",
+   "where": "6.0 heading",
+   "quote": "EVERY 14 DAYS: LUBRICATION AND NOZZLE INSPECTION",
+   "doc": "MP-501"
+  },
+  {
+   "what": "valve seal inspection interval",
+   "applies_to": "filler",
+   "value": "90",
+   "unit": "days",
+   "where": "7.0 heading",
+   "quote": "EVERY 90 DAYS: VALVE SEAL INSPECTION",
+   "doc": "MP-501"
+  },
+  {
+   "what": "grease strokes per point",
+   "applies_to": "carousel bearing and lift cams",
+   "value": "3",
+   "unit": "strokes",
+   "where": "6.0 step 2",
+   "quote": "3 strokes at each point",
+   "doc": "MP-501"
+  },
+  {
+   "what": "empty run time after lubrication",
+   "applies_to": "filler",
+   "value": "2",
+   "unit": "minutes",
+   "where": "6.0 step 4",
+   "quote": "Run the filler empty for 2 minutes and listen for noise.",
+   "doc": "MP-501"
+  },
+  {
+   "what": "valve seal inspection sample",
+   "applies_to": "filler valves",
+   "value": "2",
+   "unit": "valves",
+   "where": "7.0 step 1",
+   "quote": "Remove two valves, chosen from different sides of the carousel.",
+   "doc": "MP-501"
+  },
+  {
+   "what": "worn seal share that triggers full set replacement",
+   "applies_to": "filler valve seals",
+   "value": "more than one third",
+   "where": "7.0 step 3",
+   "quote": "If more than a third are worn, replace the full set.",
+   "doc": "MP-501"
+  },
+  {
+   "what": "maximum bearing housing temperature",
+   "applies_to": "vacuum pump",
+   "value": "70",
+   "unit": "degrees C",
+   "where": "6.0 step 2",
+   "quote": "More than 70 degrees C, or more than 15 degrees above last month, is a fail.",
+   "doc": "MP-502"
+  },
+  {
+   "what": "maximum bearing temperature rise since last month",
+   "applies_to": "vacuum pump",
+   "value": "15",
+   "unit": "degrees C",
+   "where": "6.0 step 2",
+   "quote": "More than 70 degrees C, or more than 15 degrees above last month, is a fail.",
+   "doc": "MP-502"
+  },
+  {
+   "what": "minimum vacuum",
+   "applies_to": "case packer",
+   "value": "0.7",
+   "unit": "bar",
+   "where": "6.0 step 3",
+   "quote": "Read the vacuum at the pump inlet with the erector idle: at least 0.7 bar of vacuum.",
+   "doc": "MP-502"
+  },
+  {
+   "what": "vacuum pump inspection interval",
+   "applies_to": "case packer",
+   "value": "monthly",
+   "where": "2.0 Scope",
+   "quote": "Monthly task in the maintenance system.",
+   "doc": "MP-502"
+  },
+  {
+   "what": "minimum bearing VP-BRG-6205 in stores",
+   "applies_to": "vacuum pump",
+   "value": "1",
+   "unit": "bearing",
+   "where": "7.0 step 4",
+   "quote": "Keep at least one bearing VP-BRG-6205 in stores.",
+   "doc": "MP-502"
+  },
+  {
+   "what": "fill weight check interval",
+   "applies_to": "Lines 1, 2 and 3",
+   "value": "1",
+   "unit": "hour",
+   "where": "step 1",
+   "quote": "Once every hour, take 5 bottles in a row from the filler discharge.",
+   "doc": "QP-303"
+  },
+  {
+   "what": "fill weight sample size",
+   "applies_to": "each fill weight check",
+   "value": "5",
+   "unit": "bottles",
+   "where": "step 1",
+   "quote": "Once every hour, take 5 bottles in a row from the filler discharge.",
+   "doc": "QP-303"
+  },
+  {
+   "what": "check scale verification test weight",
+   "applies_to": "check scale",
+   "value": "1",
+   "unit": "kg",
+   "where": "step 3",
+   "quote": "Verify the check scale with the 1 kg test weight at the start of every shift.",
+   "doc": "QP-303"
+  },
+  {
+   "what": "overfill trigger to tell the Line Lead",
+   "applies_to": "average above target, two checks in a row",
+   "value": "4",
+   "unit": "g",
+   "where": "step 6",
+   "quote": "Average above target by more than 4 g for two checks in a row: tell the Line Lead.",
+   "doc": "QP-303"
+  },
+  {
+   "what": "first-off bottles to QA bench",
+   "applies_to": "start-up or changeover",
+   "value": "5",
+   "unit": "good bottles",
+   "where": "step 1",
+   "quote": "Bring the first 5 good bottles and one packed case to the QA bench.",
+   "doc": "QP-306"
+  },
+  {
+   "what": "label straightness tolerance",
+   "applies_to": "first-off label check",
+   "value": "2",
+   "unit": "mm",
+   "where": "step 4",
+   "quote": "straight within 2 mm, no wrinkles or bubbles",
+   "doc": "QP-306"
+  },
+  {
+   "what": "maximum line speed before first-off approval",
+   "applies_to": "Lines 1, 2 and 3",
+   "value": "50",
+   "unit": "%",
+   "where": "step 9",
+   "quote": "Do not run above 50% speed before approval.",
+   "doc": "QP-306"
+  },
+  {
+   "what": "incoming inspection sample size",
+   "applies_to": "bottles",
+   "value": "13",
+   "unit": "bottles",
+   "where": "step 4",
+   "quote": "Bottles (sample of 13): weight, height, neck finish with the go/no-go gauge, no flash or contamination.",
+   "doc": "QP-308"
+  },
+  {
+   "what": "incoming inspection sample size",
+   "applies_to": "caps",
+   "value": "13",
+   "unit": "caps",
+   "where": "step 5",
+   "quote": "Caps (sample of 13): size, colour, liner present, fit on a sample bottle.",
+   "doc": "QP-308"
+  },
+  {
+   "what": "incoming inspection sample size",
+   "applies_to": "labels",
+   "value": "3",
+   "unit": "rolls per lot",
+   "where": "step 6",
+   "quote": "Labels (3 rolls per lot): artwork and revision against the binder",
+   "doc": "QP-308"
+  },
+  {
+   "what": "incoming inspection sample size",
+   "applies_to": "shipper cases",
+   "value": "5",
+   "unit": "cases",
+   "where": "step 7",
+   "quote": "Shipper cases (sample of 5): dimensions, board grade stamp, print.",
+   "doc": "QP-308"
+  },
+  {
+   "what": "minimum barcode grade",
+   "applies_to": "labels",
+   "value": "C or better",
+   "where": "step 6",
+   "quote": "barcode grade C or better",
+   "doc": "QP-308"
+  },
+  {
+   "what": "label roll core diameter",
+   "applies_to": "labels",
+   "value": "76",
+   "unit": "mm",
+   "where": "step 6",
+   "quote": "core diameter 76 mm, labels wound outward",
+   "doc": "QP-308"
+  },
+  {
+   "what": "time to email Purchasing after a failed lot",
+   "applies_to": "rejected packaging lots",
+   "value": "same day",
+   "where": "step 9",
+   "quote": "Fail: red REJECTED tag, hold as described in QP-315, and email Purchasing the same day.",
+   "doc": "QP-308"
+  },
+  {
+   "what": "label liner caliper",
+   "applies_to": "labels",
+   "value": "0.075",
+   "unit": "mm",
+   "tolerance": "plus or minus 0.005",
+   "where": "Specifications table",
+   "quote": "Liner caliper 0.075 mm plus or minus 0.005; barcode grade C or better",
+   "doc": "QP-309"
+  },
+  {
+   "what": "minimum barcode grade",
+   "applies_to": "labels",
+   "value": "C or better",
+   "where": "Specifications table",
+   "quote": "barcode grade C or better",
+   "doc": "QP-309"
+  },
+  {
+   "what": "label roll core diameter",
+   "applies_to": "labels",
+   "value": "76",
+   "unit": "mm",
+   "where": "Specifications table",
+   "quote": "Roll width, core 76 mm",
+   "doc": "QP-309"
+  },
+  {
+   "what": "shipper case board grade",
+   "applies_to": "shipper cases",
+   "value": "32",
+   "unit": "ECT",
+   "where": "Specifications table",
+   "quote": "Inside dimensions, board grade 32 ECT",
+   "doc": "QP-309"
+  },
+  {
+   "what": "supplier line trial length",
+   "applies_to": "new or second supplier",
+   "value": "at least one full shift",
+   "where": "step 2",
+   "quote": "A new or second supplier needs a line trial of at least one full shift",
+   "doc": "QP-309"
+  },
+  {
+   "what": "scrap value needing Quality Manager signature",
+   "applies_to": "held product disposition",
+   "value": "500",
+   "unit": "dollars",
+   "where": "step 6",
+   "quote": "Scrap above 500 dollars needs the Quality Manager's signature.",
+   "doc": "QP-315"
+  },
+  {
+   "what": "time to inspect held product",
+   "applies_to": "held product",
+   "value": "1",
+   "unit": "working day",
+   "where": "step 4",
+   "quote": "Inspect within one working day.",
+   "doc": "QP-315"
+  },
+  {
+   "what": "time to move held product to the hold cage",
+   "applies_to": "held product",
+   "value": "same shift",
+   "where": "step 2",
+   "quote": "Move held product to the hold cage the same shift.",
+   "doc": "QP-315"
+  },
+  {
+   "what": "time to open the complaint record",
+   "applies_to": "customer complaint",
+   "value": "1",
+   "unit": "working day",
+   "where": "7.0 step 1",
+   "quote": "Open FRM-QA-20 Complaint Record within one working day.",
+   "doc": "QP-316"
+  },
+  {
+   "what": "customer reply time",
+   "applies_to": "customer complaint",
+   "value": "5",
+   "unit": "working days",
+   "where": "7.0 step 5",
+   "quote": "Reply to the customer within 5 working days with the cause and the action taken.",
+   "doc": "QP-316"
+  },
+  {
+   "what": "time to hand shift records to QA Technician",
+   "applies_to": "lot trace",
+   "value": "1",
+   "unit": "working day",
+   "where": "7.0 step 4",
+   "quote": "Give the QA Technician the shift's records and any notes within one working day.",
+   "doc": "QP-316"
+  },
+  {
+   "what": "stop length that requires a full start-up",
+   "applies_to": "Lines 1, 2 and 3",
+   "value": "60",
+   "unit": "minutes",
+   "where": "Scope",
+   "quote": "Applies at the start of every shift and after any stop longer than 60 minutes.",
+   "doc": "SOP-101"
+  },
+  {
+   "what": "minimum compressed air pressure",
+   "applies_to": "line regulator",
+   "value": "6.2",
+   "unit": "bar",
+   "where": "step 4",
+   "quote": "Check compressed air at the line regulator: 6.2 bar minimum.",
+   "doc": "SOP-101"
+  },
+  {
+   "what": "maximum line speed before first-off approval",
+   "applies_to": "Lines 1, 2 and 3",
+   "value": "50",
+   "unit": "%",
+   "where": "step 11",
+   "quote": "Start conveyors (CNV-1, CNV-2, CNV-3), then the filler at 50% speed.",
+   "doc": "SOP-101"
+  },
+  {
+   "what": "bottles run before first-off samples",
+   "applies_to": "start-up",
+   "value": "20",
+   "unit": "bottles",
+   "where": "step 12",
+   "quote": "Run 20 bottles and stop. Take the first-off samples to the QA Technician.",
+   "doc": "SOP-101"
+  },
+  {
+   "what": "ramp time to scheduled rate",
+   "applies_to": "start-up after first-off approval",
+   "value": "5",
+   "unit": "minutes",
+   "where": "step 14",
+   "quote": "After approval, ramp to the scheduled rate over 5 minutes.",
+   "doc": "SOP-101"
+  },
+  {
+   "what": "first fill weight check after start",
+   "applies_to": "start-up",
+   "value": "15",
+   "unit": "minutes",
+   "where": "step 15",
+   "quote": "Take the first fill weight check within 15 minutes of start",
+   "doc": "SOP-101"
+  },
+  {
+   "what": "fill weight check interval",
+   "applies_to": "Lines 1, 2 and 3",
+   "value": "30",
+   "unit": "minutes",
+   "where": "step 15",
+   "quote": "then every 30 minutes for the rest of the shift, as described in QP-303.",
+   "doc": "SOP-101"
+  },
+  {
+   "what": "minimum stop length to log",
+   "applies_to": "Lines 1, 2 and 3",
+   "value": "3",
+   "unit": "minutes",
+   "where": "step 5",
+   "quote": "Enter every stop of 3 minutes or longer in FRM-PR-09 Downtime Log Sheet with the cause and a short comment.",
+   "doc": "SOP-102"
+  },
+  {
+   "what": "stop length that requires a full start-up",
+   "applies_to": "Lines 1, 2 and 3",
+   "value": "60",
+   "unit": "minutes",
+   "where": "step 8",
+   "quote": "If the line will be down for more than 60 minutes, the next start follows SOP-101 in full.",
+   "doc": "SOP-102"
+  },
+  {
+   "what": "application torque",
+   "applies_to": "38 mm cap",
+   "value": "15",
+   "unit": "in-lb",
+   "tolerance": "plus or minus 2",
+   "where": "7.0 step 3",
+   "quote": "Set the application torque to 15 in-lb, plus or minus 2.",
+   "doc": "SOP-104"
+  },
+  {
+   "what": "torque check sample at changeover",
+   "applies_to": "CAP-2",
+   "value": "3",
+   "unit": "bottles",
+   "where": "7.0 step 3",
+   "quote": "Check three bottles with the torque tester.",
+   "doc": "SOP-104"
+  },
+  {
+   "what": "pack pattern",
+   "applies_to": "2 L",
+   "value": "6",
+   "unit": "per case",
+   "where": "7.0 step 5",
+   "quote": "6 per case for 2 L, 12 per case for 500 ml",
+   "doc": "SOP-104"
+  },
+  {
+   "what": "pack pattern",
+   "applies_to": "500 ml",
+   "value": "12",
+   "unit": "per case",
+   "where": "7.0 step 5",
+   "quote": "6 per case for 2 L, 12 per case for 500 ml",
+   "doc": "SOP-104"
+  },
+  {
+   "what": "conveyor guide rail clearance",
+   "applies_to": "CNV-2",
+   "value": "3",
+   "unit": "mm each side",
+   "where": "7.0 step 6",
+   "quote": "adjust the guide rails to the bottle width plus 3 mm on each side.",
+   "doc": "SOP-104"
+  },
+  {
+   "what": "target changeover time",
+   "applies_to": "Line 2 size changeover",
+   "value": "45",
+   "unit": "minutes",
+   "where": "8.0 note",
+   "quote": "Target changeover time: 45 minutes in either direction.",
+   "doc": "SOP-104"
+  },
+  {
+   "what": "supply line flush time",
+   "applies_to": "MIX-1 or MIX-2 to the filler",
+   "value": "10",
+   "unit": "minutes",
+   "where": "6.0 step 4",
+   "quote": "Flush the supply line from MIX-1 or MIX-2 to the filler with water for 10 minutes.",
+   "doc": "SOP-105"
+  },
+  {
+   "what": "target changeover time",
+   "applies_to": "Lines 1 and 3 product changeover",
+   "value": "30",
+   "unit": "minutes",
+   "where": "7.0 note",
+   "quote": "Target changeover time: 30 minutes.",
+   "doc": "SOP-105"
+  },
+  {
+   "what": "glue tank cool-down temperature before lockout work",
+   "applies_to": "case packers",
+   "value": "60",
+   "unit": "degrees C",
+   "where": "step 4",
+   "quote": "Case packers: also wait for the glue tank to cool below 60 degrees C or keep the tank lid closed and tagged.",
+   "doc": "SP-402"
+  },
+  {
+   "what": "lockout procedure audit interval",
+   "applies_to": "SP-402",
+   "value": "1",
+   "unit": "year",
+   "where": "Roles",
+   "quote": "Audits this procedure every year.",
+   "doc": "SP-402"
+  },
+  {
+   "what": "maximum forklift speed",
+   "applies_to": "forklifts inside the building",
+   "value": "5",
+   "unit": "mph",
+   "where": "step 2",
+   "quote": "Maximum speed is 5 mph everywhere inside the building.",
+   "doc": "SP-405"
+  },
+  {
+   "what": "forklift stop distance from pedestrian",
+   "applies_to": "forklifts",
+   "value": "3",
+   "unit": "metres",
+   "where": "step 3",
+   "quote": "Stop if a pedestrian is within 3 metres.",
+   "doc": "SP-405"
+  },
+  {
+   "what": "no-stacking distance from corner or dock door",
+   "applies_to": "warehouse",
+   "value": "2",
+   "unit": "metres",
+   "where": "step 6",
+   "quote": "Nothing is stacked within 2 metres of a corner or a dock door where it could block a driver's view.",
+   "doc": "SP-405"
+  },
+  {
+   "what": "near-miss report review interval",
+   "applies_to": "Safety Manager",
+   "value": "1",
+   "unit": "week",
+   "where": "Roles",
+   "quote": "Reviews near-miss reports every week.",
+   "doc": "SP-405"
+  },
+  {
+   "what": "retraining window after a procedure is revised",
+   "applies_to": "everyone trained on the procedure",
+   "value": "30",
+   "unit": "days",
+   "where": "step 3",
+   "quote": "When a procedure is revised, everyone trained on it is retrained within 30 days.",
+   "doc": "TR-701"
+  },
+  {
+   "what": "required procedures review interval",
+   "applies_to": "each role",
+   "value": "1",
+   "unit": "year",
+   "where": "step 4",
+   "quote": "Review the required procedures for each role every year.",
+   "doc": "TR-701"
+  },
+  {
+   "what": "maximum forklift speed",
+   "applies_to": "forklifts on the dock and in the receiving lanes",
+   "value": "3",
+   "unit": "mph",
+   "where": "step 3",
+   "quote": "Drive at walking pace on the dock and in the receiving lanes: no faster than 3 mph.",
+   "doc": "WH-601"
+  },
+  {
+   "what": "late delivery reporting threshold",
+   "applies_to": "inbound deliveries",
+   "value": "2",
+   "unit": "hours late",
+   "where": "step 8",
+   "quote": "A delivery more than 2 hours late, or short, is reported to Purchasing and to the Production Planner the same shift.",
+   "doc": "WH-601"
+  },
+  {
+   "what": "nozzle weight deviation that stops the filler",
+   "applies_to": "any nozzle compared with the others",
+   "value": "3",
+   "unit": "g",
+   "where": "step 4",
+   "quote": "Any nozzle more than 3 g from the others: stop, tell the Line Lead, and call the Maintenance Technician.",
+   "doc": "WI-210"
+  },
+  {
+   "what": "operator fill setpoint adjustment limit",
+   "applies_to": "per adjustment, up or down",
+   "value": "2",
+   "unit": "g",
+   "where": "step 5",
+   "quote": "you may adjust the fill setpoint by up to 2 g up or down.",
+   "doc": "WI-210"
+  },
+  {
+   "what": "operator fill setpoint adjustment limit per shift",
+   "applies_to": "one shift",
+   "value": "2",
+   "unit": "g",
+   "where": "step 6",
+   "quote": "If more than 2 g of adjustment is needed in one shift, stop adjusting and call the Maintenance Technician.",
+   "doc": "WI-210"
+  },
+  {
+   "what": "bottles to run on a dripping nozzle before re-check",
+   "applies_to": "dripping or stringing nozzle",
+   "value": "10",
+   "unit": "bottles",
+   "where": "step 7",
+   "quote": "wipe, run 10 bottles, check again.",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill target weight",
+   "applies_to": "AC-1000 / AC-1000-LEM",
+   "value": "1005",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "AC-1000 / AC-1000-LEM 1005 1000 1015",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill weight limits",
+   "applies_to": "AC-1000 / AC-1000-LEM",
+   "value": "1000 to 1015",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "AC-1000 / AC-1000-LEM 1005 1000 1015",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill target weight",
+   "applies_to": "FS-2000",
+   "value": "2010",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "FS-2000 2010 2000 2030",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill weight limits",
+   "applies_to": "FS-2000",
+   "value": "2000 to 2030",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "FS-2000 2010 2000 2030",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill target weight",
+   "applies_to": "FS-0500",
+   "value": "504",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "FS-0500 504 500 512",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill weight limits",
+   "applies_to": "FS-0500",
+   "value": "500 to 512",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "FS-0500 504 500 512",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill target weight",
+   "applies_to": "DS-0750 / DS-0750-ECO",
+   "value": "756",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "DS-0750 / DS-0750-ECO 756 750 765",
+   "doc": "WI-210"
+  },
+  {
+   "what": "fill weight limits",
+   "applies_to": "DS-0750 / DS-0750-ECO",
+   "value": "750 to 765",
+   "unit": "g",
+   "where": "Fill targets table",
+   "quote": "DS-0750 / DS-0750-ECO 756 750 765",
+   "doc": "WI-210"
+  },
+  {
+   "what": "application torque",
+   "applies_to": "28 mm cap",
+   "value": "12",
+   "unit": "in-lb",
+   "tolerance": "plus or minus 2",
+   "where": "Application torque table",
+   "quote": "28 mm Lines 1 and 3 (CAP-1, CAP-3) 12 plus or minus 2",
+   "doc": "WI-211"
+  },
+  {
+   "what": "application torque",
+   "applies_to": "38 mm cap",
+   "value": "17",
+   "unit": "in-lb",
+   "tolerance": "plus or minus 2",
+   "where": "Application torque table",
+   "quote": "38 mm Line 2 (CAP-2), both bottle sizes 17 plus or minus 2",
+   "doc": "WI-211"
+  },
+  {
+   "what": "torque check interval",
+   "applies_to": "each capping head",
+   "value": "2",
+   "unit": "hours",
+   "where": "step 4",
+   "quote": "At start-up and every 2 hours: take one bottle from each capping head.",
+   "doc": "WI-211"
+  },
+  {
+   "what": "capping heads out of range that stop the line",
+   "applies_to": "capper",
+   "value": "2 or more",
+   "unit": "heads",
+   "where": "step 6",
+   "quote": "Two or more heads out of range: stop the line and call the Maintenance Technician.",
+   "doc": "WI-211"
+  },
+  {
+   "what": "web tension setting",
+   "applies_to": "dancer arm",
+   "value": "mark 4",
+   "where": "step 4",
+   "quote": "Set web tension to mark 4 on the dancer arm.",
+   "doc": "WI-212"
+  },
+  {
+   "what": "jams or web breaks per hour that trigger a roll hold",
+   "applies_to": "labeler",
+   "value": "3",
+   "unit": "per hour",
+   "where": "step 10",
+   "quote": "Three jams or web breaks in one hour: tell the Line Lead.",
+   "doc": "WI-212"
+  },
+  {
+   "what": "glue tank temperature",
+   "applies_to": "case packer",
+   "value": "175",
+   "unit": "degrees C",
+   "where": "step 2",
+   "quote": "Glue tank set to 175 degrees C.",
+   "doc": "WI-213"
+  },
+  {
+   "what": "minimum vacuum",
+   "applies_to": "case packer",
+   "value": "0.6",
+   "unit": "bar",
+   "where": "step 3",
+   "quote": "Check the vacuum gauge on the case erector reads at least 0.6 bar of vacuum with a case on the cups.",
+   "doc": "WI-213"
+  },
+  {
+   "what": "setup test cases",
+   "applies_to": "case packer",
+   "value": "3",
+   "unit": "cases",
+   "where": "step 4",
+   "quote": "Run three cases. Check they are square and that all four flaps are glued.",
+   "doc": "WI-213"
+  },
+  {
+   "what": "case seal check interval",
+   "applies_to": "case packer",
+   "value": "1",
+   "unit": "hour",
+   "where": "step 5",
+   "quote": "Every hour: tear open one sealed case.",
+   "doc": "WI-213"
+  }
+ ],
+ "rules": [
+  {
+   "topic": "who removes lockout locks",
+   "statement": "The Maintenance Technician removes the locks after the lubrication work.",
+   "where": "6.0 step 4",
+   "quote": "Maintenance Technician: Remove locks. Run the filler empty for 2 minutes",
+   "doc": "MP-501"
+  },
+  {
+   "topic": "who repeats the nozzle check after a seal change",
+   "statement": "After any seal change the operator, not the Maintenance Technician, repeats the WI-210 nozzle check before the line is released.",
+   "where": "7.0 step 4",
+   "quote": "After any seal change, the operator repeats the nozzle check in WI-210 before the line is released.",
+   "doc": "MP-501"
+  },
+  {
+   "topic": "who releases the line",
+   "statement": "The Shift Lead releases the line.",
+   "where": "3.0 Responsibilities",
+   "quote": "Shift Lead Releases the line.",
+   "doc": "MP-501"
+  },
+  {
+   "topic": "lockout method for case packers",
+   "statement": "Case packers are locked out using the group lock box.",
+   "where": "7.0 step 1",
+   "quote": "Lock out the case packer using the group lock box, as described in SP-402, Rev B.",
+   "doc": "MP-502"
+  },
+  {
+   "topic": "who may change the fill setpoint",
+   "statement": "Operators must not change the fill setpoint.",
+   "where": "step 6",
+   "quote": "Operators must not change the fill setpoint.",
+   "doc": "QP-303"
+  },
+  {
+   "topic": "who may change the fill setpoint",
+   "statement": "Only the Maintenance Technician changes the setpoint and the change is written on the chart.",
+   "where": "step 7",
+   "quote": "Only the Maintenance Technician changes the setpoint, and the change is written on the chart.",
+   "doc": "QP-303"
+  },
+  {
+   "topic": "who places product on hold",
+   "statement": "The QA Technician places product on hold.",
+   "where": "Roles",
+   "quote": "Reviews the charts each shift and places product on hold.",
+   "doc": "QP-303"
+  },
+  {
+   "topic": "who places product on hold",
+   "statement": "The Line Lead places all product since the last good check on hold.",
+   "where": "step 5",
+   "quote": "Place all product since the last good check on hold as described in QP-315.",
+   "doc": "QP-303"
+  },
+  {
+   "topic": "who gives first-off approval",
+   "statement": "The QA Technician checks and signs first-off approval.",
+   "where": "step 7",
+   "quote": "All checks pass: sign FRM-QA-06 First-Off Record and tell the Line Lead.",
+   "doc": "QP-306"
+  },
+  {
+   "topic": "who holds the line until first-off approval",
+   "statement": "The Line Lead holds the line until approval and corrects any fault.",
+   "where": "step 8",
+   "quote": "Any check fails: the line stays stopped. The Line Lead corrects the fault and a new first-off is taken.",
+   "doc": "QP-306"
+  },
+  {
+   "topic": "who releases packaging materials",
+   "statement": "The QA Technician releases or rejects each lot.",
+   "where": "Roles / step 8",
+   "quote": "Pass: green RELEASED sticker on every pallet or roll.",
+   "doc": "QP-308"
+  },
+  {
+   "topic": "which suppliers' packaging may be used",
+   "statement": "The QA Technician rejects a lot whose supplier is not on the approved list in QP-309.",
+   "where": "step 2",
+   "quote": "Check the supplier is on the approved list in QP-309. If not, reject.",
+   "doc": "QP-308"
+  },
+  {
+   "topic": "who approves suppliers",
+   "statement": "The Quality Manager owns the document and approves suppliers; a new or second supplier needs a line trial and a signed FRM-QA-09 before first production order.",
+   "where": "Roles / step 2",
+   "quote": "A new or second supplier needs a line trial of at least one full shift and a signed FRM-QA-09 Supplier Approval Record",
+   "doc": "QP-309"
+  },
+  {
+   "topic": "which suppliers' packaging may be used",
+   "statement": "Purchasing buys only from the approved supplier in the table.",
+   "where": "step 1",
+   "quote": "Buy packaging materials only from the approved supplier in the table below.",
+   "doc": "QP-309"
+  },
+  {
+   "topic": "inspection of critical characteristics",
+   "statement": "Characteristics marked critical must be measured on every lot by the QA Technician; label liner caliper is critical.",
+   "where": "step 4",
+   "quote": "Characteristics marked critical below must be measured on every lot.",
+   "doc": "QP-309"
+  },
+  {
+   "topic": "documents to update after supplier approval",
+   "statement": "After approval the Quality Manager updates QP-309, QP-308 and the label and cap setup instructions before the material is used.",
+   "where": "step 3",
+   "quote": "After approval, update this document, QP-308 and the label and cap setup instructions before the material is used.",
+   "doc": "QP-309"
+  },
+  {
+   "topic": "who places product on hold",
+   "statement": "Anyone may place product on hold.",
+   "where": "Roles",
+   "quote": "Anyone May place product on hold.",
+   "doc": "QP-315"
+  },
+  {
+   "topic": "who moves held product to the hold cage",
+   "statement": "The Team Leader moves held product to the hold cage the same shift.",
+   "where": "step 2",
+   "quote": "Move held product to the hold cage the same shift. Nothing on hold stays at the line.",
+   "doc": "QP-315"
+  },
+  {
+   "topic": "who approves scrap above 500 dollars",
+   "statement": "Scrap above 500 dollars needs the Quality Manager's signature.",
+   "where": "step 6",
+   "quote": "Scrap above 500 dollars needs the Quality Manager's signature.",
+   "doc": "QP-315"
+  },
+  {
+   "topic": "who places product on hold",
+   "statement": "The QA Technician places any remaining stock from the same lot on hold.",
+   "where": "7.0 step 3",
+   "quote": "Place any remaining stock from the same lot on hold as described in QP-315.",
+   "doc": "QP-316"
+  },
+  {
+   "topic": "who supplies shift records for a lot trace",
+   "statement": "The Shift Lead gives the QA Technician the shift's records.",
+   "where": "7.0 step 4",
+   "quote": "Shift Lead: Give the QA Technician the shift's records and any notes within one working day.",
+   "doc": "QP-316"
+  },
+  {
+   "topic": "who removes lockout locks",
+   "statement": "The Maintenance Technician removes locks after maintenance work, and the Line Lead confirms all locks and tags are removed.",
+   "where": "Roles / step 2",
+   "quote": "Removes locks after maintenance work.",
+   "doc": "SOP-101"
+  },
+  {
+   "topic": "who gives first-off approval",
+   "statement": "The QA Technician approves or rejects the first-off as described in QP-306.",
+   "where": "step 13",
+   "quote": "Approve or reject the first-off as described in QP-306.",
+   "doc": "SOP-101"
+  },
+  {
+   "topic": "who releases the line",
+   "statement": "The Line Lead owns the start-up and signs the checklist.",
+   "where": "Roles",
+   "quote": "Owns the start-up and signs the checklist.",
+   "doc": "SOP-101"
+  },
+  {
+   "topic": "who moves held product to the hold cage",
+   "statement": "The Operator moves any product on hold to the hold cage at shutdown.",
+   "where": "step 4",
+   "quote": "Move any product on hold to the hold cage as described in QP-315.",
+   "doc": "SOP-102"
+  },
+  {
+   "topic": "who removes lockout locks",
+   "statement": "The Maintenance Technician removes locks and tags after the changeover.",
+   "where": "7.0 step 7",
+   "quote": "Maintenance Technician: Remove locks and tags as described in SP-402.",
+   "doc": "SOP-104"
+  },
+  {
+   "topic": "who releases the line",
+   "statement": "The Shift Lead releases the line for changeover and signs the record.",
+   "where": "3.0 Responsibilities",
+   "quote": "Releases the line for changeover and signs the record.",
+   "doc": "SOP-104"
+  },
+  {
+   "topic": "lockout scope for Line 2 size changeover",
+   "statement": "Only FIL-2 and CAP-2 are locked out, though changes are also made on LAB-2, CPK-2 and CNV-2.",
+   "where": "6.0 step 4",
+   "quote": "Maintenance Technician: Lock out FIL-2 and CAP-2 as described in SP-402.",
+   "doc": "SOP-104"
+  },
+  {
+   "topic": "who verifies line clearance",
+   "statement": "The Shift Lead walks the line with FRM-PR-05 and signs only when nothing from the old product remains.",
+   "where": "6.0 step 5",
+   "quote": "Sign only when nothing from the old product remains.",
+   "doc": "SOP-105"
+  },
+  {
+   "topic": "who flushes the supply line",
+   "statement": "The Batching Operator flushes the supply line from MIX-1 or MIX-2.",
+   "where": "6.0 step 4",
+   "quote": "Batching Operator: Flush the supply line from MIX-1 or MIX-2 to the filler",
+   "doc": "SOP-105"
+  },
+  {
+   "topic": "who gives first-off approval",
+   "statement": "The QA Technician gives first-off approval, including a label and lot code check.",
+   "where": "7.0 step 3",
+   "quote": "First-off approval as described in QP-306, including a label and lot code check.",
+   "doc": "SOP-105"
+  },
+  {
+   "topic": "lockout method for case packers",
+   "statement": "One person, one lock, one key: each person applies their own lock to the hasp. The group lock box was removed in Rev D.",
+   "where": "step 5 / Revision history",
+   "quote": "One person, one lock, one key. Each person working on the machine applies their own lock to the hasp.",
+   "doc": "SP-402"
+  },
+  {
+   "topic": "who removes lockout locks",
+   "statement": "Each person removes only their own lock; a lock left at shift change stays until its owner removes it or the Safety Manager authorises removal.",
+   "where": "step 8",
+   "quote": "Each person removes only their own lock.",
+   "doc": "SP-402"
+  },
+  {
+   "topic": "who applies lockout locks",
+   "statement": "Authorized Employees (trained and listed Operators and Maintenance Technicians) apply their own lock and tag.",
+   "where": "Roles",
+   "quote": "Operators and Maintenance Technicians who are trained and listed.",
+   "doc": "SP-402"
+  },
+  {
+   "topic": "lockout scope",
+   "statement": "Lockout applies to all servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2.",
+   "where": "Scope",
+   "quote": "All servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2.",
+   "doc": "SP-402"
+  },
+  {
+   "topic": "maximum forklift speed",
+   "statement": "Forklifts may not exceed 5 mph anywhere inside the building.",
+   "where": "step 2",
+   "quote": "Maximum speed is 5 mph everywhere inside the building.",
+   "doc": "SP-405"
+  },
+  {
+   "topic": "who checks the dock before entering a trailer",
+   "statement": "The Forklift Driver confirms wheels are chocked and the dock leveler is locked before entering a trailer.",
+   "where": "step 7",
+   "quote": "Before entering a trailer: wheels chocked, dock leveler (DOCK-1 to DOCK-4) locked in place.",
+   "doc": "SP-405"
+  },
+  {
+   "topic": "who signs off new operators",
+   "statement": "The Line Lead signs off a new operator on FRM-TR-02 for each required procedure.",
+   "where": "step 2",
+   "quote": "A new operator works with a qualified operator until signed off on FRM-TR-02 Sign-Off Sheet",
+   "doc": "TR-701"
+  },
+  {
+   "topic": "who tells the Training Coordinator of a revision",
+   "statement": "The document owner tells the Training Coordinator on the day of issue.",
+   "where": "step 3",
+   "quote": "The document owner tells the Training Coordinator on the day of issue.",
+   "doc": "TR-701"
+  },
+  {
+   "topic": "maximum forklift speed",
+   "statement": "On the dock and in the receiving lanes forklifts drive no faster than 3 mph.",
+   "where": "step 3",
+   "quote": "no faster than 3 mph",
+   "doc": "WH-601"
+  },
+  {
+   "topic": "who releases packaging materials",
+   "statement": "Packaging materials stay in the quarantine lane until the QA Technician releases them.",
+   "where": "step 6",
+   "quote": "until the QA Technician releases them (see QP-308).",
+   "doc": "WH-601"
+  },
+  {
+   "topic": "who checks the dock before entering a trailer",
+   "statement": "The Forklift Driver chocks the trailer wheels and locks the dock leveler before entering.",
+   "where": "step 2",
+   "quote": "Chock the trailer wheels and lock the dock leveler before entering.",
+   "doc": "WH-601"
+  },
+  {
+   "topic": "who may change the fill setpoint",
+   "statement": "The Operator may adjust the fill setpoint by up to 2 g up or down and writes the change on FRM-PR-10.",
+   "where": "step 5",
+   "quote": "you may adjust the fill setpoint by up to 2 g up or down.",
+   "doc": "WI-210"
+  },
+  {
+   "topic": "who may change the fill setpoint",
+   "statement": "If more than 2 g of adjustment is needed in one shift the Operator stops and calls the Maintenance Technician.",
+   "where": "step 6",
+   "quote": "stop adjusting and call the Maintenance Technician.",
+   "doc": "WI-210"
+  },
+  {
+   "topic": "who places product on hold",
+   "statement": "The Operator puts product capped since the last good check on hold.",
+   "where": "step 7",
+   "quote": "Product capped since the last good check goes on hold as described in QP-315.",
+   "doc": "WI-211"
+  },
+  {
+   "topic": "who sets application torque",
+   "statement": "The Operator sets the application torque from the table.",
+   "where": "step 3",
+   "quote": "Set the application torque from the table below.",
+   "doc": "WI-211"
+  },
+  {
+   "topic": "which suppliers' packaging may be used",
+   "statement": "Rolls from a supplier not listed in QP-309 are not to be loaded.",
+   "where": "step 1",
+   "quote": "Rolls from a supplier not listed in QP-309 are not to be loaded.",
+   "doc": "WI-212"
+  },
+  {
+   "topic": "who releases packaging materials",
+   "statement": "Operators load only label rolls with a green QA release sticker.",
+   "where": "step 1",
+   "quote": "Use only label rolls with a green QA release sticker (see QP-308).",
+   "doc": "WI-212"
+  },
+  {
+   "topic": "who places product on hold",
+   "statement": "The Operator puts a roll aside with a hold tag after three jams in an hour.",
+   "where": "step 10",
+   "quote": "Put the roll aside with a hold tag as described in QP-315 and load a roll from a different lot.",
+   "doc": "WI-212"
+  },
+  {
+   "topic": "lockout method for case packers",
+   "statement": "For any work inside the guards the Operator locks out as described in SP-402 (no revision given).",
+   "where": "step 7",
+   "quote": "For any work inside the guards, lock out as described in SP-402.",
+   "doc": "WI-213"
+  },
+  {
+   "topic": "who services the vacuum pump",
+   "statement": "Operators check the cups, then call the Maintenance Technician for low vacuum.",
+   "where": "step 6",
+   "quote": "Low vacuum or cases not erecting: check the cups for wear, then call the Maintenance Technician (see MP-502).",
+   "doc": "WI-213"
+  }
+ ],
+ "issues": [
+  {
+   "id": "I012",
+   "type": "gap",
+   "severity": "high",
+   "title": "Label liner caliper is critical on every lot (QP-309 Rev G) but QP-308 does not check it",
+   "detail": "QP-309 Rev G made label liner caliper (0.075 mm plus or minus 0.005) a critical characteristic that must be measured on every lot. QP-308 Rev D (2023, older than QP-309 Rev G) lists the label checks at incoming inspection and liner caliper is not among them. QP-309 step 3 also requires QP-308 to be updated after a change.",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "step 4",
+     "quote": "Characteristics marked critical below must be measured on every lot."
+    },
+    {
+     "doc": "QP-309",
+     "where": "Revision history",
+     "quote": "Label liner caliper made a critical characteristic for the new Line 3 labeler."
+    },
+    {
+     "doc": "QP-308",
+     "where": "step 6",
+     "quote": "print quality, barcode grade C or better, roll width, core diameter 76 mm, labels wound outward."
+    }
+   ],
+   "docs": [
+    "QP-308",
+    "QP-309"
+   ]
+  },
+  {
+   "id": "I002",
+   "type": "missing_document",
+   "severity": "high",
+   "title": "QP-315 points to QP-318, which is not in the set",
+   "detail": "The document is referenced but was not among the files provided. It may be missing, withdrawn or renumbered.",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "step 5",
+     "quote": ""
+    }
+   ],
+   "docs": [
+    "QP-315"
+   ]
+  },
+  {
+   "id": "I004",
+   "type": "missing_document",
+   "severity": "high",
+   "title": "WI-212 points to WI-215, which is not in the set",
+   "detail": "The document is referenced but was not among the files provided. It may be missing, withdrawn or renumbered.",
+   "evidence": [
+    {
+     "doc": "WI-212",
+     "where": "step 7",
+     "quote": ""
+    }
+   ],
+   "docs": [
+    "WI-212"
+   ]
+  },
+  {
+   "id": "I001",
+   "type": "old_revision",
+   "severity": "high",
+   "title": "MP-502 cites SP-402 Rev B; the current revision is D",
+   "detail": "Work may be following a withdrawn version.",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "5.0 and 7.0 step 1",
+     "quote": ""
+    }
+   ],
+   "docs": [
+    "MP-502",
+    "SP-402"
+   ]
+  },
+  {
+   "id": "I003",
+   "type": "old_revision",
+   "severity": "high",
+   "title": "TR-701 cites WI-211 Rev A; the current revision is C",
+   "detail": "Work may be following a withdrawn version.",
+   "evidence": [
+    {
+     "doc": "TR-701",
+     "where": "Required procedures by role; Related documents",
+     "quote": ""
+    }
+   ],
+   "docs": [
+    "TR-701",
+    "WI-211"
+   ]
+  },
+  {
+   "id": "I007",
+   "type": "rule_conflict",
+   "severity": "high",
+   "title": "SOP-101, SOP-104 and MP-501 have the Maintenance Technician remove locks; SP-402 says each person removes only their own",
+   "detail": "SP-402 step 8 lets each person remove only their own lock, and Operators can be Authorized Employees. SOP-101, SOP-104 and MP-501 assign lock removal to the Maintenance Technician alone, which cannot cover a lock an operator applied.",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "6.0 step 4",
+     "quote": "Maintenance Technician: Remove locks. Run the filler empty for 2 minutes"
+    },
+    {
+     "doc": "SOP-101",
+     "where": "Roles / step 2",
+     "quote": "Removes locks after maintenance work."
+    },
+    {
+     "doc": "SOP-104",
+     "where": "7.0 step 7",
+     "quote": "Maintenance Technician: Remove locks and tags as described in SP-402."
+    },
+    {
+     "doc": "SP-402",
+     "where": "step 8",
+     "quote": "Each person removes only their own lock."
+    }
+   ],
+   "docs": [
+    "MP-501",
+    "SOP-101",
+    "SOP-104",
+    "SP-402"
+   ]
+  },
+  {
+   "id": "I008",
+   "type": "rule_conflict",
+   "severity": "high",
+   "title": "MP-502 still tells technicians to use the group lock box that SP-402 Rev D removed",
+   "detail": "MP-502 step 7.1 locks out the case packer with the group lock box per SP-402 Rev B. SP-402 Rev D says 'Group lock box removed' and requires one person, one lock, one key. WI-213 points to SP-402 without a revision, so only MP-502 is out of date.",
+   "evidence": [
+    {
+     "doc": "MP-502",
+     "where": "7.0 step 1",
+     "quote": "Lock out the case packer using the group lock box, as described in SP-402, Rev B."
+    },
+    {
+     "doc": "SP-402",
+     "where": "step 5 / Revision history",
+     "quote": "One person, one lock, one key. Each person working on the machine applies their own lock to the hasp."
+    },
+    {
+     "doc": "WI-213",
+     "where": "step 7",
+     "quote": "For any work inside the guards, lock out as described in SP-402."
+    }
+   ],
+   "docs": [
+    "MP-502",
+    "SP-402",
+    "WI-213"
+   ]
+  },
+  {
+   "id": "I009",
+   "type": "rule_conflict",
+   "severity": "high",
+   "title": "Two answers to who may change the fill setpoint",
+   "detail": "WI-210 Rev D (2023) lets operators adjust the setpoint by up to 2 g. QP-303 Rev F (2024) says operators must not change it and only the Maintenance Technician may. WI-210 was not revised after QP-303, and TR-701 trains operators on WI-210.",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "step 6",
+     "quote": "Operators must not change the fill setpoint."
+    },
+    {
+     "doc": "QP-303",
+     "where": "step 7",
+     "quote": "Only the Maintenance Technician changes the setpoint, and the change is written on the chart."
+    },
+    {
+     "doc": "WI-210",
+     "where": "step 5",
+     "quote": "you may adjust the fill setpoint by up to 2 g up or down."
+    },
+    {
+     "doc": "WI-210",
+     "where": "step 6",
+     "quote": "stop adjusting and call the Maintenance Technician."
+    }
+   ],
+   "docs": [
+    "QP-303",
+    "WI-210"
+   ]
+  },
+  {
+   "id": "I010",
+   "type": "rule_conflict",
+   "severity": "high",
+   "title": "Two different roles move held product to the hold cage",
+   "detail": "QP-315 step 2 makes the Team Leader responsible for moving held product to the hold cage the same shift. SOP-102 step 4 has the Operator do it at shutdown. Team Leader is not defined anywhere else.",
+   "evidence": [
+    {
+     "doc": "QP-315",
+     "where": "step 2",
+     "quote": "Move held product to the hold cage the same shift. Nothing on hold stays at the line."
+    },
+    {
+     "doc": "SOP-102",
+     "where": "step 4",
+     "quote": "Move any product on hold to the hold cage as described in QP-315."
+    }
+   ],
+   "docs": [
+    "QP-315",
+    "SOP-102"
+   ]
+  },
+  {
+   "id": "I011",
+   "type": "rule_conflict",
+   "severity": "high",
+   "title": "Forklift speed limit: 5 mph everywhere (SP-405) versus 3 mph on the dock (WH-601)",
+   "detail": "SP-405 step 2 says the maximum is 5 mph everywhere inside the building, including dock doors. WH-601 step 3 says no faster than 3 mph on the dock and in the receiving lanes. A driver who reads only SP-405 would think 5 mph is allowed at the dock.",
+   "evidence": [
+    {
+     "doc": "SP-405",
+     "where": "step 2",
+     "quote": "Maximum speed is 5 mph everywhere inside the building."
+    },
+    {
+     "doc": "WH-601",
+     "where": "step 3",
+     "quote": "no faster than 3 mph"
+    }
+   ],
+   "docs": [
+    "SP-405",
+    "WH-601"
+   ]
+  },
+  {
+   "id": "I005",
+   "type": "value_conflict",
+   "severity": "high",
+   "title": "Two values for fill weight check interval (Lines 1, 2 and 3)",
+   "detail": "QP-303 says 1 hour; SOP-101 says 30 minutes",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "step 1",
+     "quote": "Once every hour, take 5 bottles in a row from the filler discharge."
+    },
+    {
+     "doc": "SOP-101",
+     "where": "step 15",
+     "quote": "then every 30 minutes for the rest of the shift, as described in QP-303."
+    }
+   ],
+   "docs": [
+    "QP-303",
+    "SOP-101"
+   ]
+  },
+  {
+   "id": "I006",
+   "type": "value_conflict",
+   "severity": "high",
+   "title": "Two torque values for the same 38 mm cap",
+   "detail": "WI-211 Rev C raised the 38 mm cap torque from 15 to 17 in-lb after leak complaints. SOP-104 step 7.3 still tells the Operator to set 15 in-lb, and TR-701 requires operators to be trained on WI-211 Rev A, the version before the change. Line 2 operators following SOP-104 or trained to TR-701 would set the old torque.",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "7.0 step 3",
+     "quote": "Set the application torque to 15 in-lb, plus or minus 2."
+    },
+    {
+     "doc": "WI-211",
+     "where": "Application torque table",
+     "quote": "38 mm Line 2 (CAP-2), both bottle sizes 17 plus or minus 2"
+    }
+   ],
+   "docs": [
+    "SOP-104",
+    "WI-211"
+   ]
+  },
+  {
+   "id": "I017",
+   "type": "not_trained",
+   "severity": "medium",
+   "title": "QA Technician has a job in 7 procedures that are not on its training list",
+   "detail": "Procedures: QP-309, QP-316, SOP-101, SOP-104, SOP-105, WH-601, WI-212.",
+   "evidence": [
+    {
+     "doc": "QP-309",
+     "where": "Roles",
+     "quote": ""
+    },
+    {
+     "doc": "QP-316",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    },
+    {
+     "doc": "SOP-101",
+     "where": "Roles",
+     "quote": ""
+    },
+    {
+     "doc": "SOP-104",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    },
+    {
+     "doc": "SOP-105",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    },
+    {
+     "doc": "WH-601",
+     "where": "Roles",
+     "quote": ""
+    },
+    {
+     "doc": "WI-212",
+     "where": "step 11",
+     "quote": ""
+    }
+   ],
+   "docs": [
+    "QP-309",
+    "QP-316",
+    "SOP-101",
+    "SOP-104",
+    "SOP-105",
+    "WH-601",
+    "WI-212"
+   ]
+  },
+  {
+   "id": "I018",
+   "type": "not_trained",
+   "severity": "medium",
+   "title": "Maintenance Technician has a job in 5 procedures that are not on its training list",
+   "detail": "Procedures: QP-303, SOP-101, SOP-104, WI-211, WI-212.",
+   "evidence": [
+    {
+     "doc": "QP-303",
+     "where": "Roles",
+     "quote": ""
+    },
+    {
+     "doc": "SOP-101",
+     "where": "Roles",
+     "quote": ""
+    },
+    {
+     "doc": "SOP-104",
+     "where": "3.0 Responsibilities",
+     "quote": ""
+    },
+    {
+     "doc": "WI-211",
+     "where": "Roles",
+     "quote": ""
+    },
+    {
+     "doc": "WI-212",
+     "where": "Roles",
+     "quote": ""
+    }
+   ],
+   "docs": [
+    "QP-303",
+    "SOP-101",
+    "SOP-104",
+    "WI-211",
+    "WI-212"
+   ]
+  },
+  {
+   "id": "I019",
+   "type": "not_trained",
+   "severity": "medium",
+   "title": "Operator has a job in 2 procedures that are not on its training list",
+   "detail": "Procedures: MP-501, QP-306.",
+   "evidence": [
+    {
+     "doc": "MP-501",
+     "where": "7.0 step 4",
+     "quote": ""
+    },
+    {
+     "doc": "QP-306",
+     "where": "Roles",
+     "quote": ""
+    }
+   ],
+   "docs": [
+    "MP-501",
+    "QP-306"
+   ]
+  },
+  {
+   "id": "I013",
+   "type": "rule_conflict",
+   "severity": "medium",
+   "title": "SOP-104 locks out only FIL-2 and CAP-2 but the changeover also works on LAB-2, CPK-2 and CNV-2",
+   "detail": "SP-402 applies to all servicing, cleaning and jam clearing that puts any part of the body inside a guard on any equipment. SOP-104 locks out only FIL-2 and CAP-2 in preparation, then has operators change parts on the labeler, case packer and conveyor with no lockout stated. If those changes reach inside a guard, SP-402 requires a lock.",
+   "evidence": [
+    {
+     "doc": "SOP-104",
+     "where": "6.0 step 4",
+     "quote": "Lock out FIL-2 and CAP-2 as described in SP-402."
+    },
+    {
+     "doc": "SOP-104",
+     "where": "7.0 step 5",
+     "quote": "change the case magazine guides and select the pack pattern"
+    },
+    {
+     "doc": "SP-402",
+     "where": "Scope",
+     "quote": "All servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2."
+    }
+   ],
+   "docs": [
+    "SOP-104",
+    "SP-402"
+   ]
+  },
+  {
+   "id": "I014",
+   "type": "gap",
+   "severity": "low",
+   "title": "SOP-102 shutdown cleaning does not refer to lockout",
+   "detail": "SOP-102 has operators clean the filler nozzles and drip tray and empty the case packer reject bin, and does not mention SP-402. SP-402 covers cleaning that puts any part of the body inside a guard. Whether these tasks reach inside guards is not stated.",
+   "evidence": [
+    {
+     "doc": "SOP-102",
+     "where": "step 2",
+     "quote": "Clean filler nozzles and the drip tray. Wipe the labeler rollers. Empty the case packer reject bin."
+    },
+    {
+     "doc": "SP-402",
+     "where": "Scope",
+     "quote": "All servicing, cleaning and jam clearing that puts any part of the body inside a guard, on any equipment at Plant 2."
+    }
+   ],
+   "docs": [
+    "SOP-102",
+    "SP-402"
+   ]
+  },
+  {
+   "id": "I015",
+   "type": "gap",
+   "severity": "low",
+   "title": "QP-306 asks for a packed case at first-off but SOP-101 start-up does not produce one",
+   "detail": "QP-306 step 1 has the Operator bring the first 5 good bottles and one packed case to the QA bench, and QA checks the case in step 6. SOP-101 steps 11 and 12 run 20 bottles and take the first-off samples to the QA Technician, with no step for a packed case.",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 1",
+     "quote": "Bring the first 5 good bottles and one packed case to the QA bench."
+    },
+    {
+     "doc": "SOP-101",
+     "where": "step 12",
+     "quote": "Run 20 bottles and stop. Take the first-off samples to the QA Technician."
+    }
+   ],
+   "docs": [
+    "QP-306",
+    "SOP-101"
+   ]
+  },
+  {
+   "id": "I016",
+   "type": "gap",
+   "severity": "low",
+   "title": "QP-306 checks cap removal torque against a range that WI-211 does not give",
+   "detail": "QP-306 step 3 passes the first-off cap if removal torque is inside the range in WI-211. WI-211 only gives an application torque with a tolerance for each cap size, and has the operator measure removal torque without stating a removal range.",
+   "evidence": [
+    {
+     "doc": "QP-306",
+     "where": "step 3",
+     "quote": "Cap: correct cap, removal torque inside the range in WI-211."
+    },
+    {
+     "doc": "WI-211",
+     "where": "step 3",
+     "quote": "Set the application torque from the table below."
+    }
+   ],
+   "docs": [
+    "QP-306",
+    "WI-211"
+   ]
+  },
+  {
+   "id": "I021",
+   "type": "overdue_review",
+   "severity": "low",
+   "title": "11 documents not revised in more than 3 years",
+   "detail": "MP-502 (7.2 years), MP-501 (6.7 years), QP-316 (6.0 years), SOP-105 (5.8 years), SOP-104 (5.7 years), QP-315 (4.6 years), WI-213 (4.2 years), WI-211 (4.0 years), WI-210 (3.6 years), WH-601 (3.4 years), QP-308 (3.1 years).",
+   "evidence": [],
+   "docs": [
+    "MP-501",
+    "MP-502",
+    "QP-308",
+    "QP-315",
+    "QP-316",
+    "SOP-104",
+    "SOP-105",
+    "WH-601",
+    "WI-210",
+    "WI-211",
+    "WI-213"
+   ]
+  },
+  {
+   "id": "I020",
+   "type": "role_not_in_matrix",
+   "severity": "low",
+   "title": "11 roles with jobs in procedures are not in the training list",
+   "detail": "Batching Operator (SOP-105); Department Manager (TR-701); Maintenance Planner (MP-501, MP-502); Production Planner (WH-601); Purchasing (QP-308, QP-309, WH-601); Quality Manager (QP-309, QP-315, QP-316); Safety Manager (SP-402, SP-405); Shift Lead (MP-501, QP-316, SOP-104, SOP-105); Team Leader (QP-315); Training Coordinator (TR-701); Warehouse Supervisor (SP-405, WH-601). Some may be other names for listed roles.",
+   "evidence": [],
+   "docs": [
+    "MP-501",
+    "MP-502",
+    "QP-308",
+    "QP-309",
+    "QP-315",
+    "QP-316",
+    "SOP-104",
+    "SOP-105",
+    "SP-402",
+    "SP-405",
+    "TR-701",
+    "WH-601"
+   ]
+  },
+  {
+   "id": "I022",
+   "type": "similar_names",
+   "severity": "low",
+   "title": "“Shift Lead” and “Line Lead” may be the same role",
+   "detail": "If they are, add them to aliases.json and rebuild so the graph treats them as one.",
+   "evidence": [],
+   "docs": []
+  },
+  {
+   "id": "I023",
+   "type": "similar_names",
+   "severity": "low",
+   "title": "“Shift Lead” and “Team Leader” may be the same role",
+   "detail": "If they are, add them to aliases.json and rebuild so the graph treats them as one.",
+   "evidence": [],
+   "docs": []
+  },
+  {
+   "id": "I024",
+   "type": "similar_names",
+   "severity": "low",
+   "title": "“Operator” and “Batching Operator” may be the same role",
+   "detail": "If they are, add them to aliases.json and rebuild so the graph treats them as one.",
+   "evidence": [],
+   "docs": []
+  },
+  {
+   "id": "I025",
+   "type": "similar_names",
+   "severity": "low",
+   "title": "“Line Lead” and “Team Leader” may be the same role",
+   "detail": "If they are, add them to aliases.json and rebuild so the graph treats them as one.",
+   "evidence": [],
+   "docs": []
+  },
+  {
+   "id": "I026",
+   "type": "similar_names",
+   "severity": "low",
+   "title": "“Caps” and “Caps (28 mm)” may be the same material",
+   "detail": "If they are, add them to aliases.json and rebuild so the graph treats them as one.",
+   "evidence": [],
+   "docs": []
+  },
+  {
+   "id": "I027",
+   "type": "similar_names",
+   "severity": "low",
+   "title": "“Caps” and “Caps (38 mm)” may be the same material",
+   "detail": "If they are, add them to aliases.json and rebuild so the graph treats them as one.",
+   "evidence": [],
+   "docs": []
+  }
+ ],
+ "to_decide": [],
+ "unsure": [
+  {
+   "doc": "MP-501",
+   "what": "Step 4 of section 7.0 is written as a Maintenance Technician step but assigns the action to 'the operator'",
+   "why": "Unclear who actually repeats the nozzle check; WI-210 has no 'repeat after seal change' step",
+   "where": "7.0 step 4"
+  },
+  {
+   "doc": "MP-501",
+   "what": "Shift Lead, a role not used in the Line Lead procedures",
+   "why": "May be the same person as the Line Lead; not stated",
+   "where": "3.0 Responsibilities"
+  },
+  {
+   "doc": "MP-502",
+   "what": "Vacuum reading is taken at the pump inlet with the erector idle (0.7 bar), WI-213 reads at the erector cups (0.6 bar)",
+   "why": "Different measuring points; document does not say how they relate",
+   "where": "6.0 step 3"
+  },
+  {
+   "doc": "QP-303",
+   "what": "The 1 kg test weight is used in step 3 but is not listed under Tools",
+   "why": "Tools list only the check scale and tare bottles",
+   "where": "step 3 / Tools"
+  },
+  {
+   "doc": "QP-303",
+   "what": "Roles table says the QA Technician places product on hold; step 5 has the Line Lead doing it",
+   "why": "Internal inconsistency in who places the hold",
+   "where": "Roles / step 5"
+  },
+  {
+   "doc": "QP-306",
+   "what": "Step 3 checks removal torque against 'the range in WI-211'",
+   "why": "WI-211's table gives application torque with a tolerance, not a removal torque range",
+   "where": "step 3"
+  },
+  {
+   "doc": "QP-306",
+   "what": "Fill weight check says 'limits in WI-210'",
+   "why": "WI-210 limits are per product; which product's limits apply is by context only",
+   "where": "step 2"
+  },
+  {
+   "doc": "QP-308",
+   "what": "Label checks do not list liner caliper",
+   "why": "QP-309 Rev G (later than this Rev D) makes label liner caliper a critical characteristic on every lot; this document is not updated for it",
+   "where": "step 6"
+  },
+  {
+   "doc": "QP-309",
+   "what": "'the label and cap setup instructions' not named by number",
+   "why": "Assumed to be WI-212 (labeler) and WI-211 (capper); the document does not give numbers",
+   "where": "step 3"
+  },
+  {
+   "doc": "QP-309",
+   "what": "'Caps, 28 mm and 38 mm' share one row; Labels row says 'pressure-sensitive'",
+   "why": "Table cells wrap; supplier column alignment read from the image",
+   "where": "Specifications table"
+  },
+  {
+   "doc": "QP-315",
+   "what": "Team Leader is not a role in any other document",
+   "why": "May be the Line Lead or Shift Lead; not stated",
+   "where": "Roles / steps 2 and 3"
+  },
+  {
+   "doc": "QP-315",
+   "what": "QP-318 Rework is referenced but its content is not in the document set",
+   "why": "Not provided",
+   "where": "step 5"
+  },
+  {
+   "doc": "QP-316",
+   "what": "Lot code form P2-L3-261104-A: plant, line, year-month-day, shift",
+   "why": "The date '261104' reads as 2026-11-04 but the document is dated 2020; it is only an example",
+   "where": "6.0 step 1"
+  },
+  {
+   "doc": "QP-316",
+   "what": "'Shift Lead' role",
+   "why": "Other documents use Line Lead; not stated whether these are the same",
+   "where": "3.0 Responsibilities"
+  },
+  {
+   "doc": "SOP-101",
+   "what": "Step 12 has the Operator run 20 bottles before first-off samples; QP-306 asks for the first 5 good bottles and one packed case",
+   "why": "Not clear whether the 20 bottles include the 5; the case sample is not mentioned in SOP-101",
+   "where": "step 12"
+  },
+  {
+   "doc": "SOP-102",
+   "what": "Cleaning filler nozzles, the drip tray and the case packer reject bin (step 2) does not mention lockout",
+   "why": "SP-402 scope covers cleaning that puts any part of the body inside a guard; SOP-102 does not reference SP-402",
+   "where": "step 2"
+  },
+  {
+   "doc": "SOP-104",
+   "what": "Products FS-2000 and FS-0500 are named in scope but the schema has no field for products",
+   "why": "Not extracted as a node",
+   "where": "2.0 Scope"
+  },
+  {
+   "doc": "SOP-104",
+   "what": "Steps 7.0.4 to 7.0.6 (labeler, case packer, conveyor changes) are done by the Operator with no lockout stated",
+   "why": "Only FIL-2 and CAP-2 are locked out in 6.0 step 4; unclear whether the other machines are inside guards",
+   "where": "6.0 step 4 / 7.0 steps 4-6"
+  },
+  {
+   "doc": "SOP-105",
+   "what": "Scope says the clearance steps also apply to Line 2 size changeovers",
+   "why": "Not stated whether the Batching Operator flush applies to a Line 2 size change (SOP-104 does not mention it)",
+   "where": "2.0 Scope"
+  },
+  {
+   "doc": "SOP-105",
+   "what": "Products AC-1000, AC-1000-LEM, DS-0750, DS-0750-ECO named in scope",
+   "why": "No field for products in the schema",
+   "where": "2.0 Scope"
+  },
+  {
+   "doc": "SP-402",
+   "what": "'Trained and listed' Authorized Employees",
+   "why": "The list is not part of this document and TR-701 has no row for the Authorized Employee role",
+   "where": "Roles"
+  },
+  {
+   "doc": "TR-701",
+   "what": "Line Lead row says 'Everything for Operator, plus QP-306'; expanded here to the Operator list plus QP-306",
+   "why": "Expansion is mine, not printed",
+   "where": "Required procedures by role"
+  },
+  {
+   "doc": "TR-701",
+   "what": "Operator row names WI-211 'Rev A', while the current WI-211 is Rev C",
+   "why": "May be intentional pinning or a stale revision; not explained",
+   "where": "Required procedures by role"
+  },
+  {
+   "doc": "TR-701",
+   "what": "No row for Shift Lead, Team Leader, Batching Operator, Quality Manager, Warehouse Supervisor, Purchasing, Authorized Employee",
+   "why": "Roles used in other procedures but absent from the training table",
+   "where": "Required procedures by role"
+  },
+  {
+   "doc": "WH-601",
+   "what": "Dock doors 1 to 4 have no equipment tag in this document",
+   "why": "SP-405 calls the dock levelers DOCK-1 to DOCK-4, but WH-601 does not give tags, so no tag assumed",
+   "where": "Scope"
+  },
+  {
+   "doc": "WI-210",
+   "what": "Number of nozzles on FIL-2 and FIL-3",
+   "why": "Step 3 says 'all nozzles on FIL-2 and FIL-3' without a number",
+   "where": "step 3"
+  },
+  {
+   "doc": "WI-210",
+   "what": "Products (AC-1000, FS-2000, FS-0500, DS-0750 and variants) have no field in the schema",
+   "why": "Only captured as applies_to text in parameters",
+   "where": "Fill targets table"
+  },
+  {
+   "doc": "WI-211",
+   "what": "The table gives application torque; step 4 has operators measure removal torque",
+   "why": "No removal torque range is given, although QP-306 step 3 refers to 'the range in WI-211'",
+   "where": "step 4 / table"
+  },
+  {
+   "doc": "WI-212",
+   "what": "WI-215 Label Splicing is referenced but not in the document set",
+   "why": "Not provided",
+   "where": "step 7"
+  },
+  {
+   "doc": "WI-212",
+   "what": "Rev D says 'Updated for the new Line 3 labeler' but no step mentions the liner caliper that QP-309 Rev G made critical",
+   "why": "Only a gap if QP-309 step 3 expects the setup instruction to change; not stated",
+   "where": "Revision history"
+  },
+  {
+   "doc": "WI-213",
+   "what": "Rev B (2022) says nothing about the glue tank cool-down or tagged lid that SP-402 Rev D (2025) added for case packers",
+   "why": "WI-213 just points to SP-402 and does not say who locks out beyond 'the Operator'",
+   "where": "step 7"
+  }
+ ],
+ "consistent": [
+  {
+   "title": "Two values for minimum vacuum (case packer)",
+   "why": "Measured at different points: MP-502 reads at least 0.7 bar at the pump inlet with the erector idle, WI-213 reads at least 0.6 bar at the erector cups with a case on them. The lower figure at the cups is expected, but neither document says how the two relate.",
+   "docs": [
+    "MP-502",
+    "WI-213"
+   ]
+  },
+  {
+   "title": "Compare: who releases the line",
+   "why": "MP-501 (Shift Lead releases after maintenance), SOP-104 (Shift Lead releases for changeover) and SOP-101 (Line Lead owns the start-up) describe different events and do not contradict each other. The Shift Lead versus Line Lead naming is left for the plant to decide.",
+   "docs": [
+    "MP-501",
+    "SOP-101",
+    "SOP-104"
+   ]
+  },
+  {
+   "title": "Compare: who places product on hold",
+   "why": "QP-315 lets anyone place product on hold, so the QA Technician (QP-303, QP-316), Line Lead (QP-303), Operator (WI-211, WI-212) are all allowed. QP-303's own roles table and step 5 name different people, but neither forbids the other.",
+   "docs": [
+    "QP-303",
+    "QP-315",
+    "QP-316",
+    "WI-211",
+    "WI-212"
+   ]
+  },
+  {
+   "title": "Compare: who gives first-off approval",
+   "why": "QP-306, SOP-101 and SOP-105 all give first-off approval to the QA Technician.",
+   "docs": [
+    "QP-306",
+    "SOP-101",
+    "SOP-105"
+   ]
+  },
+  {
+   "title": "Compare: who releases packaging materials",
+   "why": "QP-308 and WH-601 both give release to the QA Technician, and WI-212 only loads rolls that carry the QA release sticker.",
+   "docs": [
+    "QP-308",
+    "WH-601",
+    "WI-212"
+   ]
+  },
+  {
+   "title": "Compare: which suppliers' packaging may be used",
+   "why": "QP-309 limits purchasing to the listed supplier, QP-308 rejects lots from unlisted suppliers and WI-212 refuses rolls from unlisted suppliers. The three documents agree.",
+   "docs": [
+    "QP-308",
+    "QP-309",
+    "WI-212"
+   ]
+  },
+  {
+   "title": "Compare: who checks the dock before entering a trailer",
+   "why": "SP-405 and WH-601 both require the Forklift Driver to chock the wheels and lock the dock leveler before entering a trailer.",
+   "docs": [
+    "SP-405",
+    "WH-601"
+   ]
+  }
+ ]
+}

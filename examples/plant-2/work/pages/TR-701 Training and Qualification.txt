@@ -1,0 +1,110 @@
+     PLANT 2 · TRAINING PROCEDURE
+                                                                                                         TR-701
+     Training and Qualification                                                                             Rev D
+
+
+  Effective                     Owner                        Prepared by                  Approved by
+  2024-02-12                    Human Resources              A. Rossi                     D. Whitfield
+
+
+PURPOSE
+
+Make sure nobody carries out a procedure they have not been trained and signed off on.
+
+SCOPE
+
+All production, quality, maintenance and warehouse roles at Plant 2.
+
+ROLES
+
+ ROLE                                RESPONSIBILITY
+
+
+ Training Coordinator                Keeps the training matrix.
+
+ Line Lead                           Signs off operators on the line.
+
+ Department Manager                  Approves the list of required procedures for each role.
+
+
+PPE
+None.
+
+TOOLS
+
+None.
+
+M AT E R I A L S
+
+None.
+
+PROCEDURE
+
+  Rules
+
+ STEP         WHO                       ACTION
+
+ 1            Training Coordinator      Keep FRM-TR-01 Training Matrix current: one row per person, one
+                                        column per procedure.
+
+ 2            Line Lead                 A new operator works with a qualified operator until signed off on FRM-
+                                        TR-02 Sign-Off Sheet for each procedure in the table below.
+
+ 3            Training Coordinator      When a procedure is revised, everyone trained on it is retrained within 30
+                                        days. The document owner tells the Training Coordinator on the day of
+                                        issue.
+
+ 4            Department Manager        Review the required procedures for each role every year.
+  Required procedures by role
+
+ ROLE                          MUST BE TRAINED ON
+
+ Operator                      SOP-101, SOP-102, SOP-104 (Line 2 only), SOP-105, WI-210, WI-211 Rev A, WI-212,
+                               WI-213, QP-303, QP-315, SP-402
+
+ Line Lead                     Everything for Operator, plus QP-306
+
+ QA Technician                 QP-303, QP-306, QP-308, QP-315, SP-405
+
+ Maintenance                   SP-402, MP-501, MP-502, WI-210, WI-213
+ Technician
+
+ Forklift Driver               SP-405, WH-601
+
+ Receiving Clerk               WH-601, QP-308, SP-405
+
+
+R E L AT E D D O C U M E N T S
+
+     SOP-101 Line Start-Up
+     SOP-102 Line Shutdown and Shift Handover
+     SOP-104 Size Changeover, Line 2
+     SOP-105 Product Changeover and Line Clearance
+     WI-210 Filler Setup and Nozzle Check
+     WI-211 Capper Setup and Torque Check, Rev A
+     WI-212 Labeler Setup and Label Roll Change
+     WI-213 Case Packer Setup and Glue Check
+     QP-303 Fill Weight Checks
+     QP-306 First-Off Approval
+     QP-308 Incoming Inspection of Packaging Materials
+     QP-315 Nonconforming Product and Hold
+     SP-402 Lockout/Tagout
+     SP-405 Forklift and Pedestrian Safety
+     MP-501 Filler Lubrication and Valve Seal Inspection
+     MP-502 Case Packer Vacuum Pump Inspection
+     WH-601 Receiving and Put-Away
+
+RECORDS
+     FRM-TR-01 Training Matrix
+     FRM-TR-02 Sign-Off Sheet
+
+R E V I S I O N H I S T O RY
+
+ REV               D AT E                        CHANGE
+
+ D                 2024-02-12                    Retraining window set at 30 days.
+ C                  2023-02-06                          New template.
+
+
+TR-701 Training and Qualification Rev D. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

@@ -1,0 +1,58 @@
+        PLANT 2                           Case Packer Vacuum Pump Inspection
+   Maintenance Procedure
+                             Document No.: MP-502               Revision: A        Effective: 2019-08-12
+
+ Department: Maintenance     Prepared by: K. Petrov             Approved by: J. Brandt
+
+
+1.0 PURPOSE
+Find a failing vacuum pump before it stops the case packer.
+
+2.0 SCOPE
+The vacuum pumps on CPK-1, CPK-2 and CPK-3. Monthly task in the maintenance system.
+
+3.0 RESPONSIBILITIES
+
+ Role                                      Responsibility
+
+ Maintenance Technician                    Carries out the inspection.
+
+ Maintenance Planner                       Orders spare parts and schedules repairs.
+
+
+4.0 SAFETY AND MATERIALS
+Personal protective equipment: Safety glasses; Hearing protection; Safety shoes
+Materials: Vacuum pump inlet filter; Bearing VP-BRG-6205
+Tools: Infrared thermometer; Vacuum gauge; Stethoscope
+
+5.0 RELATED DOCUMENTS AND RECORDS
+Documents: SP-402 Lockout/Tagout, Rev B; WI-213 Case Packer Setup and Glue Check
+Records: Maintenance work order
+
+6.0 INSPECTION (PUMP RUNNING)
+ 1. Maintenance Technician: Listen to the pump with the stethoscope at the drive end. Rumbling or
+    grinding means a bearing is failing.
+ 2. Maintenance Technician: Measure the bearing housing temperature. More than 70 degrees C, or more
+    than 15 degrees above last month, is a fail.
+ 3. Maintenance Technician: Read the vacuum at the pump inlet with the erector idle: at least 0.7 bar of
+    vacuum.
+ 4. Maintenance Technician: Write the three readings on the work order every month, pass or fail.
+
+7.0 SERVICE (PUMP LOCKED OUT)
+ 1. Maintenance Technician: Lock out the case packer using the group lock box, as described in SP-402,
+    Rev B.
+  2. Maintenance Technician: Replace the inlet filter if it is dark or the vacuum reading was low.
+  3. Maintenance Technician: On a failed bearing check: replace bearing VP-BRG-6205 and check the
+     coupling alignment.
+  4. Maintenance Planner: Keep at least one bearing VP-BRG-6205 in stores.
+
+8.0 REVISION HISTORY
+
+  Rev                        Date                                                    Change
+
+  A                          2019-08-12                                              First issue.
+
+
+MP-502 Case Packer Vacuum Pump Inspection Rev A. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open
+dataset.
+

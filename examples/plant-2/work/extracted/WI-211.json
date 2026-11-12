@@ -1,0 +1,44 @@
+{
+  "doc": {"id": "WI-211", "title": "Capper Setup and Torque Check", "type": "Work Instruction", "rev": "C", "effective": "2022-11-07", "owner": "Production", "file": "WI-211 Capper Setup and Torque Check.pdf", "pages": 2,
+          "purpose": "Apply caps at the right torque so bottles neither leak nor are too hard to open."},
+  "roles": [
+    {"name": "Operator", "does": "Sets up the capper and checks torque.", "where": "Roles"},
+    {"name": "Maintenance Technician", "does": "Replaces chucks and adjusts clutches.", "where": "Roles"}
+  ],
+  "equipment": [
+    {"id": "CAP-1", "name": "Capper 1", "where": "Scope"},
+    {"id": "CAP-2", "name": "Capper 2", "where": "Scope"},
+    {"id": "CAP-3", "name": "Capper 3", "where": "Scope"}
+  ],
+  "materials": [
+    {"name": "Caps (28 mm)", "where": "Materials"},
+    {"name": "Caps (38 mm)", "where": "Materials"}
+  ],
+  "tools": [
+    {"name": "Torque tester", "where": "Tools"},
+    {"name": "Chuck wrench", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-11", "name": "Torque Check Sheet", "where": "step 5"}
+  ],
+  "references": [
+    {"id": "QP-315", "as_written": "QP-315 Nonconforming Product and Hold", "rev": null, "where": "step 7"}
+  ],
+  "parameters": [
+    {"what": "application torque", "applies_to": "28 mm cap", "value": "12", "unit": "in-lb", "tolerance": "plus or minus 2", "where": "Application torque table", "quote": "28 mm Lines 1 and 3 (CAP-1, CAP-3) 12 plus or minus 2"},
+    {"what": "application torque", "applies_to": "38 mm cap", "value": "17", "unit": "in-lb", "tolerance": "plus or minus 2", "where": "Application torque table", "quote": "38 mm Line 2 (CAP-2), both bottle sizes 17 plus or minus 2"},
+    {"what": "torque check interval", "applies_to": "each capping head", "value": "2", "unit": "hours", "where": "step 4", "quote": "At start-up and every 2 hours: take one bottle from each capping head."},
+    {"what": "capping heads out of range that stop the line", "applies_to": "capper", "value": "2 or more", "unit": "heads", "where": "step 6", "quote": "Two or more heads out of range: stop the line and call the Maintenance Technician."}
+  ],
+  "rules": [
+    {"topic": "who places product on hold", "statement": "The Operator puts product capped since the last good check on hold.", "where": "step 7", "quote": "Product capped since the last good check goes on hold as described in QP-315."},
+    {"topic": "who sets application torque", "statement": "The Operator sets the application torque from the table.", "where": "step 3", "quote": "Set the application torque from the table below."}
+  ],
+  "unsure": [
+    {"what": "The table gives application torque; step 4 has operators measure removal torque", "why": "No removal torque range is given, although QP-306 step 3 refers to 'the range in WI-211'", "where": "step 4 / table"}
+  ]
+}

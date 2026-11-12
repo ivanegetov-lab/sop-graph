@@ -1,0 +1,56 @@
+{
+  "doc": {"id": "WI-210", "title": "Filler Setup and Nozzle Check", "type": "Work Instruction", "rev": "D", "effective": "2023-04-03", "owner": "Production", "file": "WI-210 Filler Setup and Nozzle Check.pdf", "pages": 2,
+          "purpose": "Set up a rotary filler so that every nozzle fills inside the weight limits."},
+  "roles": [
+    {"name": "Operator", "does": "Sets up and adjusts the filler.", "where": "Roles"},
+    {"name": "Line Lead", "does": "Is told about any nozzle taken out of service.", "where": "Roles"},
+    {"name": "Maintenance Technician", "does": "Repairs nozzles and valves.", "where": "Roles"}
+  ],
+  "equipment": [
+    {"id": "FIL-1", "name": "Filler 1", "where": "Scope and step 3"},
+    {"id": "FIL-2", "name": "Filler 2", "where": "Scope"},
+    {"id": "FIL-3", "name": "Filler 3", "where": "Scope"}
+  ],
+  "materials": [
+    {"name": "Sanitizer", "where": "Materials"}
+  ],
+  "tools": [
+    {"name": "Check scale (0.1 g)", "where": "Tools"},
+    {"name": "Nozzle wrench", "where": "Tools"},
+    {"name": "Sample tray", "where": "Tools"}
+  ],
+  "ppe": [
+    {"name": "Safety glasses", "where": "PPE"},
+    {"name": "Chemical-resistant gloves", "where": "PPE"},
+    {"name": "Safety shoes", "where": "PPE"}
+  ],
+  "forms": [
+    {"id": "FRM-PR-10", "name": "Filler Setup Sheet", "where": "steps 3 and 5"}
+  ],
+  "references": [
+    {"id": "QP-303", "as_written": "QP-303 Fill Weight Checks", "rev": null, "where": "Related documents"},
+    {"id": "MP-501", "as_written": "MP-501 Filler Lubrication and Valve Seal Inspection", "rev": null, "where": "step 6"}
+  ],
+  "parameters": [
+    {"what": "nozzle weight deviation that stops the filler", "applies_to": "any nozzle compared with the others", "value": "3", "unit": "g", "where": "step 4", "quote": "Any nozzle more than 3 g from the others: stop, tell the Line Lead, and call the Maintenance Technician."},
+    {"what": "operator fill setpoint adjustment limit", "applies_to": "per adjustment, up or down", "value": "2", "unit": "g", "where": "step 5", "quote": "you may adjust the fill setpoint by up to 2 g up or down."},
+    {"what": "operator fill setpoint adjustment limit per shift", "applies_to": "one shift", "value": "2", "unit": "g", "where": "step 6", "quote": "If more than 2 g of adjustment is needed in one shift, stop adjusting and call the Maintenance Technician."},
+    {"what": "bottles to run on a dripping nozzle before re-check", "applies_to": "dripping or stringing nozzle", "value": "10", "unit": "bottles", "where": "step 7", "quote": "wipe, run 10 bottles, check again."},
+    {"what": "fill target weight", "applies_to": "AC-1000 / AC-1000-LEM", "value": "1005", "unit": "g", "where": "Fill targets table", "quote": "AC-1000 / AC-1000-LEM 1005 1000 1015"},
+    {"what": "fill weight limits", "applies_to": "AC-1000 / AC-1000-LEM", "value": "1000 to 1015", "unit": "g", "where": "Fill targets table", "quote": "AC-1000 / AC-1000-LEM 1005 1000 1015"},
+    {"what": "fill target weight", "applies_to": "FS-2000", "value": "2010", "unit": "g", "where": "Fill targets table", "quote": "FS-2000 2010 2000 2030"},
+    {"what": "fill weight limits", "applies_to": "FS-2000", "value": "2000 to 2030", "unit": "g", "where": "Fill targets table", "quote": "FS-2000 2010 2000 2030"},
+    {"what": "fill target weight", "applies_to": "FS-0500", "value": "504", "unit": "g", "where": "Fill targets table", "quote": "FS-0500 504 500 512"},
+    {"what": "fill weight limits", "applies_to": "FS-0500", "value": "500 to 512", "unit": "g", "where": "Fill targets table", "quote": "FS-0500 504 500 512"},
+    {"what": "fill target weight", "applies_to": "DS-0750 / DS-0750-ECO", "value": "756", "unit": "g", "where": "Fill targets table", "quote": "DS-0750 / DS-0750-ECO 756 750 765"},
+    {"what": "fill weight limits", "applies_to": "DS-0750 / DS-0750-ECO", "value": "750 to 765", "unit": "g", "where": "Fill targets table", "quote": "DS-0750 / DS-0750-ECO 756 750 765"}
+  ],
+  "rules": [
+    {"topic": "who may change the fill setpoint", "statement": "The Operator may adjust the fill setpoint by up to 2 g up or down and writes the change on FRM-PR-10.", "where": "step 5", "quote": "you may adjust the fill setpoint by up to 2 g up or down."},
+    {"topic": "who may change the fill setpoint", "statement": "If more than 2 g of adjustment is needed in one shift the Operator stops and calls the Maintenance Technician.", "where": "step 6", "quote": "stop adjusting and call the Maintenance Technician."}
+  ],
+  "unsure": [
+    {"what": "Number of nozzles on FIL-2 and FIL-3", "why": "Step 3 says 'all nozzles on FIL-2 and FIL-3' without a number", "where": "step 3"},
+    {"what": "Products (AC-1000, FS-2000, FS-0500, DS-0750 and variants) have no field in the schema", "why": "Only captured as applies_to text in parameters", "where": "Fill targets table"}
+  ]
+}

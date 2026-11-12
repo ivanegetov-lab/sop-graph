@@ -1,0 +1,94 @@
+     P L A N T 2 · S TA N D A R D O P E R AT I N G P R O C E D U R E
+                                                                                                         SOP-102
+     Line Shutdown and Shift Handover                                                                             Rev C
+
+
+  Effective                        Owner                           Prepared by                 Approved by
+  2024-09-02                       Production                      M. Alvarez                  D. Whitfield
+
+
+PURPOSE
+
+Leave the line clean, safe and documented for the next shift.
+
+SCOPE
+
+Lines 1, 2 and 3, at the end of every shift.
+
+ROLES
+
+ ROLE                    RESPONSIBILITY
+
+
+ Line Lead               Writes the handover and meets the incoming Line Lead.
+
+ Operator                Cleans and secures the machine.
+
+
+PPE
+
+     Safety glasses
+     Safety shoes
+     Chemical-resistant gloves when cleaning the filler
+
+TOOLS
+     Scraper
+     Lint-free wipes
+
+M AT E R I A L S
+
+     Sanitizer
+
+PROCEDURE
+
+  Shutdown
+
+ STEP         WHO                            ACTION
+
+ 1            Operator                       Run the line empty. Stop the filler, then the capper, labeler and case
+                                             packer in that order.
+
+ 2            Operator                       Clean filler nozzles and the drip tray. Wipe the labeler rollers. Empty the
+                                             case packer reject bin.
+
+ 3            Operator                       Count rejected bottles and write the count on the production report.
+
+ 4            Operator                       Move any product on hold to the hold cage as described in QP-315.
+  Handover
+
+ STEP         WHO                               ACTION
+
+ 5            Operator                          Enter every stop of 3 minutes or longer in FRM-PR-09 Downtime Log
+                                                Sheet with the cause and a short comment.
+
+ 6            Line Lead                         Fill in FRM-PR-02 Shift Handover Log: output against plan, open
+                                                problems, materials short, safety concerns.
+
+ 7            Line Lead                         Walk the line with the incoming Line Lead. Both sign the log.
+
+ 8            Line Lead                         If the line will be down for more than 60 minutes, the next start follows
+                                                SOP-101 in full.
+
+
+R E L AT E D D O C U M E N T S
+
+     SOP-101 Line Start-Up
+     QP-315 Nonconforming Product and Hold
+
+RECORDS
+
+     FRM-PR-02 Shift Handover Log
+     FRM-PR-09 Downtime Log Sheet
+
+R E V I S I O N H I S T O RY
+
+ REV           D AT E                    CHANGE
+
+
+ C             2024-09-02                Stops of 3 minutes or longer must be logged (was 5).
+
+ B             2022-01-10                Added walk with incoming lead.
+
+
+SOP-102 Line Shutdown and Shift Handover Rev C. Printed copies are uncontrolled. Fictional document, written for the Plant 2 open dataset.
+

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F6F8;--card:#fff;--ink:#111827;--ink2:#374151;--mut:#6B7280;--line:#E3E7EC;--edge:#C3CAD4;--accent:#F06050;--accent-bg:#FEF1EF;
+--equipment:#0E7490;--material:#B45309;--product:#0891B2;--tool:#64748B;--ppe:#4D7C0F;--role:#7C3AED;--form:#2563EB;--supplier:#BE185D;--red:#DC2626;
+--font:Inter,-apple-system,"Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+button,input{font:inherit;color:inherit}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:18px;padding:14px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px;font:700 11.5px/1 var(--font);letter-spacing:1.6px;color:var(--mut);white-space:nowrap}
+.mark{width:13px;height:13px;border-radius:3px;background:var(--accent)}
+.hrow h1{font:800 21px/1.15 var(--font);letter-spacing:-.4px;margin:0;flex:1;min-width:200px}
+.stats{display:flex;gap:18px;font-size:13px;color:var(--mut);white-space:nowrap}.stats b{color:var(--ink);font-weight:700}.stats .bad b{color:var(--red)}
+.story{display:flex;align-items:center;gap:14px;padding:14px 0 16px;flex-wrap:wrap}
+.steps{display:flex;gap:6px;flex-wrap:wrap}
+.steps button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:600 13px/1 var(--font);color:var(--ink2);cursor:pointer;white-space:nowrap}
+.steps button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.cap{flex:1;min-width:260px;font:700 19px/1.3 var(--font);letter-spacing:-.3px}
+main{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:16px;padding-bottom:28px;align-items:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.gwrap{position:relative;overflow:hidden}
+.ask{display:flex;gap:8px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.ask label{font:600 13px/1 var(--font);color:var(--ink2);white-space:nowrap}
+.ask input{flex:1;min-width:0;border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:14.5px;outline:none;background:#FAFBFC}
+.ask input:focus{border-color:var(--accent);background:#fff}
+.ask button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:10px 12px;font:600 13px/1 var(--font);cursor:pointer;color:var(--ink2);white-space:nowrap}
+svg#g{display:block;width:100%;height:660px;cursor:grab;touch-action:none;background:
+ radial-gradient(circle at 1px 1px,#E9ECF0 1px,transparent 0) 0 0/22px 22px}
+svg#g.drag{cursor:grabbing}
+.e{stroke:var(--edge);stroke-width:1;transition:opacity .5s,stroke .3s}
+.e.faint{stroke-opacity:.38}.e.lit{stroke:var(--accent);stroke-width:2.2;stroke-opacity:1}
+.n{cursor:pointer;transition:opacity .5s}
+.n text{font-family:var(--font);pointer-events:none}
+.n .box{fill:#fff;stroke:var(--ink);stroke-width:1.5;transition:stroke .3s,fill .3s}
+.n .id{font-size:11.5px;font-weight:700;fill:var(--ink)}
+.n .ti{font-size:9.5px;fill:var(--mut)}
+.n .lb{font-size:10px;fill:var(--ink2);opacity:0;transition:opacity .3s}
+.n.hub .lb,.n.lit .lb,.n:hover .lb{opacity:1}
+.n.lit .box{stroke:var(--accent);stroke-width:2.2;fill:var(--accent-bg)}
+.n.sel .box{fill:var(--accent);stroke:var(--accent)}.n.sel .id{fill:#fff}
+.n.sel circle.dot{r:9px;stroke:var(--accent);stroke-width:7;stroke-opacity:.3}.n.sel .lb{font-weight:700;font-size:11.5px;fill:var(--ink)}
+.n.missing .box{stroke:var(--red);stroke-dasharray:4 3;fill:#FEF2F2}.n.missing .id{fill:var(--red)}
+.n .badge{fill:var(--red)}.n .bt{font-size:8.5px;font-weight:700;fill:#fff;text-anchor:middle}
+.n .pg{transition:opacity .7s,transform .7s;transform-box:fill-box;transform-origin:center}
+.dim .n:not(.lit){opacity:.13}.dim .e:not(.lit){opacity:.07}
+.s1 .e,.s1 .n:not(.proc){opacity:0}.s1 .n .core{opacity:0}
+.n .core{transition:opacity .6s}
+body:not(.s1c) .n .pg{opacity:0;transform:scale(.15)}
+.legend{position:absolute;left:14px;bottom:12px;display:flex;flex-wrap:wrap;gap:6px 12px;font-size:11.5px;color:var(--ink2);background:rgba(255,255,255,.88);padding:7px 10px;border-radius:8px;border:1px solid var(--line);max-width:calc(100% - 28px)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.legend i.sq{border-radius:2px;background:#fff;border:1.5px solid var(--ink)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:12px;padding:5px 8px;border-radius:6px;white-space:nowrap;display:none;z-index:5}
+.panel{padding:18px 18px 8px;max-height:724px;overflow:auto}
+.ey{display:block;font:600 11px/1 var(--font);letter-spacing:1.3px;text-transform:uppercase;color:var(--mut);margin-bottom:7px}
+.panel h2{font:800 20px/1.2 var(--font);letter-spacing:-.4px;margin:0 0 4px}
+.panel .sub{color:var(--mut);font-size:13px;margin:0 0 14px}
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 16px}
+.sum div{background:var(--accent-bg);border-radius:10px;padding:10px 10px 9px}.sum b{display:block;font:800 24px/1 var(--font);color:var(--accent)}.sum span{font-size:11.5px;color:var(--ink2);line-height:1.25;display:block;margin-top:4px}
+.sec{margin:0 0 16px}.sec h3{font:700 13px/1.3 var(--font);margin:0 0 6px}
+.it{display:block;width:100%;text-align:left;border:0;background:transparent;padding:8px 0;border-top:1px solid var(--line);cursor:pointer}
+.it:hover b{color:var(--accent)}.it b{font-weight:600;font-size:13.5px}.it small{display:block;color:var(--mut);font-size:12px;line-height:1.4;margin-top:2px}
+.it q{quotes:"“" "”";font-style:italic}
+.chips{display:flex;flex-wrap:wrap;gap:5px}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 9px;font-size:12px;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--accent)}.chip i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
+.iss{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer;background:#fff;width:100%;text-align:left;display:block}
+.iss:hover,.iss.on{border-color:var(--accent)}.iss.on{background:var(--accent-bg)}
+.iss b{font-weight:600;font-size:13.5px;display:block;line-height:1.35}.iss small{display:block;color:var(--ink2);font-size:12.5px;line-height:1.45;margin-top:4px}
+.iss .q{display:none;margin-top:8px}.iss.on .q{display:block}
+.q div{border-left:3px solid var(--accent);padding:2px 0 2px 9px;margin-top:6px;font-size:12.5px;color:var(--ink2)}.q div b{display:inline;font-size:12px;color:var(--ink)}
+.sev{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px}.sev.high{background:var(--red)}.sev.medium{background:#D97706}.sev.low{background:#9CA3AF}
+.more{margin:14px 0 0;border-top:1px solid var(--line);padding-top:12px}.more summary{cursor:pointer;font:700 13px/1.3 var(--font);display:flex;justify-content:space-between;list-style:none;margin-bottom:10px}.more summary::-webkit-details-marker{display:none}.more summary::before{content:'▸';margin-right:6px;color:var(--mut)}.more[open] summary::before{content:'▾'}.more summary span{margin-left:auto;color:var(--mut);font-weight:600}
+.grp{display:flex;justify-content:space-between;align-items:baseline;margin:16px 0 8px;font:700 13px/1.3 var(--font)}.grp span{color:var(--mut);font-weight:600}
+.thumb{float:right;width:96px;margin:0 0 8px 12px;border:1px solid var(--line);border-radius:4px;box-shadow:0 2px 8px rgba(16,24,40,.12)}
+.back{border:0;background:transparent;color:var(--mut);font:600 12.5px/1 var(--font);cursor:pointer;padding:0;margin-bottom:12px}.back:hover{color:var(--accent)}
+footer{display:flex;justify-content:space-between;gap:20px;padding:14px 0 28px;font-size:12.5px;color:var(--mut)}footer a{color:var(--ink);font-weight:600;text-decoration:none;white-space:nowrap}
+@media(max-width:980px){main{grid-template-columns:1fr}svg#g{height:460px}.panel{max-height:none}.cap{font-size:16px}.stats{display:none}}
+@media(max-width:600px){.wrap{padding:0 12px}.ask label{display:none}.hrow h1{font-size:18px}svg#g{height:400px}}
+@media(prefers-reduced-motion:reduce){.e,.n,.n .pg,.n .core{transition:none!important}}
+</style></head>
+<body class="s1 s1c">
+<header><div class="wrap">
+  <div class="hrow"><span class="brand"><i class="mark"></i>SOP GRAPH</span><h1 id="title"></h1><div class="stats" id="stats"></div></div>
+</div></header>
+<div class="wrap">
+  <div class="story"><div class="steps" id="steps"></div><div class="cap" id="cap"></div></div>
+  <main>
+    <section class="card gwrap">
+      <div class="ask"><label for="q">What are you changing?</label><input id="q" list="names" placeholder="A machine, material, form, role or procedure" autocomplete="off"><datalist id="names"></datalist><button id="clear">Clear</button></div>
+      <svg id="g"><g id="vp"><g id="edges"></g><g id="nodes"></g></g></svg>
+      <div class="legend" id="legend"></div><div class="tip" id="tip"></div>
+    </section>
+    <aside class="card panel" id="panel"></aside>
+  </main>
+  <footer><span>Made with the free <b>SOP Graph</b> Claude skill by Ivan Getov<span id="gen"></span>. Claude reads the documents; a script connects and checks them. Review it with someone who knows the plant.</span>
+    <a href="https://getov.substack.com">getov.substack.com &rarr;</a></footer>
+</div>
+<script>
+const D=/*__DATA__*/null;
+(function(){
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const M=D.meta,ST=M.story||{},N=D.nodes,E=D.edges,byId={};N.forEach((n,i)=>{n.i=i;byId[n.id]=n});
+const COL={equipment:'var(--equipment)',material:'var(--material)',product:'var(--product)',tool:'var(--tool)',ppe:'var(--ppe)',role:'var(--role)',form:'var(--form)',supplier:'var(--supplier)'};
+const TN={procedure:'Procedure',equipment:'Machine',material:'Material',product:'Product',tool:'Tool',ppe:'Protective gear',role:'Role',form:'Form or record',supplier:'Supplier',missing:'Missing document'};
+const isP=n=>n.type==='procedure'||n.type==='missing';
+const procs=N.filter(n=>n.type==='procedure'),things=N.filter(n=>!isP(n));
+const adj=N.map(()=>[]);E.forEach((e,k)=>{e.k=k;const a=byId[e.src],b=byId[e.dst];if(!a||!b)return;adj[a.i].push([k,b,e.type,'out']);adj[b.i].push([k,a,e.type,'in']);});
+const W=1000,H=660;
+
+// ---------- layout: fixed seed, so the map is the same every time ----------
+// Procedures are spread out first (pulled together when they cite each other or share things).
+// Everything else is then placed between the procedures that use it, or in a ring around the only one that does.
+(function layout(){
+  let s=12345;const rnd=()=>(s=(s*1103515245+12345)&0x7fffffff)/0x7fffffff;
+  const P=N.filter(n=>n.type==='procedure'),things=N.filter(n=>n.type!=='procedure'),isR=n=>n.type==='procedure',X0=86,X1=W-86,Y0=52,Y1=H-74,pk=(a,b)=>a.i<b.i?a.i+'|'+b.i:b.i+'|'+a.i,w=new Map();
+  for(const e of E){const a=byId[e.src],b=byId[e.dst];if(a&&b&&isR(a)&&isR(b))w.set(pk(a,b),(w.get(pk(a,b))||0)+3);}
+  const pl=n=>[...new Set(adj[n.i].map(x=>x[1]).filter(isR))];
+  for(const t of things){const L=pl(t);if(L.length<2||L.length>6)continue;for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++)w.set(pk(L[i],L[j]),(w.get(pk(L[i],L[j]))||0)+1.5/L.length);}
+  P.forEach((n,i)=>{const a=i/P.length*Math.PI*2;n.x=W/2+Math.cos(a)*300+(rnd()-.5)*20;n.y=H/2+Math.sin(a)*200+(rnd()-.5)*20;});
+  for(let it=0;it<500;it++){const t=1-it/500;
+    for(const n of P){n.fx=(W/2-n.x)*.006;n.fy=(H/2-n.y)*.011;}
+    for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j];let dx=a.x-b.x,dy=(a.y-b.y)*1.5,d2=dx*dx+dy*dy+1,d=Math.sqrt(d2),f=16000/d2;
+      const ww=w.get(pk(a,b));if(ww)f-=(d-150)*.004*Math.min(ww,5);dx/=d;dy/=d;a.fx+=dx*f;a.fy+=dy*f;b.fx-=dx*f;b.fy-=dy*f;}
+    for(const n of P){const m=Math.hypot(n.fx,n.fy),c=Math.min(m,18*t+1.5)/(m||1);n.x+=n.fx*c;n.y+=n.fy*c;}}
+  let x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;for(const n of P){x0=Math.min(x0,n.x);x1=Math.max(x1,n.x);y0=Math.min(y0,n.y);y1=Math.max(y1,n.y);}
+  for(const n of P){n.x=X0+(n.x-x0)/(x1-x0||1)*(X1-X0);n.y=Y0+(n.y-y0)/(y1-y0||1)*(Y1-Y0);}
+  for(let it=0;it<80;it++)for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],dx=a.x-b.x,dy=a.y-b.y,ox=128-Math.abs(dx),oy=58-Math.abs(dy);
+    if(ox>0&&oy>0){if(ox/128<oy/58){const m=ox/2*(dx<0?-1:1);a.x+=m;b.x-=m;}else{const m=oy/2*(dy<0?-1:1);a.y+=m;b.y-=m;}
+      for(const n of[a,b]){n.x=Math.max(X0,Math.min(X1,n.x));n.y=Math.max(Y0,Math.min(Y1,n.y));}}}
+  const leaves=new Map();
+  for(const t of things){const L=pl(t);
+    if(L.length>=2){t.ax=L.reduce((q,m)=>q+m.x,0)/L.length+(rnd()-.5)*30;t.ay=L.reduce((q,m)=>q+m.y,0)/L.length+(rnd()-.5)*30;}
+    else if(L.length===1){if(!leaves.has(L[0].id))leaves.set(L[0].id,[]);leaves.get(L[0].id).push(t);}
+    else t.ax=null;}
+  for(const[id,ts]of leaves){const p=byId[id],out=Math.atan2(p.y-H/2,(p.x-W/2)*.66),m=ts.length,step=Math.min(.62,Math.PI*1.5/m);
+    ts.forEach((t,k)=>{const a=out+(k-(m-1)/2)*step,r=58+(k%2)*17;t.ax=p.x+Math.cos(a)*r*1.25;t.ay=p.y+Math.sin(a)*r;});}
+  for(const t of things)if(t.ax==null){const nb=adj[t.i].map(x=>x[1]).filter(m=>m.ax!=null||isR(m));t.ax=nb.length?nb.reduce((q,m)=>q+(isR(m)?m.x:m.ax),0)/nb.length+30:W/2;t.ay=nb.length?nb.reduce((q,m)=>q+(isR(m)?m.y:m.ay),0)/nb.length+30:H/2;}
+  for(const t of things){t.x=t.ax;t.y=t.ay;}
+  for(let it=0;it<160;it++){for(const t of things){t.fx=(t.ax-t.x)*.04;t.fy=(t.ay-t.y)*.04;}
+    for(let i=0;i<things.length;i++){const a=things[i];
+      for(let j=i+1;j<things.length;j++){const b=things[j],dx=a.x-b.x,dy=a.y-b.y,ox=58-Math.abs(dx),oy=30-Math.abs(dy);
+        if(ox>0&&oy>0){const fx=(dx<0?-1:1)*ox*.08,fy=(dy<0?-1:1)*oy*.16;a.fx+=fx;a.fy+=fy;b.fx-=fx;b.fy-=fy;}}
+      for(const p of P){const dx=a.x-p.x,dy=a.y-p.y,ox=64-Math.abs(dx),oy=40-Math.abs(dy);if(ox>0&&oy>0){a.fx+=(dx<0?-1:1)*ox*.1;a.fy+=(dy<0?-1:1)*oy*.25;}}}
+    for(const t of things){t.x=Math.max(14,Math.min(W-14,t.x+t.fx));t.y=Math.max(14,Math.min(H-26,t.y+t.fy));}}
+})();
+
+// ---------- draw ----------
+const el=(t,a,p)=>{const x=document.createElementNS(NS,t);for(const k in a)x.setAttribute(k,a[k]);if(p)p.appendChild(x);return x;};
+const svg=$('g');svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+const eEl=E.map(e=>{const a=byId[e.src],b=byId[e.dst];if(!a||!b)return null;const hub=(!isP(a)&&a.degree>=8)||(!isP(b)&&b.degree>=8);return el('line',{class:'e'+(hub?' faint':''),x1:a.x,y1:a.y,x2:b.x,y2:b.y},$('edges'));});
+const short=(s,n)=>s.length>n?s.slice(0,n-1)+'…':s;
+const nEl=N.map(n=>{const g=el('g',{class:'n '+(isP(n)?'proc ':'')+n.type+(!isP(n)&&n.degree>=3?' hub':''),transform:`translate(${n.x},${n.y})`},$('nodes'));
+  if(isP(n)){const w=n.id.length*7.4+16,c=el('g',{class:'core'},g);el('rect',{class:'box',x:-w/2,y:-12,width:w,height:24,rx:6},c);
+    el('text',{class:'id','text-anchor':'middle',y:4},c).textContent=n.id;
+    if(n.type==='procedure')el('text',{class:'ti','text-anchor':'middle',y:25},c).textContent=short(n.name,30);
+    if(n.issues){el('circle',{class:'badge',cx:w/2,cy:-12,r:7.5},c);el('text',{class:'bt',x:w/2,y:-9},c).textContent=n.issues;}
+    if(D.thumbs&&D.thumbs[n.id]){const p=el('g',{class:'pg'},g),r=((n.i*37)%9)-4;
+      el('rect',{x:-45,y:-58,width:90,height:116,fill:'#fff',stroke:'#C9D0D9',transform:`rotate(${r})`,rx:2,style:'filter:drop-shadow(0 3px 5px rgba(16,24,40,.18))'},p);
+      el('image',{href:D.thumbs[n.id],x:-45,y:-58,width:90,height:116,transform:`rotate(${r})`,preserveAspectRatio:'xMidYMin slice'},p);}
+  }else{el('circle',{class:'dot',cx:0,cy:0,r:n.degree>=6?7:5.5,fill:COL[n.type]||'#888'},g);el('text',{class:'lb','text-anchor':'middle',y:19},g).textContent=short(n.type==='equipment'?n.id:n.name,26);}
+  g.addEventListener('click',ev=>{ev.stopPropagation();stop();pick(n.id);});
+  g.addEventListener('mousemove',ev=>{const t=$('tip'),r=svg.parentNode.getBoundingClientRect();t.style.display='block';t.textContent=(isP(n)?n.id+' · ':'')+n.name+' · '+TN[n.type];t.style.left=(ev.clientX-r.left+12)+'px';t.style.top=(ev.clientY-r.top+12)+'px';});
+  g.addEventListener('mouseleave',()=>$('tip').style.display='none');
+  return g;});
+// pan and zoom
+let vx=0,vy=0,vk=1,dr=null;const ap=()=>$('vp').setAttribute('transform',`translate(${vx},${vy}) scale(${vk})`);
+svg.addEventListener('wheel',ev=>{ev.preventDefault();const r=svg.getBoundingClientRect(),mx=(ev.clientX-r.left)/r.width*W,my=(ev.clientY-r.top)/r.height*H,k=Math.max(.6,Math.min(3.5,vk*(ev.deltaY<0?1.12:.89)));vx=mx-(mx-vx)*k/vk;vy=my-(my-vy)*k/vk;vk=k;ap();},{passive:false});
+svg.addEventListener('pointerdown',ev=>{dr=[ev.clientX,ev.clientY,vx,vy,false];});
+window.addEventListener('pointermove',ev=>{if(!dr)return;const r=svg.getBoundingClientRect(),dx=(ev.clientX-dr[0])/r.width*W,dy=(ev.clientY-dr[1])/r.height*H;if(Math.abs(dx)+Math.abs(dy)>3){dr[4]=true;svg.classList.add('drag');}vx=dr[2]+dx;vy=dr[3]+dy;ap();});
+window.addEventListener('pointerup',()=>{if(dr&&!dr[4]&&S.sel){/* plain click on empty space handled below */}dr=null;svg.classList.remove('drag');});
+svg.addEventListener('click',()=>{if(!dr){stop();pick(null);}});
+
+// ---------- what a change touches ----------
+const S={sel:null,issue:null,step:0};
+function nb(n,types,dir){return adj[n.i].filter(x=>(!types||types.includes(x[2]))&&(!dir||x[3]===dir));}
+function impact(n){
+  const lit=new Set([n.id]),le=new Set(),R={procs:[],roles:[],forms:[],also:[],refs:[],refby:[],things:[]};
+  const add=(x)=>{le.add(x[0]);lit.add(x[1].id);};
+  if(isP(n)){for(const x of adj[n.i]){add(x);const m=x[1];
+      if(x[2]==='refers_to')(x[3]==='out'?R.refs:R.refby).push([m,E[x[0]]]);else if(m.type==='role'){if(!R.roles.includes(m))R.roles.push(m);}else if(m.type==='form')R.forms.push(m);else R.things.push(m);}
+    return{lit,le,R};}
+  let first=[];
+  if(n.type==='supplier'){for(const x of nb(n,['supplies'],'out')){add(x);for(const y of nb(x[1],['uses'],'in')){add(y);first.push([y[1],E[y[0]]]);}}
+    for(const x of nb(n,['names_supplier'],'in')){add(x);first.push([x[1],E[x[0]]]);}}
+  else for(const x of adj[n.i])if(isP(x[1])){add(x);first.push([x[1],E[x[0]]]);}
+  const seen=new Map();for(const[p,e]of first){if(!seen.has(p.id))seen.set(p.id,[p,[]]);seen.get(p.id)[1].push(e);}
+  R.procs=[...seen.values()];
+  for(const[p]of R.procs){
+    if(n.type!=='role')for(const x of nb(p,['done_by','trained_on'])){if(x[1].type==='role'){add(x);if(!R.roles.includes(x[1]))R.roles.push(x[1]);}}
+    for(const x of nb(p,['records_on'],'out')){add(x);if(!R.forms.includes(x[1])&&x[1]!==n)R.forms.push(x[1]);}
+    for(const x of nb(p,['refers_to'],'in')){if(!seen.has(x[1].id)){add(x);if(!R.also.includes(x[1]))R.also.push(x[1]);}}
+  }
+  return{lit,le,R};
+}
+function paint(lit,le,sel){
+  document.body.classList.toggle('dim',!!lit);
+  N.forEach((n,i)=>{nEl[i].classList.toggle('lit',!!lit&&lit.has(n.id));nEl[i].classList.toggle('sel',sel===n.id);});
+  E.forEach((e,k)=>{if(eEl[k])eEl[k].classList.toggle('lit',!!le&&le.has(k));});
+}
+const dot=n=>`<i style="background:${COL[n.type]||'#111'}"></i>`;
+const chip=n=>`<button class="chip" data-n="${esc(n.id)}">${isP(n)?'':dot(n)}${esc(isP(n)?n.id:n.type==='equipment'?n.id:n.name)}</button>`;
+const evLine=e=>e&&e.evidence&&e.evidence[0]?`<small>${esc(e.evidence[0].where||'')}${e.evidence[0].quote?`: <q>${esc(e.evidence[0].quote)}</q>`:''}</small>`:'';
+const issFor=ids=>D.issues.filter(i=>i.docs.some(d=>ids.includes(d)));
+function issueCard(i){return `<button class="iss${S.issue===i.id?' on':''}" data-i="${i.id}"><b><span class="sev ${i.severity}"></span>${esc(i.title)}</b><small>${esc(i.detail)}</small>`+
+  `<div class="q">${(i.evidence||[]).filter(e=>e.quote||e.where).map(e=>`<div><b>${esc(e.doc||'')}</b> ${esc(e.where||'')}${e.quote?`: “${esc(e.quote)}”`:''}</div>`).join('')}</div></button>`;}
+function wire(){const p=$('panel');p.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{stop();pick(b.dataset.n)});
+  p.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{stop();pickIssue(b.dataset.i)});
+  const bk=p.querySelector('.back');if(bk)bk.onclick=()=>{stop();pick(null)};}
+const REAL=D.issues.filter(i=>i.severity!=='low'),LOW=D.issues.filter(i=>i.severity==='low');
+function home(){
+  const by={};REAL.forEach(i=>(by[i.type]=by[i.type]||[]).push(i));
+  let h=`<span class="ey">Review report</span><h2>${REAL.length} finding${REAL.length===1?'':'s'}</h2><p class="sub">Found by comparing the documents with each other. Click one to see it on the map, with the exact words.</p>`;
+  for(const t in M.labels)if(by[t])h+=`<div class="grp">${esc(M.labels[t])}<span>${by[t].length}</span></div>`+by[t].map(issueCard).join('');
+  if(D.to_decide&&D.to_decide.length)h+=`<div class="grp">Still to decide<span>${D.to_decide.length}</span></div>`+D.to_decide.map(c=>`<div class="iss"><b>${esc(c.title)}</b><small>${esc(c.detail)}</small></div>`).join('');
+  if(LOW.length)h+=`<details class="more"><summary>Housekeeping<span>${LOW.length}</span></summary>${LOW.map(issueCard).join('')}</details>`;
+  if(D.unsure&&D.unsure.length)h+=`<details class="more"><summary>What Claude wasn’t sure about<span>${D.unsure.length}</span></summary>${D.unsure.map(u=>`<div class="iss" style="cursor:default"><b>${esc(u.doc)}${u.where?' · '+esc(u.where):''}</b><small>${esc(u.what)}${u.why?' '+esc(u.why):''}</small></div>`).join('')}</details>`;
+  if(D.consistent&&D.consistent.length)h+=`<details class="more"><summary>Compared and found consistent<span>${D.consistent.length}</span></summary>${D.consistent.map(u=>`<div class="iss" style="cursor:default"><b>${esc(u.title)}</b><small>${esc(u.docs.join(', '))}. ${esc(u.why)}</small></div>`).join('')}</details>`;
+  $('panel').innerHTML=h;wire();
+}
+function panel(n,im){
+  const R=im.R;let h=`<button class="back">&larr; All findings</button>`;
+  if(isP(n)){
+    h+=(D.thumbs&&D.thumbs[n.id]?`<img class="thumb" src="${D.thumbs[n.id]}" alt="">`:'')+`<span class="ey">${esc(n.doc_type||TN[n.type])}</span><h2>${esc(n.id)} ${esc(n.type==='missing'?'':n.name)}</h2>`;
+    h+=n.type==='missing'?`<p class="sub">Other documents point to this one, but it was not in the set.</p>`:`<p class="sub">Rev ${esc(n.rev||'?')} · effective ${esc(n.effective||'?')} · ${esc(n.owner||'')}</p><p style="margin:0 0 14px;font-size:13.5px;color:var(--ink2)">${esc(n.purpose||'')}</p>`;
+    const is=issFor([n.id]);if(is.length)h+=`<div class="sec" style="clear:both"><h3>Problems on this document (${is.length})</h3>${is.map(issueCard).join('')}</div>`;
+    if(R.refby.length)h+=`<div class="sec" style="clear:both"><h3>Documents that point here (${R.refby.length})</h3>${R.refby.map(([m,e])=>`<button class="it" data-n="${esc(m.id)}"><b>${esc(m.id)} ${esc(m.name)}</b>${evLine(e)}</button>`).join('')}</div>`;
+    if(R.refs.length)h+=`<div class="sec"><h3>Documents it points to (${R.refs.length})</h3><div class="chips">${R.refs.map(x=>chip(x[0])).join('')}</div></div>`;
+    if(R.roles.length)h+=`<div class="sec"><h3>People</h3><div class="chips">${R.roles.map(chip).join('')}</div></div>`;
+    const t=R.things.concat(R.forms);if(t.length)h+=`<div class="sec"><h3>Machines, materials, tools and forms</h3><div class="chips">${t.map(chip).join('')}</div></div>`;
+    const ps=D.parameters.filter(p=>p.doc===n.id);if(ps.length)h+=`<div class="sec"><h3>Numbers in this document</h3>${ps.map(p=>`<div class="it" style="cursor:default"><b>${esc(p.what)}${p.applies_to?' · '+esc(p.applies_to):''}: ${esc(p.value)} ${esc(p.unit||'')} ${esc(p.tolerance||'')}</b><small>${esc(p.where||'')}</small></div>`).join('')}</div>`;
+  }else{
+    const q=S.asked||('If you change '+(n.type==='equipment'?n.id:n.name));
+    h+=`<span class="ey">${esc(TN[n.type])}${n.type==='equipment'?' · '+esc(n.name):''}</span><h2>${esc(q)}</h2>`;
+    h+=`<div class="sum"><div><b>${R.procs.length}</b><span>procedure${R.procs.length===1?'':'s'} to update</span></div><div><b>${R.roles.length}</b><span>role${R.roles.length===1?'':'s'} who use them</span></div><div><b>${R.forms.length}</b><span>form${R.forms.length===1?'':'s'} to check</span></div></div>`;
+    if(R.procs.length)h+=`<div class="sec"><h3>Procedures that mention it</h3>${R.procs.map(([p,es])=>`<button class="it" data-n="${esc(p.id)}"><b>${esc(p.id)} ${esc(p.name)}</b>${evLine(es[0])}</button>`).join('')}</div>`;
+    if(R.roles.length)h+=`<div class="sec"><h3>People who work to those procedures</h3><div class="chips">${R.roles.map(chip).join('')}</div></div>`;
+    if(R.forms.length)h+=`<div class="sec"><h3>Forms and records</h3><div class="chips">${R.forms.map(chip).join('')}</div></div>`;
+    if(R.also.length)h+=`<div class="sec"><h3>Also check: procedures that point to those</h3><div class="chips">${R.also.map(chip).join('')}</div></div>`;
+    const is=issFor(R.procs.map(x=>x[0].id));if(is.length)h+=`<div class="sec"><h3>Open problems on those procedures (${is.length})</h3>${is.map(issueCard).join('')}</div>`;
+  }
+  $('panel').innerHTML=h;$('panel').scrollTop=0;wire();
+}
+function pick(id,asked){
+  S.sel=id;S.issue=null;S.asked=asked||null;
+  if(!id||!byId[id]){paint(null,null,null);home();$('q').value='';return;}
+  const n=byId[id],im=impact(n);paint(im.lit,im.le,id);panel(n,im);if(!asked)$('q').value=isP(n)?n.id:n.type==='equipment'?n.id:n.name;
+}
+function pickIssue(id){
+  const i=D.issues.find(x=>x.id===id);if(S.issue===id){S.issue=null;paint(null,null,null);}
+  else{S.issue=id;S.sel=null;const lit=new Set(i.docs),le=new Set();
+    E.forEach((e,k)=>{if(e.type==='refers_to'&&lit.has(e.src)&&(lit.has(e.dst)||byId[e.dst]&&byId[e.dst].type==='missing'&&i.type==='missing_document')){le.add(k);lit.add(e.dst);}});
+    paint(lit,le,null);}
+  $('panel').querySelectorAll('.iss').forEach(b=>b.classList.toggle('on',b.dataset.i===S.issue));
+}
+function find(q){q=q.trim().toLowerCase();if(!q)return null;
+  return N.find(n=>n.id.toLowerCase()===q||n.name.toLowerCase()===q)||N.filter(n=>(n.id+' '+n.name).toLowerCase().includes(q)).sort((a,b)=>b.degree-a.degree)[0]||null;}
+$('names').innerHTML=things.concat(N.filter(isP)).map(n=>`<option value="${esc(isP(n)?n.id:n.type==='equipment'?n.id:n.name)}">${esc(TN[n.type]+(n.type==='equipment'||isP(n)?' · '+n.name:''))}</option>`).join('');
+$('q').addEventListener('change',()=>{stop();const n=find($('q').value);if(n){setStep(2,true);pick(n.id);}});
+$('q').addEventListener('keydown',ev=>{if(ev.key==='Enter'){ev.preventDefault();$('q').dispatchEvent(new Event('change'));$('q').blur();}});
+$('clear').onclick=()=>{stop();pick(null)};
+
+// ---------- the four-step story ----------
+const pages=procs.reduce((t,n)=>t+(+n.pages||0),0),ex=ST.example||{},exNode=ex.node&&find(ex.node)||things.slice().sort((a,b)=>b.degree-a.degree).find(n=>n.type==='material'||n.type==='equipment')||things[0];
+const hi=REAL.filter(i=>i.severity==='high').length;
+const steps=[['The documents',`${procs.length} procedures${pages?', '+pages+' pages':''}. Written by different people in different years.`],
+  ['The graph',`Claude read every page. Each procedure is now linked to the machines, materials, people and forms it touches.`],
+  ['Change one thing',ex.question||('Change '+(exNode?exNode.name:'one thing')+'. What needs updating?')],
+  ['What doesn’t add up',`${REAL.length} findings${hi?', '+hi+' of them serious':''}: documents that disagree, or point to something that isn’t there.`]];
+$('steps').innerHTML=steps.map((s,i)=>`<button data-s="${i}">${i+1} · ${s[0]}</button>`).join('');
+let timers=[];function stop(){timers.forEach(clearTimeout);timers=[];}
+function setStep(i,quiet){S.step=i;document.body.classList.toggle('s1',i===0);document.body.classList.toggle('s1c',i===0);
+  $('steps').querySelectorAll('button').forEach((b,j)=>b.classList.toggle('on',j===i));$('cap').textContent=steps[i][1];
+  if(quiet)return;
+  if(i<2){pick(null);}
+  if(i===2&&exNode){pick(null);const q=ex.question||'';$('q').value='';let k=0;const name=exNode.type==='equipment'?exNode.id:exNode.name;
+    const type=()=>{if(k<=name.length){$('q').value=name.slice(0,k++);timers.push(setTimeout(type,70));}else pick(exNode.id,q?q.replace(/\s*What.*$/,'').replace(/\.$/,''):null);};
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches||location.hash.includes('fast')){pick(exNode.id,q?q.replace(/\s*What.*$/,'').replace(/\.$/,''):null);$('q').value=name;}else timers.push(setTimeout(type,500));}
+  if(i===3){pick(null);const lit=new Set(),le=new Set();REAL.forEach(x=>x.docs.forEach(d=>lit.add(d)));N.forEach(n=>{if(n.type==='missing')lit.add(n.id)});
+    E.forEach((e,k)=>{if(e.type==='refers_to'&&byId[e.dst]&&byId[e.dst].type==='missing')le.add(k);});paint(lit,le,null);}
+}
+$('steps').querySelectorAll('button').forEach(b=>b.onclick=()=>{stop();setStep(+b.dataset.s)});
+function play(){stop();setStep(0);[[1,3200],[2,7000],[3,13500]].forEach(([i,t])=>timers.push(setTimeout(()=>setStep(i),t)));}
+
+$('title').textContent=M.title;document.title=M.title+' · SOP graph';$('gen').textContent=M.sample?' · sample documents':'';
+$('stats').innerHTML=`<span><b>${procs.length}</b> procedures</span><span><b>${things.length}</b> things they touch</span><span><b>${E.length}</b> links</span><span class="bad"><b>${REAL.length}</b> findings</span>`;
+$('legend').innerHTML=`<span><i class="sq"></i>Procedure</span>`+['equipment','material','product','tool','ppe','role','form','supplier'].filter(t=>N.some(n=>n.type===t)).map(t=>`<span><i style="background:${COL[t]}"></i>${TN[t]}</span>`).join('');
+home();
+const hs=location.hash.match(/step=(\d)/);
+window.__sg={setStep,pick,pickIssue,stop,find,example:exNode,question:ex.question||''};
+if(location.hash.includes('rec'))setStep(0,true);else if(hs)setStep(Math.min(3,+hs[1]-1));else if(location.hash.includes('explore')||matchMedia('(prefers-reduced-motion:reduce)').matches)setStep(1);else play();
+})();
+</script>
+</body></html>
